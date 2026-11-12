@@ -7,3 +7,4 @@ if idx != -1:
     print(text[idx:idx+1200])
 else:
     print("Table not found")
+
