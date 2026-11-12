@@ -1171,7 +1171,7 @@ def get_footer():
           <div class="slc-footer__phones">
             <a href="tel:+8618248547224">CEO Wolex: +86 182 4854 7224</a>
             <a href="tel:+8615757991458">Procurement (Star): +86 157 5799 1458</a>
-            <a href="mailto:svgadmsavelandedimpexpcomltd@gmail.com">svgadmsavelandedimpexpcomltd@gmail.com</a>
+            <a href="mailto:admsavelandedimpexpcomltd@gmail.com">admsavelandedimpexpcomltd@gmail.com</a>
           </div>
         </div>
 

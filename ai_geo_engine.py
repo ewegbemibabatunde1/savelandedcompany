@@ -17,7 +17,7 @@ ORG_ENTITY_SCHEMA = {
         "caption": "Savelanded Import and Export Company Limited Corporate Logo"
     },
     "image": "https://savelandedcompany.vercel.app/logo.jpg",
-    "email": "svgadmsavelandedimpexpcomltd@gmail.com",
+    "email": "admsavelandedimpexpcomltd@gmail.com",
     "telephone": "+8618248547224",
     "priceRange": "$$",
     "slogan": "Connecting China to Nigeria. Simplifying Global Trade.",
