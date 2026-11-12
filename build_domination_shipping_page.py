@@ -1,0 +1,1910 @@
+# -*- coding: utf-8 -*-
+"""
+build_domination_shipping_page.py
+Master generator for Savelanded's comprehensive China-to-Nigeria landing page:
+https://savelandedcompany.vercel.app/shipping
+
+Fully compliant with:
+- Sections A through M
+- Independent, robust dual calculators (Air & Sea with multi-package support)
+- 18 comprehensive FAQs matching visible page content and Schema.org FAQPage
+- Worked pricing examples for Air Volumetric Weight and Sea CBM
+- 10 Real-world Problem & Solution scenarios
+- 11-step Sourcing & Shipping Guide (1688, Alibaba, Taobao)
+- Sensitive and special cargo handling guidelines
+- China origin hubs (Guangzhou, Yiwu, Shenzhen, Shanghai, Ningbo)
+- Nigerian destination coverage (Lagos, Abuja, Port Harcourt, Kano, Onitsha, Aba, Ibadan)
+- Customs requirements (Form M, PAAR, SONCAP, NAFDAC)
+- Verified business information (Wolex, Chibueze, official emails, addresses, WhatsApp)
+- 100% Technical SEO & Schema.org JSON-LD graph
+"""
+
+import os
+import json
+
+def generate_master_shipping_page():
+    html_content = '''<!DOCTYPE html>
+<html lang="en" class="slc-html">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WSW25L7G');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Shipping from China to Nigeria | Air &amp; Sea Freight Services | Savelanded</title>
+  <meta name="description" content="Official shipping services from China to Nigeria by Savelanded. Fast air freight (5–8 days), sea freight LCL &amp; FCL (35–45 days), DDP door-to-door delivery, warehouse consolidation in Guangzhou &amp; Yiwu, and customs clearance in Lagos. Calculate rates online.">
+  <meta name="keywords" content="shipping from China to Nigeria, China to Nigeria shipping cost, shipping agent from China to Nigeria, China to Nigeria freight forwarder, air freight from China to Nigeria, sea freight from China to Nigeria, cheap shipping from China to Nigeria, how to ship goods from China to Nigeria, how much does it cost to ship 1kg from China to Nigeria, how long does shipping from China to Nigeria take, China to Nigeria cargo shipping, shipping from Guangzhou to Nigeria, shipping from Yiwu to Nigeria, DDP shipping from China to Nigeria, shipping from China to Lagos, shipping from China to Abuja, shipping from China to Port Harcourt">
+  <meta name="author" content="Savelanded Import and Export Company Limited">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://savelandedcompany.vercel.app/shipping">
+  
+  <!-- International SEO: Hreflang Tagging -->
+  <link rel="alternate" hreflang="en-ng" href="https://savelandedcompany.vercel.app/shipping">
+  <link rel="alternate" hreflang="en" href="https://savelandedcompany.vercel.app/shipping">
+  <link rel="alternate" hreflang="x-default" href="https://savelandedcompany.vercel.app/shipping">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Savelanded Import and Export Company Limited">
+  <meta property="og:url" content="https://savelandedcompany.vercel.app/shipping">
+  <meta property="og:title" content="Shipping from China to Nigeria | Air &amp; Sea Freight Services | Savelanded">
+  <meta property="og:description" content="Comprehensive China-to-Nigeria logistics: Air cargo (5–8 days), sea freight LCL/FCL (35–45 days), DDP door-to-door delivery, warehouse consolidation in Guangzhou and Yiwu, and customs clearance in Lagos.">
+  <meta property="og:image" content="https://savelandedcompany.vercel.app/logo.jpg">
+  <meta property="og:locale" content="en_NG">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shipping from China to Nigeria | Air &amp; Sea Freight Services | Savelanded">
+  <meta name="twitter:description" content="Calculate shipping costs, compare air vs sea freight transit times, and explore reliable cargo consolidation from Guangzhou and Yiwu to Lagos.">
+  <meta name="twitter:image" content="https://savelandedcompany.vercel.app/logo.jpg">
+
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+
+  <!-- Google Fonts: Sora, DM Sans, Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/savelanded.css">
+
+  <!-- Structured Data (Schema.org JSON-LD Graph) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LogisticsService",
+      "@id": "https://savelandedcompany.vercel.app/#organization",
+      "name": "Savelanded Import and Export Company Limited",
+      "alternateName": [
+        "Savelanded",
+        "Savelanded Logistics",
+        "Savelanded Co. Ltd"
+      ],
+      "legalName": "Savelanded Import and Export Company Limited",
+      "url": "https://savelandedcompany.vercel.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://savelandedcompany.vercel.app/#logo",
+        "url": "https://savelandedcompany.vercel.app/logo.jpg",
+        "caption": "Savelanded Import and Export Company Limited Corporate Logo"
+      },
+      "image": "https://savelandedcompany.vercel.app/logo.jpg",
+      "email": "admsavelandedimpexpcomltd@gmail.com",
+      "telephone": "+8618248547224",
+      "priceRange": "$$",
+      "slogan": "Connecting China to Nigeria. Simplifying Global Trade.",
+      "description": "Savelanded Import and Export Company Limited provides end-to-end commercial freight forwarding, air cargo, ocean shipping, product sourcing, customs clearance, and nationwide doorstep delivery from China to Nigeria.",
+      "knowsAbout": [
+        "China to Nigeria Freight Forwarding",
+        "Air Freight Guangzhou and Shenzhen to Lagos MMIA",
+        "Ocean Container Shipping Ningbo and Shanghai to Apapa, Tin Can, Lekki",
+        "LCL Groupage and FCL Full Container Consolidation",
+        "Product Sourcing on 1688, Taobao, and Alibaba",
+        "RMB and Yuan Supplier Payments",
+        "Nigerian Customs Clearance Form M and PAAR",
+        "Door-to-Door Delivery to Lagos, Abuja, Port Harcourt, Kano, Onitsha, Aba, Ibadan"
+      ],
+      "sameAs": [
+        "https://savelandedcompany.vercel.app/",
+        "https://web.facebook.com/people/Savelanded-Import-Export-Company-LTD/61584779115044",
+        "https://www.instagram.com/savelanded_impexp_comltd",
+        "https://www.tiktok.com/@savelandedcompany",
+        "https://share.google/F4xa5WqkFDpGopYkM"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://savelandedcompany.vercel.app/#wolex",
+        "name": "Wolex",
+        "jobTitle": "Chief Executive Officer & Founder",
+        "telephone": "+8618248547224"
+      },
+      "employee": [
+        {
+          "@type": "Person",
+          "@id": "https://savelandedcompany.vercel.app/#chibueze",
+          "name": "Chibueze",
+          "jobTitle": "Nigeria Operations Desk Lead",
+          "telephone": "+2348038037353"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://savelandedcompany.vercel.app/#star",
+          "name": "Star",
+          "jobTitle": "Lead China Procurement Specialist",
+          "telephone": "+8615757991458"
+        }
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Yiwu City",
+          "addressRegion": "Zhejiang Province",
+          "streetAddress": "16, 2nd Street, Longgang Road",
+          "addressCountry": "CN"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Guangzhou",
+          "addressRegion": "Guangdong Province",
+          "streetAddress": "Room 103, Warehouse 4, Huayag Warehouse, No. 498 Qinglong Road, Shijing Street, Baiyun District",
+          "addressCountry": "CN"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Lagos",
+          "addressRegion": "Lagos State",
+          "streetAddress": "Zone B, Shop 13/14, 23/24, Edo Plaza, Balogun, Trade Fair Complex, Badagry Expressway, Ojo",
+          "addressCountry": "NG"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://savelandedcompany.vercel.app/shipping#service",
+      "name": "Shipping from China to Nigeria",
+      "serviceType": "International Freight Forwarding & Logistics",
+      "provider": {
+        "@id": "https://savelandedcompany.vercel.app/#organization"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Nigeria"
+        },
+        {
+          "@type": "Country",
+          "name": "China"
+        }
+      ],
+      "description": "Commercial air freight, sea freight LCL & FCL, customs clearance, and DDP door-to-door delivery connecting Guangzhou, Yiwu, Shenzhen, and Shanghai to Lagos, Abuja, Port Harcourt, Kano, Onitsha, Aba, and Ibadan.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "China to Nigeria Freight Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Air Freight from China to Nigeria (5–8 Working Days)",
+              "url": "https://savelandedcompany.vercel.app/air-freight"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sea Freight LCL & FCL from China to Nigeria (35–45 Days)",
+              "url": "https://savelandedcompany.vercel.app/sea-freight"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Delivered Duty Paid (DDP) All-Inclusive Door-to-Door Delivery",
+              "url": "https://savelandedcompany.vercel.app/door-to-door"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://savelandedcompany.vercel.app/shipping#howto",
+      "name": "How to Buy from China and Ship to Nigeria (11-Step Importer Guide)",
+      "description": "Step-by-step practical guide for sourcing goods on 1688, Alibaba, and Taobao, consolidating packages in China, and clearing customs in Nigeria.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Find a Supplier on Alibaba, 1688, or Taobao",
+          "text": "Locate verified suppliers with high transaction histories and confirmed manufacturing capabilities."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Confirm Product Specifications and Supplier Details",
+          "text": "Verify unit pricing, material quality, production lead time, and gross weight/dimensions before paying."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Request a Shipping Quotation from Savelanded",
+          "text": "Submit your estimated dimensions, carton count, and cargo category to Savelanded's desk for an accurate rate quote."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Arrange Supplier Delivery to the Savelanded Warehouse",
+          "text": "Instruct Chinese vendors to send packages clearly marked with your Savelanded Client ID to our Guangzhou or Yiwu warehouse."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Receive and Verify Cargo Information",
+          "text": "Our warehouse team logs your incoming packages, weighs each carton, and inspects external packaging for transit integrity."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Consolidate Packages Where Appropriate",
+          "text": "We combine orders from multiple suppliers into a unified consignment and crate fragile goods in solid timber."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Confirm Shipping Method and Costs",
+          "text": "Select air freight or ocean freight based on your timeline and budget, and confirm the final freight invoice."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "name": "Complete Required Documentation",
+          "text": "Commercial invoices, packing lists, and export clearance declarations are finalized in China."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "name": "Ship Cargo from China",
+          "text": "Goods depart via scheduled cargo flights from Guangzhou/Shenzhen or container vessels from Ningbo/Nansha/Shekou."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "name": "Complete Nigerian Customs and Clearance Processes",
+          "text": "Savelanded's clearance desk handles terminal assessment, tariff settlement, and joint examination at Lagos Airport or Seaports."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 11,
+          "name": "Receive the Cargo at the Agreed Destination",
+          "text": "Pick up your goods at our Trade Fair Complex office in Lagos or receive secure doorstep delivery in Abuja, Port Harcourt, Kano, Onitsha, Aba, or Ibadan."
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://savelandedcompany.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Shipping from China to Nigeria",
+          "item": "https://savelandedcompany.vercel.app/shipping"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does it cost to ship from China to Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shipping costs depend on the transport mode, cargo weight, volume, and cargo classification. Air freight generally ranges from $7.80 to $13.50 per kg depending on total weight tier (higher volume qualifies for lower per-kg rates), plus local clearance. Sea freight LCL (groupage) is billed per Cubic Meter (CBM), typically starting from $180 to $280 per CBM for general merchandise, with full 20ft and 40ft container ocean baselines ranging from $2,800 to $4,800 depending on season. Savelanded maintains the exact same transparent base pricing structure as leading market providers like Dechaser, competing through superior operational transparency, customer care, and cargo safety."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to ship 1kg from China to Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For small parcel air cargo under 10kg, rates typically range between $11.50 and $13.50 per kg for general goods, and $13.50 to $15.50 per kg for sensitive items containing batteries. Shipments are subject to a minimum parcel handling charge. Destination clearing in Lagos is either bundled or assessed at approximately ₦1,200 per kg."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does air freight take from China to Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard air cargo from Guangzhou or Shenzhen to Lagos (Murtala Muhammed International Airport) typically takes 5 to 8 working days from flight departure. Express courier options take approximately 3 to 5 business days for urgent commercial samples and documents."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does sea freight take from China to Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ocean freight sailing time from major Chinese ports (Ningbo-Zhoushan, Guangzhou Nansha, Shenzhen Shekou, Shanghai, Qingdao) to Lagos ports (Apapa, Tin Can Island, Lekki Deep Sea Port) takes approximately 35 to 45 sailing days. Terminal discharge and customs clearance typically require an additional 5 to 10 working days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is air freight cheaper than sea freight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. For commercial volume and heavy goods, sea freight is drastically more cost-effective than air freight—frequently saving importers 70% to 85% per unit. Air freight is only cheaper in total dollar spend for very small, lightweight packages (under 15–20kg) where paying for the minimum ocean CBM space would not be economical."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the minimum shipping weight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For air cargo, Savelanded accepts commercial shipments starting from 1kg (billed at the minimum parcel tier threshold). For ocean freight LCL (groupage), our minimum accepted volume starts from as low as 0.1 CBM, allowing growing importers to access economical sea shipping without waiting to fill a full container."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is CBM?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CBM stands for Cubic Meter (m³). It is the standard international metric unit used in ocean freight to measure cargo volume. One CBM equals a cube that measures 1 meter long, 1 meter wide, and 1 meter high (100cm × 100cm × 100cm = 1,000,000 cubic centimeters)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate shipping volume?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To calculate volume in CBM: multiply carton Length (cm) × Width (cm) × Height (cm), then divide by 1,000,000, and multiply by the total number of cartons. For example: 10 cartons measuring 60cm × 40cm × 50cm = (60 × 40 × 50 ÷ 1,000,000) × 10 = 1.20 CBM. You can use our on-page interactive CBM calculator for instant calculations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I combine goods from different suppliers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Cargo consolidation is one of Savelanded's core specialties. You can order from 5, 10, or 20 different suppliers across 1688, Alibaba, or Taobao and have them deliver to our Guangzhou or Yiwu warehouse marked with your Client ID. We hold all packages, verify carton integrity, combine them into a single master shipment, and crate fragile goods, saving you up to 35% in dead freight charges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I ship goods from 1688 to Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. 1688 is China's largest domestic wholesale platform. You can either purchase directly and use our warehouse address for delivery, or engage Savelanded's Procurement Desk: provide your product links, pay us in Nigerian Naira (NGN) or USD, and we will settle the 1688 Chinese factory directly in Chinese Yuan (RMB) on your behalf."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I ship batteries from China to Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Savelanded operates dedicated sensitive cargo channels for products containing built-in lithium-ion batteries (smartphones, power banks, solar energy systems, laptops). These shipments require specialized airline hazard classifications and are routed on authorized dangerous goods (DG) flights and sea vessels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Savelanded help with customs clearance in Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Savelanded provides comprehensive customs brokerage at Lagos Seaports (Apapa, Tin Can Island, Lekki Deep Sea Port) and Murtala Muhammed Airport (LOS). We manage documentation for formal commercial containers (Form M, PAAR, SONCAP) and offer all-inclusive DDP groupage where customs clearing and terminal duties are bundled into your per-kg or per-CBM rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Savelanded provide door-to-door delivery in Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We offer Delivered Duty Paid (DDP) door-to-door service. You can collect your cleared cargo directly from our Lagos consolidation hub at the Trade Fair Complex, or request onward doorstep delivery to your warehouse, store, or residence in Lagos, Abuja, Port Harcourt, Kano, Onitsha, Aba, Ibadan, or any of Nigeria's 36 states."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which cities in Nigeria can receive cargo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While international vessels and cargo flights arrive in Lagos, Savelanded provides secure, tracked interstate delivery to all major commercial centers across Nigeria, including Abuja (FCT), Port Harcourt (Rivers State), Kano, Onitsha (Anambra State), Aba (Abia State), Ibadan (Oyo State), Kaduna, Asaba, Benin City, and Warri."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get a shipping quotation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can generate an instant estimate using our interactive rate calculator on this page, submit our online Quote Request form, or click the WhatsApp button to chat directly with CEO Wolex (+86 182 4854 7224) or our Nigeria Operations Lead Chibueze (+234 803 803 7353). Please provide carton dimensions, gross weight, cargo description, origin city, and destination."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents do I need to import goods into Nigeria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For formal full container imports (FCL), Nigeria Customs Service requires an e-Form M, Pre-Arrival Assessment Report (PAAR), Bill of Lading, Commercial Invoice, Packing List, and a SONCAP Certificate (or NAFDAC permit for food/cosmetics/chemicals). However, for consolidated DDP groupage shipments with Savelanded, we clear your goods under our corporate trade master manifest, eliminating individual documentation complexity for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are customs duties included in shipping prices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under our Delivered Duty Paid (DDP) shipping service, customs duties, port handling charges, and terminal clearing fees are 100% included in the quoted per-kg or per-CBM price. For port-to-port ocean container shipping (FCL), statutory government customs duties and terminal dues are assessed separately based on your PAAR valuation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I ship commercial and personal goods?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Savelanded handles both large commercial wholesale shipments for retailers and manufacturers as well as personal cargo, household goods, e-commerce orders, and business samples."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body class="slc-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSW25L7G"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="slc-header">
+    <div class="slc-container slc-header__inner">
+      <a href="index.html" class="slc-brand" aria-label="Savelanded Home">
+        <div class="slc-brand__logo">
+          <img src="logo.jpg" alt="Savelanded Import and Export Company Limited Logo" width="52" height="52" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <div class="slc-brand__name">SAVELANDED</div>
+          <div class="slc-brand__sub">Import &amp; Export Co. Ltd</div>
+        </div>
+      </a>
+
+      <nav class="slc-nav-wrap" aria-label="Primary Navigation">
+        <ul class="slc-nav">
+          <li class="slc-nav__item">
+            <a href="index.html" class="slc-nav__link">Home</a>
+          </li>
+          <li class="slc-nav__item">
+            <a href="about.html" class="slc-nav__link">About Us</a>
+          </li>
+          <li class="slc-nav__item">
+            <a href="services.html" class="slc-nav__link">
+              <span>Services</span>
+              <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </a>
+            <ul class="slc-dropdown">
+              <li class="slc-dropdown__header">Freight &amp; Cargo</li>
+              <li>
+                <a href="air-freight.html" class="slc-dropdown__link">
+                  <span class="slc-dropdown__title">Air Freight from China to Nigeria</span>
+                  <svg class="slc-dropdown__arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="sea-freight.html" class="slc-dropdown__link">
+                  <span class="slc-dropdown__title">Sea Freight from China to Nigeria</span>
+                  <svg class="slc-dropdown__arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+              <li class="slc-dropdown__header">Sourcing &amp; Procurement</li>
+              <li>
+                <a href="product-sourcing.html" class="slc-dropdown__link">
+                  <span class="slc-dropdown__title">Product Sourcing &amp; Verification</span>
+                  <svg class="slc-dropdown__arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="procurement.html" class="slc-dropdown__link">
+                  <span class="slc-dropdown__title">Purchasing and Procurement</span>
+                  <svg class="slc-dropdown__arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+              <li class="slc-dropdown__header">Ground &amp; Trade Operations</li>
+              <li>
+                <a href="warehousing.html" class="slc-dropdown__link">
+                  <span class="slc-dropdown__title">Warehousing &amp; Cargo Consolidation</span>
+                  <svg class="slc-dropdown__arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="customs-clearance.html" class="slc-dropdown__link">
+                  <span class="slc-dropdown__title">Customs Clearance &amp; Documentation</span>
+                  <svg class="slc-dropdown__arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="import-export.html" class="slc-dropdown__link">
+                  <span class="slc-dropdown__title">International Import &amp; Export</span>
+                  <svg class="slc-dropdown__arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="door-to-door.html" class="slc-dropdown__link">
+                  <span class="slc-dropdown__title">Door-to-Door Delivery in Nigeria</span>
+                  <svg class="slc-dropdown__arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="slc-nav__item">
+            <a href="shipping.html" class="slc-nav__link is-active">Shipping</a>
+          </li>
+          <li class="slc-nav__item">
+            <a href="contact.html" class="slc-nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="slc-header__cta">
+        <a href="https://wa.me/8618248547224" target="_blank" rel="noopener noreferrer" class="slc-btn slc-btn-gold">
+          <span>WHATSAPP SHIPPING</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <button type="button" class="slc-menu-toggle" id="slc-menu-toggle" aria-label="Open Navigation">
+        <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="slc-overlay" id="slc-overlay"></div>
+  <aside class="slc-mobile-drawer" id="slc-mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; padding-bottom:14px; border-bottom:1px solid var(--slc-gray-200);">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="logo.jpg" alt="Savelanded Import and Export Company Limited Logo" width="36" height="36" style="border-radius:4px;">
+        <span style="font-family:var(--slc-font-head); font-weight:800; font-size:1.15rem; color:var(--slc-black);">SAVELANDED</span>
+      </div>
+      <button type="button" id="slc-menu-close" style="background:none; border:none; cursor:pointer; font-size:1.8rem; line-height:1; color:var(--slc-black); padding:4px 8px;" aria-label="Close Navigation">&times;</button>
+    </div>
+    <ul style="list-style:none; display:flex; flex-direction:column; gap:16px;">
+      <li><a href="index.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem;">Home</a></li>
+      <li><a href="about.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem;">About Us</a></li>
+      <li>
+        <a href="services.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem; display:block; margin-bottom:8px;">All Services</a>
+        <ul style="list-style:none; padding-left:14px; display:flex; flex-direction:column; gap:10px; font-size:0.925rem; border-left:2px solid var(--slc-gold);">
+          <li><a href="air-freight.html">Air Freight</a></li>
+          <li><a href="sea-freight.html">Sea Freight</a></li>
+          <li><a href="product-sourcing.html">Product Sourcing &amp; Verification</a></li>
+          <li><a href="procurement.html">Purchasing &amp; Procurement</a></li>
+          <li><a href="warehousing.html">Warehousing &amp; Consolidation</a></li>
+          <li><a href="customs-clearance.html">Customs Clearance</a></li>
+          <li><a href="import-export.html">Import &amp; Export</a></li>
+          <li><a href="door-to-door.html">Door-to-Door Delivery</a></li>
+        </ul>
+      </li>
+      <li><a href="shipping.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem; color:var(--slc-wine);">Shipping from China</a></li>
+      <li><a href="contact.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem;">Contact &amp; Locations</a></li>
+    </ul>
+    <div style="margin-top:32px; display:flex; flex-direction:column; gap:12px;">
+      <a href="quote.html" class="slc-btn slc-btn-gold" style="width:100%; justify-content:center;">REQUEST A QUOTE</a>
+      <a href="https://wa.me/8618248547224" target="_blank" rel="noopener noreferrer" class="slc-btn" style="width:100%; justify-content:center; background:#25D366; color:#ffffff;">WHATSAPP CEO WOLEX</a>
+    </div>
+  </aside>
+
+<main>
+  <!-- ==========================================================================
+       SECTION A: SEO TITLE & INTRODUCTION
+       ========================================================================== -->
+  <header class="slc-page-hero">
+    <div class="slc-container">
+      <nav class="slc-breadcrumbs" aria-label="Breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="slc-breadcrumbs__separator">/</span>
+        <span class="slc-breadcrumbs__current">Shipping from China to Nigeria</span>
+      </nav>
+      <span class="slc-page-hero__pill">Official China–Nigeria Freight Corridor</span>
+      <h1 class="slc-page-hero__title">
+        Shipping from China to Nigeria
+      </h1>
+      <p class="slc-page-hero__lead">
+        Yes, Savelanded provides reliable commercial shipping from China to Nigeria. We offer fast <strong>air freight (5 to 8 working days)</strong> and economical <strong>sea freight (35 to 45 sailing days)</strong> connecting major Chinese manufacturing centers—including Guangzhou, Yiwu, Shenzhen, Shanghai, and Ningbo—directly to Lagos (Apapa, Tin Can, Lekki Port, MMIA Airport) with nationwide on-forwarding to Abuja, Port Harcourt, Kano, Onitsha, Aba, and Ibadan. Shipping costs are calculated transparently per kilogram for air cargo and per Cubic Meter (CBM) for ocean freight. Use our on-page interactive calculators below or contact our desk for an immediate, binding shipping quotation.
+      </p>
+      <div class="slc-page-hero__actions">
+        <a href="quote.html" class="slc-btn slc-btn-gold">REQUEST ACCURATE SHIPPING QUOTE</a>
+        <a href="https://wa.me/8618248547224" target="_blank" rel="noopener noreferrer" class="slc-btn" style="background:#25D366; color:#ffffff;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.03C9.36 7.03 9.09 7.1 8.87 7.33C8.65 7.57 8.02 8.16 8.02 9.36C8.02 10.56 8.9 11.72 9.02 11.89C9.15 12.06 10.76 14.54 13.22 15.6C13.81 15.85 14.26 16 14.62 16.12C15.21 16.31 15.75 16.28 16.18 16.22C16.65 16.15 17.64 15.62 17.85 15.03C18.06 14.44 18.06 13.94 18 13.83C17.94 13.72 17.77 13.66 17.52 13.54C17.27 13.41 16.05 12.81 15.82 12.73C15.6 12.64 15.43 12.6 15.27 12.85C15.1 13.1 14.63 13.66 14.49 13.83C14.35 14 14.2 14.02 13.95 13.9C13.7 13.77 12.89 13.51 11.93 12.65C11.18 11.98 10.67 11.15 10.53 10.9C10.38 10.65 10.51 10.52 10.64 10.4C10.75 10.28 10.9 10.1 11.03 9.94C11.16 9.78 11.2 9.66 11.29 9.49C11.37 9.33 11.33 9.18 11.27 9.06C11.2 8.94 10.67 7.64 10.45 7.11C10.24 6.59 10.02 6.66 9.86 6.66C9.71 6.66 9.53 7.03 9.53 7.03Z"/></svg>
+          CHAT ON WHATSAPP (+86 182 4854 7224)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="slc-content-section slc-content-section--white">
+    <div class="slc-container">
+      <div class="slc-layout-with-sidebar">
+        <div class="slc-prose">
+          
+          <!-- ==========================================================================
+               SECTION B: QUICK SHIPPING ANSWER (AEO / GEO DIRECT SNIPPET)
+               ========================================================================== -->
+          <section class="slc-ai-summary" aria-label="Quick Shipping Answer">
+            <div class="slc-ai-summary__badge">
+              <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+              <span>Quick Shipping Answer &bull; Direct Overview</span>
+            </div>
+            <h2 class="slc-ai-summary__title">Shipping from China to Nigeria: Essential Facts at a Glance</h2>
+            <div class="slc-ai-summary__content">
+              <p>
+                <strong>Air Freight:</strong> Takes 5 to 8 working days from flight departure. Billed per kilogram on whichever is greater: actual scale weight vs. volumetric weight (Length × Width × Height in cm ÷ 6,000). Best for urgent, lightweight, or high-value inventory.<br>
+                <strong>Sea Freight (LCL Groupage &amp; FCL Containers):</strong> Takes 35 to 45 sailing days to Lagos ports. Billed per Cubic Meter (CBM = L × W × H in cm ÷ 1,000,000) for shared LCL cargo, or flat container rates for 20ft/40ft boxes. Most economical for bulk wholesale and machinery.<br>
+                <strong>Delivered Duty Paid (DDP):</strong> All-inclusive door-to-door delivery covering China warehouse receiving, international transit, and customs clearing at Lagos ports.<br>
+                <strong>China Warehouses:</strong> Staging facilities in Guangzhou (Baiyun) and Yiwu (Longgang Rd) for free supplier cargo consolidation.<br>
+                <strong>Nigerian Delivery:</strong> Lagos Trade Fair Complex consolidation hub with tracked onward delivery to Abuja, Port Harcourt, Kano, Onitsha, Aba, and Ibadan.
+              </p>
+            </div>
+            <div class="slc-ai-facts">
+              <div class="slc-ai-fact"><strong>Air Freight Transit</strong> 5 to 8 working days (CAN/SZX to LOS)</div>
+              <div class="slc-ai-fact"><strong>Sea Freight Transit</strong> 35 to 45 sailing days (Ningbo/Nansha to Lagos)</div>
+              <div class="slc-ai-fact"><strong>Air Formula</strong> (L × W × H in cm) &divide; 6,000 per carton</div>
+              <div class="slc-ai-fact"><strong>CBM Formula</strong> (L × W × H in cm) &divide; 1,000,000 &times; Cartons</div>
+              <div class="slc-ai-fact"><strong>Currencies Accepted</strong> NGN (Naira), USD ($), RMB/CNY (&yen;)</div>
+              <div class="slc-ai-fact"><strong>Hotline &amp; WhatsApp</strong> +86 182 4854 7224 (CEO Wolex)</div>
+            </div>
+          </section>
+          
+          <!-- Table of Contents -->
+          <nav class="slc-toc" aria-label="Table of Contents">
+            <div class="slc-toc__title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+              <span>Table of Contents &bull; Complete Shipping Resource</span>
+            </div>
+            <ul class="slc-toc__list">
+              <li><a href="#section-pricing" class="slc-toc__link"><span>&rarr;</span> 1. Shipping Prices and Rates (Air, Sea, Express, Containers)</a></li>
+              <li><a href="#section-calculator" class="slc-toc__link"><span>&rarr;</span> 2. Interactive Shipping Calculator (Air Volumetric &amp; Sea CBM)</a></li>
+              <li><a href="#section-air-freight" class="slc-toc__link"><span>&rarr;</span> 3. Air Freight from China to Nigeria (Process &amp; Chargeable Weight)</a></li>
+              <li><a href="#section-sea-freight" class="slc-toc__link"><span>&rarr;</span> 4. Sea Freight from China to Nigeria (LCL, FCL &amp; CBM Calculation)</a></li>
+              <li><a href="#section-sensitive-cargo" class="slc-toc__link"><span>&rarr;</span> 5. Sensitive and Special Cargo Handling</a></li>
+              <li><a href="#section-how-to-buy" class="slc-toc__link"><span>&rarr;</span> 6. How to Buy from China and Ship to Nigeria (11-Step Practical Guide)</a></li>
+              <li><a href="#section-china-locations" class="slc-toc__link"><span>&rarr;</span> 7. China Warehouse and Shipping Locations (Guangzhou, Yiwu, etc.)</a></li>
+              <li><a href="#section-nigeria-destinations" class="slc-toc__link"><span>&rarr;</span> 8. Shipping Destinations in Nigeria (Lagos, Abuja, PH, Kano, Onitsha)</a></li>
+              <li><a href="#section-customs-requirements" class="slc-toc__link"><span>&rarr;</span> 9. Nigerian Customs and Import Requirements (Form M, PAAR, SONCAP)</a></li>
+              <li><a href="#section-problems-solutions" class="slc-toc__link"><span>&rarr;</span> 10. Problems and Practical Solutions (Troubleshooting Common Concerns)</a></li>
+              <li><a href="#section-why-choose" class="slc-toc__link"><span>&rarr;</span> 11. Why Choose Savelanded? (Operational Capabilities &amp; Case Studies)</a></li>
+              <li><a href="#section-faqs" class="slc-toc__link"><span>&rarr;</span> 12. Frequently Asked Questions (18 Essential Importer FAQs)</a></li>
+            </ul>
+          </nav>
+
+          <!-- ==========================================================================
+               SECTION C: SHIPPING PRICES AND RATES
+               ========================================================================== -->
+          <h2 id="section-pricing">1. Shipping Prices and Rates (Air, Sea, Express, Containers)</h2>
+          
+          <div class="slc-pricing-notice">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <div>
+              <strong>Transparent Pricing Policy:</strong> Savelanded maintains the exact same competitive baseline shipping rates as leading market forwarders like Dechaser. We do not invent artificial discounts or claim to be cheaper. Instead, we compete through greater pricing transparency, clearer breakdown of inclusions, accurate calculators, dedicated packing protection, and faster customer response. Displayed prices are indicative guidelines for planning; final quotations depend on cargo dimensions, verified gross weight, commodity classification, origin warehouse, and final delivery address.
+            </div>
+          </div>
+
+          <h3>Air Freight Pricing Table (Guangzhou / Shenzhen to Lagos MMIA)</h3>
+          <p>
+            Air freight is billed per kilogram based on the higher of physical scale weight versus dimensional volumetric weight (<code>Length × Width × Height in cm ÷ 6,000</code>).
+          </p>
+
+          <div class="slc-rate-table-wrapper">
+            <table class="slc-rate-table">
+              <thead>
+                <tr>
+                  <th>Weight Tier</th>
+                  <th>General Cargo Rate (USD/kg)</th>
+                  <th>Sensitive / Battery Cargo (USD/kg)</th>
+                  <th>Local Lagos Clearing &amp; Handling</th>
+                  <th>Estimated Transit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Weight Tier"><strong>1 to 10 kg (Minimum Parcel)</strong></td>
+                  <td data-label="General Cargo Rate">$11.50 – $13.50 / kg</td>
+                  <td data-label="Sensitive / Battery Cargo">$13.50 – $15.50 / kg</td>
+                  <td data-label="Local Lagos Clearing">Included or ₦1,200/kg</td>
+                  <td data-label="Estimated Transit"><span class="slc-badge-pill slc-badge-pill--green">5–8 Days</span></td>
+                </tr>
+                <tr>
+                  <td data-label="Weight Tier"><strong>11 to 45 kg</strong></td>
+                  <td data-label="General Cargo Rate">$9.50 – $11.50 / kg</td>
+                  <td data-label="Sensitive / Battery Cargo">$11.50 – $13.50 / kg</td>
+                  <td data-label="Local Lagos Clearing">Included or ₦1,200/kg</td>
+                  <td data-label="Estimated Transit"><span class="slc-badge-pill slc-badge-pill--green">5–8 Days</span></td>
+                </tr>
+                <tr>
+                  <td data-label="Weight Tier"><strong>46 to 100 kg (Commercial Tier)</strong></td>
+                  <td data-label="General Cargo Rate">$8.50 – $10.00 / kg</td>
+                  <td data-label="Sensitive / Battery Cargo">$10.50 – $12.00 / kg</td>
+                  <td data-label="Local Lagos Clearing">Included or ₦1,200/kg</td>
+                  <td data-label="Estimated Transit"><span class="slc-badge-pill slc-badge-pill--green">5–8 Days</span></td>
+                </tr>
+                <tr>
+                  <td data-label="Weight Tier"><strong>100 kg+ (Wholesale / Bulk Air)</strong></td>
+                  <td data-label="General Cargo Rate"><strong>$7.80 – $9.20 / kg</strong></td>
+                  <td data-label="Sensitive / Battery Cargo">$9.80 – $11.20 / kg</td>
+                  <td data-label="Local Lagos Clearing">Included or ₦1,000/kg</td>
+                  <td data-label="Estimated Transit"><span class="slc-badge-pill slc-badge-pill--green">5–8 Days</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Sea Freight LCL (Groupage) &amp; FCL Container Pricing Table</h3>
+          <p>
+            Sea freight is billed per Cubic Meter (CBM) for shared groupage shipments, or flat ocean freight for dedicated full containers. Minimum billable volume for LCL is 0.1 CBM.
+          </p>
+
+          <div class="slc-rate-table-wrapper">
+            <table class="slc-rate-table">
+              <thead>
+                <tr>
+                  <th>Freight Classification</th>
+                  <th>Billing Unit</th>
+                  <th>Indicative Ocean Freight (USD)</th>
+                  <th>Customs / Terminal Treatment</th>
+                  <th>Estimated Transit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Freight Classification"><strong>Sea Freight LCL (General Goods)</strong></td>
+                  <td data-label="Billing Unit">Per 1.0 CBM (Min 0.1 CBM)</td>
+                  <td data-label="Indicative Ocean Freight">$180 – $280 / CBM</td>
+                  <td data-label="Customs / Terminal Treatment">All-inclusive DDP clearing available</td>
+                  <td data-label="Estimated Transit"><span class="slc-badge-pill slc-badge-pill--gold">35–45 Days</span></td>
+                </tr>
+                <tr>
+                  <td data-label="Freight Classification"><strong>Sea Freight LCL (Special / Battery / Chemical)</strong></td>
+                  <td data-label="Billing Unit">Per 1.0 CBM</td>
+                  <td data-label="Indicative Ocean Freight">$260 – $360 / CBM</td>
+                  <td data-label="Customs / Terminal Treatment">All-inclusive DDP clearing available</td>
+                  <td data-label="Estimated Transit"><span class="slc-badge-pill slc-badge-pill--gold">35–45 Days</span></td>
+                </tr>
+                <tr>
+                  <td data-label="Freight Classification"><strong>20ft Standard GP Container (FCL)</strong></td>
+                  <td data-label="Billing Unit">Per Container (~28 CBM)</td>
+                  <td data-label="Indicative Ocean Freight">$2,800 – $3,800 / box</td>
+                  <td data-label="Customs / Terminal Treatment">Port-to-Port ocean baseline (PAAR extra)</td>
+                  <td data-label="Estimated Transit"><span class="slc-badge-pill slc-badge-pill--gold">35–45 Days</span></td>
+                </tr>
+                <tr>
+                  <td data-label="Freight Classification"><strong>40ft High Cube (40HQ) Container (FCL)</strong></td>
+                  <td data-label="Billing Unit">Per Container (~68 CBM)</td>
+                  <td data-label="Indicative Ocean Freight">$3,600 – $4,800 / box</td>
+                  <td data-label="Customs / Terminal Treatment">Port-to-Port ocean baseline (PAAR extra)</td>
+                  <td data-label="Estimated Transit"><span class="slc-badge-pill slc-badge-pill--gold">35–45 Days</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Express Air Courier (Emergency Samples &amp; Critical Documents)</h3>
+          <p>
+            When original commercial bills of lading, engineering samples, or emergency machine components are required on an accelerated timeline, our express courier pipeline operates with <strong>3 to 5 business days</strong> transit at <strong>$18.00 to $25.00 per kg</strong> inclusive of priority customs clearance.
+          </p>
+
+          <div class="slc-callout">
+            <strong>Clear Breakdown of Included vs. Excluded Charges:</strong><br>
+            <strong>What is Included:</strong> Safe warehouse receiving, barcode tagging, package inspection, export customs documentation in China, international air or sea freight, port terminal handling in Lagos, and cargo handover at our Trade Fair Complex consolidation depot.<br>
+            <strong>What is Excluded:</strong> Statutory Nigeria Customs import duties and VAT (for non-DDP commercial full containers requiring individual PAAR declarations), demurrage charges resulting from client documentation delays, and interstate road haulage outside Lagos metropolitan area (available as an optional add-on).
+          </div>
+
+          <h3>Worked Pricing Examples (Using Verified Rates)</h3>
+          
+          <div class="slc-callout" style="background:#fdfcf9; border-left:4px solid var(--slc-gold); margin-bottom:24px;">
+            <h4 style="margin-top:0; color:var(--slc-wine); font-size:1.05rem;">Worked Example 1: Air Freight Volumetric Calculation</h4>
+            <p style="margin-bottom:8px;">
+              An importer purchases <strong>5 cartons of branded sneakers</strong> from Guangzhou. Each carton measures <strong>60cm × 40cm × 40cm</strong> and weighs <strong>12 kg on the scale</strong>.
+            </p>
+            <ul style="padding-left:18px; margin-bottom:12px;">
+              <li><strong>Total Physical Scale Weight:</strong> 5 cartons × 12 kg = <strong>60 kg</strong>.</li>
+              <li><strong>Volumetric Weight per carton:</strong> (60 × 40 × 40) ÷ 6,000 = <strong>16 kg</strong>.</li>
+              <li><strong>Total Volumetric Weight:</strong> 5 cartons × 16 kg = <strong>80 kg</strong>.</li>
+              <li><strong>Chargeable Weight Applied:</strong> Because the volumetric weight (80 kg) is greater than the scale weight (60 kg), airlines bill on <strong>80 kg</strong>.</li>
+              <li><strong>Estimated Air Freight:</strong> 80 kg falls into the 46–100 kg commercial tier ($8.50–$10.00/kg) = approximately <strong>$680 – $800</strong> total freight, delivering to Lagos in 5–8 working days.</li>
+            </ul>
+          </div>
+
+          <div class="slc-callout" style="background:#fdfcf9; border-left:4px solid var(--slc-wine); margin-bottom:32px;">
+            <h4 style="margin-top:0; color:var(--slc-wine); font-size:1.05rem;">Worked Example 2: Sea Freight LCL (Groupage) CBM Calculation</h4>
+            <p style="margin-bottom:8px;">
+              A merchant orders <strong>20 cartons of kitchen blenders</strong> from Yiwu. Each carton measures <strong>50cm × 40cm × 40cm</strong> and weighs <strong>18 kg</strong> (total gross weight = 360 kg).
+            </p>
+            <ul style="padding-left:18px; margin-bottom:12px;">
+              <li><strong>Volume per carton in CBM:</strong> (50 × 40 × 40) ÷ 1,000,000 = <strong>0.08 CBM</strong>.</li>
+              <li><strong>Total Consignment Volume:</strong> 20 cartons × 0.08 CBM = <strong>1.60 CBM</strong>.</li>
+              <li><strong>Air Freight Comparison:</strong> 360 kg via air would cost over $2,800.</li>
+              <li><strong>Sea Freight LCL Cost:</strong> 1.60 CBM billed at the indicative rate of $180–$280/CBM = approximately <strong>$288 – $448</strong> total ocean freight!</li>
+              <li><strong>Conclusion:</strong> For non-urgent commercial merchandise, sea freight LCL saves the merchant over <strong>80% in transport expenditure</strong>.</li>
+            </ul>
+          </div>
+
+          <!-- ==========================================================================
+               SECTION D: ENHANCED INTERACTIVE SHIPPING CALCULATOR
+               ========================================================================== -->
+          <h2 id="section-calculator">2. Interactive Shipping Calculator (Air Volumetric &amp; Sea CBM)</h2>
+          <p>
+            Use our independent rate estimation tool below. Selecting Sea Freight will never trigger an air freight volumetric calculation. Enter your carton details to view the exact chargeable volume or weight, complete with a direct, pre-filled WhatsApp quotation link.
+          </p>
+
+          <div class="slc-calc-card">
+            <!-- Mode Switch Tabs -->
+            <div class="slc-calc-tabs">
+              <button type="button" class="slc-calc-tab-btn is-active" id="tab-air" onclick="setCalculatorMode('air')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px; margin-right:4px;"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                Air Freight Calculator
+              </button>
+              <button type="button" class="slc-calc-tab-btn" id="tab-sea" onclick="setCalculatorMode('sea')">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px; margin-right:4px;"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.47L20 11V3c0-1.1-.9-2-2-2h-3c-1.1 0-2 .9-2 2v2H9V3c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v8l-1.28.27c-.26.05-.48.23-.6.47s-.14.52-.06.78L3.95 19zM15 3h3v5h-3V3zM4 3h3v5H4V3z"/></svg>
+                Sea Freight CBM Calculator
+              </button>
+            </div>
+
+            <!-- Route Selectors -->
+            <div class="slc-form-grid" style="margin-bottom:16px;">
+              <div class="slc-form-group">
+                <label class="slc-label">Origin City in China</label>
+                <select id="calc-origin" class="slc-input" onchange="calculateFreight()">
+                  <option value="Guangzhou">Guangzhou (Baiyun Warehouse)</option>
+                  <option value="Yiwu">Yiwu (Longgang Rd Office)</option>
+                  <option value="Shenzhen">Shenzhen (Huaqiangbei &amp; Bao'an)</option>
+                  <option value="Shanghai">Shanghai (Seaport / Industrial Hub)</option>
+                  <option value="Ningbo">Ningbo (Deepwater Seaport)</option>
+                  <option value="Qingdao">Qingdao (Northern China Port)</option>
+                </select>
+              </div>
+              <div class="slc-form-group">
+                <label class="slc-label">Destination in Nigeria</label>
+                <select id="calc-dest" class="slc-input" onchange="calculateFreight()">
+                  <option value="Lagos Trade Fair Hub">Lagos (Trade Fair Complex Hub)</option>
+                  <option value="Abuja">Abuja (Federal Capital Territory)</option>
+                  <option value="Port Harcourt">Port Harcourt (Rivers State)</option>
+                  <option value="Kano">Kano (Northern Commercial Center)</option>
+                  <option value="Onitsha">Onitsha (Main Market, Anambra)</option>
+                  <option value="Aba">Aba (Ariaria Market, Abia)</option>
+                  <option value="Ibadan">Ibadan (Oyo State)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Cargo Classification -->
+            <div class="slc-form-grid" style="margin-bottom:16px;">
+              <div class="slc-form-group">
+                <label class="slc-label">Cargo Classification</label>
+                <select id="calc-category" class="slc-input" onchange="calculateFreight()">
+                  <option value="General Merchandise">General Merchandise (Clothing, Bags, Shoes, Hardware)</option>
+                  <option value="Sensitive / Battery">Sensitive Cargo (Phones, Power Banks, Liquids, Cosmetics)</option>
+                  <option value="Heavy Machinery / Industrial">Heavy Machinery / Fragile Equipment (Requires Crating)</option>
+                </select>
+              </div>
+              <div class="slc-form-group" id="calc-air-weight-group">
+                <label class="slc-label">Scale Weight per Carton (kg)</label>
+                <input type="number" id="calc-weight" class="slc-input" value="12" min="0.1" step="0.5" oninput="calculateFreight()">
+              </div>
+            </div>
+
+            <!-- Dimension Inputs (Package 1) -->
+            <div style="font-weight:700; font-size:0.9rem; color:var(--slc-black); margin-bottom:8px;" id="calc-package-heading">
+              Package Dimensions (Centimetres)
+            </div>
+            <div class="slc-form-grid">
+              <div class="slc-form-group">
+                <label class="slc-label">Length (cm)</label>
+                <input type="number" id="calc-l" class="slc-input" value="60" min="1" oninput="calculateFreight()">
+              </div>
+              <div class="slc-form-group">
+                <label class="slc-label">Width (cm)</label>
+                <input type="number" id="calc-w" class="slc-input" value="40" min="1" oninput="calculateFreight()">
+              </div>
+              <div class="slc-form-group">
+                <label class="slc-label">Height (cm)</label>
+                <input type="number" id="calc-h" class="slc-input" value="40" min="1" oninput="calculateFreight()">
+              </div>
+              <div class="slc-form-group">
+                <label class="slc-label">Total Cartons</label>
+                <input type="number" id="calc-qty" class="slc-input" value="5" min="1" oninput="calculateFreight()">
+              </div>
+            </div>
+
+            <!-- Result Box -->
+            <div class="slc-calc-result" style="margin-top:20px;">
+              <div style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--slc-copper-light);" id="calc-summary-title">
+                Calculated Chargeable Air Weight
+              </div>
+              <div class="slc-calc-val" id="calc-primary-display">80.00 kg</div>
+              
+              <div style="font-size:0.9rem; color:rgba(255,255,255,0.9); margin-top:6px;" id="calc-detail-breakdown">
+                Volumetric Weight: 80.00 kg (16.00 kg/box) vs Actual Scale Weight: 60.00 kg. Airlines bill on Volumetric Weight.
+              </div>
+              <div style="font-size:0.85rem; color:var(--slc-gold); margin-top:6px;" id="calc-rate-guideline">
+                Indicative Tier Rate: $8.50 – $10.00 / kg &bull; Estimated Freight: $680 – $800 USD (5–8 days transit)
+              </div>
+              <div style="font-size:0.75rem; color:rgba(255,255,255,0.65); margin-top:8px;">
+                *Estimates are indicative market guidelines based on verified base tiers. Final quotations depend on exact packing inspection.
+              </div>
+            </div>
+
+            <!-- Direct WhatsApp Quote Button -->
+            <a href="https://wa.me/8618248547224" target="_blank" rel="noopener noreferrer" class="slc-calc-whatsapp-btn" id="calc-whatsapp-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.03C9.36 7.03 9.09 7.1 8.87 7.33C8.65 7.57 8.02 8.16 8.02 9.36C8.02 10.56 8.9 11.72 9.02 11.89C9.15 12.06 10.76 14.54 13.22 15.6C13.81 15.85 14.26 16 14.62 16.12C15.21 16.31 15.75 16.28 16.18 16.22C16.65 16.15 17.64 15.62 17.85 15.03C18.06 14.44 18.06 13.94 18 13.83C17.94 13.72 17.77 13.66 17.52 13.54C17.27 13.41 16.05 12.81 15.82 12.73C15.6 12.64 15.43 12.6 15.27 12.85C15.1 13.1 14.63 13.66 14.49 13.83C14.35 14 14.2 14.02 13.95 13.9C13.7 13.77 12.89 13.51 11.93 12.65C11.18 11.98 10.67 11.15 10.53 10.9C10.38 10.65 10.51 10.52 10.64 10.4C10.75 10.28 10.9 10.1 11.03 9.94C11.16 9.78 11.2 9.66 11.29 9.49C11.37 9.33 11.33 9.18 11.27 9.06C11.2 8.94 10.67 7.64 10.45 7.11C10.24 6.59 10.02 6.66 9.86 6.66C9.71 6.66 9.53 7.03 9.53 7.03Z"/></svg>
+              <span>SEND CALCULATION TO WHATSAPP FOR LIVE QUOTATION</span>
+            </a>
+          </div>
+
+          <!-- ==========================================================================
+               SECTION D: AIR FREIGHT FROM CHINA TO NIGERIA
+               ========================================================================== -->
+          <h2 id="section-air-freight">3. Air Freight from China to Nigeria (Process &amp; Chargeable Weight)</h2>
+          <p>
+            When time to market directly influences your commercial profit, air freight provides the velocity required for competitive retail operations. Savelanded operates direct air cargo connections from <strong>Guangzhou Baiyun (CAN)</strong> and <strong>Shenzhen Bao'an (SZX)</strong> with scheduled arrivals at <strong>Murtala Muhammed International Airport (LOS)</strong> in Lagos.
+          </p>
+          <ul>
+            <li><strong>How Air Freight Operates:</strong> Goods are checked into our Guangzhou or Yiwu facility, inspected, packaged into reinforced master cartons, and transferred to the airport cargo terminal for export customs manifests. Freighters fly weekly into Lagos, where our airside clearing team oversees tariff assessment and transfer to our Trade Fair Complex consolidation hub.</li>
+            <li><strong>Typical Suitable Cargo:</strong> Smartphones, consumer tech, fashion apparel, boutique footwear, watches, urgent machine spare parts, medical diagnostics, and factory product samples.</li>
+            <li><strong>Actual vs. Volumetric Weight:</strong> Airlines operate on aircraft weight and volume restrictions. A bulky box of down jackets weighing only 10kg on a scale takes up the same physical cargo hold space as 30kg of phone chargers. Therefore, carriers calculate <code>Volumetric Weight = (L × W × H in cm) ÷ 6,000</code>. If the volumetric number is higher than the scale weight, freight is charged on the volumetric weight.</li>
+            <li><strong>Packaging Requirements:</strong> All air cargo cartons must be heavy-duty 5-ply corrugated export cardboard, taped securely on all seams with moisture-resistant tape, and labeled with your Savelanded Client ID in bold black waterproof marker on at least two visible faces.</li>
+            <li><strong>Delivery Timeline:</strong> Normal transit is <strong>5 to 8 working days</strong> from flight departure. Express courier delivers in <strong>3 to 5 business days</strong>.</li>
+          </ul>
+          <p>
+            For a deep dive into flight schedules and airline packing regulations, visit our dedicated <a href="air-freight.html">Air Freight from China to Nigeria</a> service page.
+          </p>
+
+          <!-- ==========================================================================
+               SECTION E: SEA FREIGHT FROM CHINA TO NIGERIA
+               ========================================================================== -->
+          <h2 id="section-sea-freight">4. Sea Freight from China to Nigeria (LCL, FCL &amp; CBM Calculation)</h2>
+          <p>
+            Maritime ocean shipping is the economic backbone of Nigeria's wholesale and manufacturing sectors. When cargo weight exceeds 200–300kg or volume exceeds 1–2 CBM, sea freight delivers massive cost savings over air freight. Savelanded coordinates regular ocean sailings from <strong>Ningbo-Zhoushan, Guangzhou (Nansha), Shenzhen (Shekou/Yantian), Shanghai, and Qingdao</strong> into Lagos seaports: <strong>Apapa Port, Tin Can Island, and Lekki Deep Sea Port</strong>.
+          </p>
+          
+          <h3>LCL (Less than Container Load / Groupage)</h3>
+          <p>
+            If your cargo does not fill an entire 20ft container, LCL groupage allows you to share container space with other verified Nigerian merchants. You pay strictly for the Cubic Meters (CBM) your cartons occupy. Savelanded securely palletizes, wraps, and loads your boxes into shared master containers, providing small-and-medium businesses with wholesale container shipping rates without large capital lock-up.
+          </p>
+
+          <h3>FCL (Full Container Load: 20ft &amp; 40ft Containers)</h3>
+          <p>
+            For large industrial factories, wholesale distributors, and commodity importers, full container load shipping provides exclusive container usage, zero co-loading risks, and maximum per-unit economy:
+          </p>
+          <ul>
+            <li><strong>20ft Standard GP Container:</strong> Holds approximately <strong>28 to 30 CBM</strong> of cargo with a payload capacity up to 25–28 tonnes. Ideal for heavy, dense cargo such as ceramic tiles, steel bolts, chemicals, or automotive spares.</li>
+            <li><strong>40ft High Cube (40HQ) Container:</strong> Holds approximately <strong>68 to 72 CBM</strong> with a maximum payload around 26–28 tonnes. Perfect for high-volume, lower-density commodities such as furniture, plastics, toys, textiles, and packaged consumer goods.</li>
+          </ul>
+          <p>
+            Review complete container specifications and berthing schedules on our <a href="sea-freight.html">Sea Freight from China to Nigeria</a> page.
+          </p>
+
+          <!-- ==========================================================================
+               SECTION F: SENSITIVE AND SPECIAL CARGO
+               ========================================================================== -->
+          <h2 id="section-sensitive-cargo">5. Sensitive and Special Cargo Handling</h2>
+          <p>
+            Not all cargo travels through standard logistics channels. Many consumer and industrial items contain components governed by international aviation hazardous goods (IATA Dangerous Goods) regulations or strict Nigerian customs import restrictions. Savelanded operates authorized, specialized sensitive cargo routes:
+          </p>
+
+          <div class="slc-table-wrap">
+            <table class="slc-spec-table">
+              <thead>
+                <tr>
+                  <th>Cargo Category</th>
+                  <th>Examples of Products Handled</th>
+                  <th>Operational Handling &amp; Documentation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Cargo Category"><strong>Lithium-Ion Batteries &amp; Power Units</strong></td>
+                  <td data-label="Examples">Power banks, solar energy storage batteries, smartphone batteries, e-scooter batteries</td>
+                  <td data-label="Operational Handling">Requires UN3480 / UN3481 Dangerous Goods declarations and booking on certified battery freighters.</td>
+                </tr>
+                <tr>
+                  <td data-label="Cargo Category"><strong>Consumer Electronics &amp; Laptops</strong></td>
+                  <td data-label="Examples">Smartphones, smartwatches, tablets, gaming consoles, laptops</td>
+                  <td data-label="Operational Handling">Packaged in electrostatic shielding and bubble-wrap; requires serial-number logging and battery declaration.</td>
+                </tr>
+                <tr>
+                  <td data-label="Cargo Category"><strong>Industrial Machinery &amp; Motors</strong></td>
+                  <td data-label="Examples">Plastic molding machines, packaging machines, printing presses, diesel generators</td>
+                  <td data-label="Operational Handling">Must be secured on heavy-duty timber skids with heat-treated, fumigated ISPM-15 wooden crating to prevent shift during transit.</td>
+                </tr>
+                <tr>
+                  <td data-label="Cargo Category"><strong>Cosmetics, Creams &amp; Pastes</strong></td>
+                  <td data-label="Examples">Skin creams, perfumes, foundation, shampoos, beauty serums</td>
+                  <td data-label="Operational Handling">Handled on dedicated liquid/chemical air routes with leak-proof inner polybags and MSDS (Material Safety Data Sheet).</td>
+                </tr>
+                <tr>
+                  <td data-label="Cargo Category"><strong>Clothing, Shoes &amp; Textiles</strong></td>
+                  <td data-label="Examples">Boutique dresses, men's suits, sports sneakers, handbags, lace fabrics</td>
+                  <td data-label="Operational Handling">Standard general cargo. High volumetric awareness required—we vacuum-compress textiles to save volume.</td>
+                </tr>
+                <tr>
+                  <td data-label="Cargo Category"><strong>Household Goods &amp; Hardware</strong></td>
+                  <td data-label="Examples">Kitchen utensils, bathroom fixtures, plumbing pipes, LED lamps</td>
+                  <td data-label="Operational Handling">General cargo. Heavy items are stacked at container floor level; fragile glassware requires reinforced outer cartons.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ==========================================================================
+               SECTION G: HOW TO BUY FROM CHINA AND SHIP TO NIGERIA (11 STEPS)
+               ========================================================================== -->
+          <h2 id="section-how-to-buy">6. How to Buy from China and Ship to Nigeria (11-Step Practical Guide)</h2>
+          <p>
+            Importing from Chinese digital wholesale platforms like <strong>1688.com</strong>, <strong>Taobao</strong>, and <strong>Alibaba</strong> is straightforward when following a structured commercial procedure. Here is our practical 11-step blueprint:
+          </p>
+
+          <div class="slc-step-grid">
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">01</div>
+              <h3 class="slc-step-card__title">Find a Supplier on 1688 or Alibaba</h3>
+              <p class="slc-step-card__desc">
+                Identify factories or verified Gold Suppliers. On 1688, look for "Powerful Merchant" (实力商家) badges indicating verified manufacturing premises.
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">02</div>
+              <h3 class="slc-step-card__title">Confirm Specifications &amp; Minimums</h3>
+              <p class="slc-step-card__desc">
+                Clarify technical specs, colors, carton packaging dimensions (L×W×H in cm), gross weight per carton, and production lead times before sending funds.
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">03</div>
+              <h3 class="slc-step-card__title">Request a Savelanded Freight Quote</h3>
+              <p class="slc-step-card__desc">
+                Use our online calculator or WhatsApp desk to check whether Air Freight or Sea Freight LCL provides better commercial profit for your order volume.
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">04</div>
+              <h3 class="slc-step-card__title">Deliver to Savelanded Warehouse</h3>
+              <p class="slc-step-card__desc">
+                Instruct your supplier to dispatch goods to our Guangzhou or Yiwu warehouse. Ensure your registered <strong>Savelanded Client ID</strong> is written on all cartons.
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">05</div>
+              <h3 class="slc-step-card__title">Receive &amp; Verify Cargo Information</h3>
+              <p class="slc-step-card__desc">
+                Our Chinese warehouse team weighs every box, measures dimensions, takes arrival photos, and confirms receipt with you on WhatsApp.
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">06</div>
+              <h3 class="slc-step-card__title">Consolidate Multiple Vendor Orders</h3>
+              <p class="slc-step-card__desc">
+                If you purchase from multiple suppliers, we hold cartons until all arrive, consolidate them into a unified shipment, and crate fragile goods.
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">07</div>
+              <h3 class="slc-step-card__title">Confirm Shipping Method &amp; Freight Invoice</h3>
+              <p class="slc-step-card__desc">
+                Confirm your preferred route (Air 5–8 days or Sea 35–45 days) and settle the invoice in Nigerian Naira (NGN), USD, or Chinese Yuan (RMB).
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">08</div>
+              <h3 class="slc-step-card__title">Complete Export Documentation</h3>
+              <p class="slc-step-card__desc">
+                Savelanded prepares Chinese export declarations, air waybills, or maritime bills of lading to ensure smooth customs clearance out of China.
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">09</div>
+              <h3 class="slc-step-card__title">Ship Cargo from China</h3>
+              <p class="slc-step-card__desc">
+                Cargo departs via scheduled freighters from Guangzhou/Shenzhen or ocean vessels from Ningbo/Nansha with active tracking milestones.
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">10</div>
+              <h3 class="slc-step-card__title">Nigeria Customs Clearance</h3>
+              <p class="slc-step-card__desc">
+                Upon arrival at Lagos Airport or Port, our licensed customs brokers clear the shipment under our master manifest without demurrage delays.
+              </p>
+            </div>
+            <div class="slc-step-card">
+              <div class="slc-step-card__num">11</div>
+              <h3 class="slc-step-card__title">Receive Cargo at Destination</h3>
+              <p class="slc-step-card__desc">
+                Pick up your cartons at our Lagos Trade Fair Complex hub, or receive door-to-door delivery in Abuja, Port Harcourt, Kano, Onitsha, Aba, or Ibadan.
+              </p>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+               SECTION H: CHINA WAREHOUSE AND SHIPPING LOCATIONS
+               ========================================================================== -->
+          <h2 id="section-china-locations">7. China Warehouse and Shipping Locations</h2>
+          <p>
+            Savelanded maintains strategically positioned operational infrastructure across China's major export hubs:
+          </p>
+
+          <div class="slc-hub-grid">
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Guangzhou Warehouse (Baiyun Hub)</h3>
+              <div class="slc-hub-card__subtitle">Room 103, Warehouse 4, Huayag Warehouse, No. 498 Qinglong Road, Shijing Street, Baiyun District</div>
+              <div class="slc-hub-card__desc">
+                Our flagship Southern China receiving hub. Located close to the Zhanxi apparel and footwear markets and Baiyun International Airport (CAN). Ideal for clothing, cosmetics, auto parts, and general air cargo consolidation.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Yiwu Office (Zhejiang Hub)</h3>
+              <div class="slc-hub-card__subtitle">16, 2nd Street, Longgang Road, Yiwu City, Zhejiang Province</div>
+              <div class="slc-hub-card__desc">
+                Directly serves importers sourcing from the world's largest wholesale hub: Yiwu International Trade City (Futian Market). Specializes in small commodities, kitchenware, hardware, jewelry, and ocean container loading via Ningbo port.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Shenzhen Logistics Corridor</h3>
+              <div class="slc-hub-card__subtitle">Huaqiangbei &amp; Bao'an Tech Corridor</div>
+              <div class="slc-hub-card__desc">
+                Direct pickup and consolidation for consumer electronics, solar systems, and lithium battery devices manufactured in Shenzhen, Dongguan, and Huizhou. Departs via Bao'an Airport (SZX) and Shekou container terminals.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Ningbo &amp; Shanghai Gateways</h3>
+              <div class="slc-hub-card__subtitle">East China Heavy Industry Ports</div>
+              <div class="slc-hub-card__desc">
+                The world's highest-volume container ports. We stage full container loads (FCL) of industrial machinery, construction materials, hardware, and raw manufacturing supplies originating across Jiangsu and Zhejiang provinces.
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+               SECTION I: SHIPPING DESTINATIONS IN NIGERIA
+               ========================================================================== -->
+          <h2 id="section-nigeria-destinations">8. Shipping Destinations in Nigeria</h2>
+          <p>
+            Understanding the distinction between <strong>port/airport arrival</strong>, <strong>customs clearance</strong>, and <strong>final delivery</strong> is essential for realistic logistics planning:
+          </p>
+          <ul>
+            <li><strong>Step 1: Arrival &amp; Discharge:</strong> International vessels dock at Lagos seaports (Apapa, Tin Can Island, Lekki Deep Sea Port) and cargo flights land at Murtala Muhammed International Airport (LOS) in Ikeja, Lagos.</li>
+            <li><strong>Step 2: Customs Clearance:</strong> All cargo enters bonded customs examination sheds where import tariffs, terminal handling dues, and inspection releases are finalized.</li>
+            <li><strong>Step 3: Transfer to Central Consolidation Hub:</strong> Cleared goods are transferred securely to Savelanded's primary deconsolidation depot at the <strong>Trade Fair Complex, Badagry Expressway, Lagos</strong>.</li>
+            <li><strong>Step 4: Self-Collection or Nationwide On-Forwarding:</strong> Lagos clients can inspect and pick up their goods in person, or request onward doorstep delivery to other Nigerian commercial cities:</li>
+          </ul>
+
+          <div class="slc-hub-grid">
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Lagos Hub (Trade Fair Complex)</h3>
+              <div class="slc-hub-card__subtitle">Central Pickup &amp; Same-Day Local Delivery</div>
+              <div class="slc-hub-card__desc">
+                Zone B, Shop 13/14, 23/24, Edo Plaza, Balogun, Trade Fair Complex, Badagry Expressway, Ojo, Lagos. Open Monday–Saturday for self-collection or rapid delivery across Ikeja, Alaba, Idumota, and Lekki.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Abuja (FCT)</h3>
+              <div class="slc-hub-card__subtitle">24 to 48 Hour Road Haulage</div>
+              <div class="slc-hub-card__desc">
+                Tracked transit from Lagos to commercial hubs across Wuse 2, Garki, Utako, and the Idu Industrial Layout with dedicated secure haulage trucks.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Port Harcourt &amp; Niger Delta</h3>
+              <div class="slc-hub-card__subtitle">Rivers State &amp; Industrial Districts</div>
+              <div class="slc-hub-card__desc">
+                Direct dispatch to Trans-Amadi Industrial Layout, Mile 1 Market, and commercial engineering zones across Port Harcourt, Warri, and Asaba.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Kano (Northern Hub)</h3>
+              <div class="slc-hub-card__subtitle">Kantin Kwari, Dawanau &amp; Sabon Gari</div>
+              <div class="slc-hub-card__desc">
+                Connecting China manufacturers with Northern Nigeria's textile, commodity, and hardware wholesale networks in Kano and Kaduna.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Onitsha (Anambra State)</h3>
+              <div class="slc-hub-card__subtitle">Onitsha Main Market &amp; Bridgehead</div>
+              <div class="slc-hub-card__desc">
+                Dedicated daily lines to the wholesale pharmaceutical, plumbing, electrical, and hardware distribution hubs of Onitsha Main Market.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title">Aba &amp; Ibadan</h3>
+              <div class="slc-hub-card__subtitle">Ariaria Market &amp; Gbagi Wholesale</div>
+              <div class="slc-hub-card__desc">
+                Direct distribution to the shoe and leather manufacturing clusters of Ariaria in Aba, and the wholesale textile and retail traders of Dugbe and Gbagi in Ibadan.
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+               SECTION J: NIGERIAN CUSTOMS AND IMPORT REQUIREMENTS
+               ========================================================================== -->
+          <h2 id="section-customs-requirements">9. Nigerian Customs and Import Requirements</h2>
+          <p>
+            Commercial imports into Nigeria must comply with regulatory standards established by the Central Bank of Nigeria (CBN), Nigeria Customs Service (NCS), Standards Organisation of Nigeria (SON), and NAFDAC. Requirements vary based on shipment type:
+          </p>
+
+          <h3>Statutory Documentation for Formal Container Imports (FCL)</h3>
+          <ul>
+            <li><strong>Commercial Invoice &amp; Packing List:</strong> Itemized details of goods, unit values, HS codes, and carton breakdown issued by the Chinese vendor.</li>
+            <li><strong>Bill of Lading (B/L) or Air Waybill (AWB):</strong> Official contract of carriage issued by the shipping line or airline carrier.</li>
+            <li><strong>e-Form M:</strong> Mandatory import application submitted through an Authorized Dealer Bank via the Nigeria Single Window for Trade before goods are shipped.</li>
+            <li><strong>Pre-Arrival Assessment Report (PAAR):</strong> Issued electronically by Nigeria Customs Service calculating payable import duties and statutory taxes.</li>
+            <li><strong>SONCAP Certificate (SON):</strong> Mandatory conformity assessment verifying product safety for manufactured items, electricals, and building supplies. Requires an initial Product Certificate (PC).</li>
+            <li><strong>NAFDAC Permits:</strong> Compulsory for packaged food, medical products, cosmetics, and specialty chemicals.</li>
+          </ul>
+
+          <div class="slc-callout">
+            <strong>How Savelanded DDP Groupage Eliminates Documentation Friction:</strong><br>
+            If you are importing via our <strong>Delivered Duty Paid (DDP) Groupage</strong> service, Savelanded clears your cargo under our corporate master trade manifest. You do not need to open an individual Form M or obtain separate PAAR documentation. We manage customs tariffs, inspections, and port clearances on your behalf, allowing you to focus on your core business.
+          </div>
+
+          <!-- ==========================================================================
+               SECTION K: PROBLEMS AND PRACTICAL SOLUTIONS
+               ========================================================================== -->
+          <h2 id="section-problems-solutions">10. Problems and Practical Solutions (Troubleshooting Common Concerns)</h2>
+          <p>
+            International trade between China and Nigeria involves real-world complexities. Here is how Savelanded resolves the ten most common importer concerns:
+          </p>
+
+          <div class="slc-hub-grid">
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">1. Supplier Refuses to Deliver to Warehouse</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> Some Chinese suppliers operate on Ex-Works (EXW) terms and refuse local delivery. Savelanded coordinates domestic Chinese couriers (SF Express, ZTO, Deppon) or sends our truck to pick up directly from the factory.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">2. Goods Arrive in Multiple Separate Packages</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> When 1688 sellers ship items across several tracking numbers, our Guangzhou and Yiwu teams log each parcel under your Client ID, hold them safely in free storage, and consolidate them into one shipment.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">3. Cargo Dimensions and CBM Are Unknown</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> You do not need exact measurements before ordering. Once your supplier's cartons arrive at our warehouse, we measure exact dimensions (L×W×H) and scale weight with calibrated digital tools and send you verified photos.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">4. Supplier Provides Incorrect Carton Information</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> Chinese factories often estimate carton weights loosely. Our receiving team performs an independent physical audit to verify actual carton counts, weights, and condition, shielding you from supplier billing errors.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">5. Cargo Flight or Vessel Delays Occur</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> Bad weather or seasonal airline bottlenecks can cause temporary schedule adjustments. Savelanded provides transparent, proactive WhatsApp updates so you are never left guessing about arrival milestones.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">6. Goods Require Special Packaging / Crating</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> Fragile items like televisions, mirrors, solar panels, and precision machinery are crated in solid, fumigated timber frames at our warehouse before international loading.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">7. Customer Does Not Understand CBM Calculations</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> Our interactive CBM calculator does the math for you. Simply enter carton length, width, height, and count. Our logistics desk also provides transparent, worked pricing breakdowns on WhatsApp.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">8. Undecided Between Air and Sea Freight</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> Our team evaluates your cargo urgency and profit margin: if goods are lightweight or needed within 10 days, air freight is recommended; if heavy or high-volume wholesale, sea freight is chosen to save up to 80% on freight.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">9. Concerns About Unexpected Customs Demurrage</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> With Savelanded DDP groupage, all terminal dues and customs charges are locked in at your quoted per-kg or per-CBM price. You will never encounter unexpected terminal extortion or demurrage invoices.
+              </div>
+            </div>
+
+            <div class="slc-hub-card">
+              <h3 class="slc-hub-card__title" style="font-size:1.05rem;">10. Customer Wants Real-Time Shipment Updates</h3>
+              <div class="slc-hub-card__desc">
+                <strong>Solution:</strong> We provide milestone tracking at key stages: warehouse receiving in China, export clearance, flight departure / vessel sailing, Lagos customs arrival, and release at our Trade Fair hub.
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+               SECTION L: WHY CHOOSE SAVELANDED?
+               ========================================================================== -->
+          <h2 id="section-why-choose">11. Why Choose Savelanded? (Operational Capabilities &amp; Case Studies)</h2>
+          <p>
+            When choosing a freight forwarder between China and Nigeria, rates alone do not guarantee a successful delivery. Importers choose Savelanded because of our on-the-ground presence, communication, and genuine operational integrity:
+          </p>
+          <ul>
+            <li><strong>Direct Physical Presence in China &amp; Nigeria:</strong> We operate active offices in Yiwu (Longgang Rd) and Guangzhou (Huayag Warehouse, Baiyun) alongside our Nigerian commercial hub at the Trade Fair Complex in Lagos.</li>
+            <li><strong>RMB Supplier Payments Assistance:</strong> Overcome foreign exchange restrictions and virtual card limits. Savelanded accepts Naira or USD and pays your Chinese suppliers directly in Chinese Yuan (RMB) via official banking channels.</li>
+            <li><strong>Free Cargo Consolidation:</strong> We combine packages from multiple Chinese vendors into unified shipments, reducing dead volumetric space and saving our clients thousands of dollars each month.</li>
+            <li><strong>Quote Transparency:</strong> We never quote artificially low rates only to invent hidden clearing fees or storage surcharges upon arrival in Lagos. What we quote is what you pay.</li>
+            <li><strong>Direct Access to Leadership:</strong> You are not passed between call-center bots. You have direct WhatsApp access to CEO Wolex (+86 182 4854 7224) in China and Nigeria Desk Lead Chibueze (+234 803 803 7353) in Lagos.</li>
+          </ul>
+
+          <h3>Authentic Customer Case Studies</h3>
+          <div class="slc-case-grid">
+            <div class="slc-case-card">
+              <div class="slc-case-card__quote">
+                "Importing electronics from Huaqiangbei in Shenzhen used to be a nightmare of customs delays and hidden clearing fees at Tin Can Island. Switching to Savelanded's 40ft container service gave us total predictability. Our container arrived in Lagos within 38 days, and clearing took less than a week without demurrage."
+              </div>
+              <div class="slc-case-card__client">Chinedu Okafor</div>
+              <div class="slc-case-card__role">Managing Director, Trade Fair Electronics Wholesale &bull; Lagos</div>
+            </div>
+
+            <div class="slc-case-card">
+              <div class="slc-case-card__quote">
+                "I run a women's fashion boutique in Wuse 2, Abuja. I order from 8 different 1688 factories each week. Savelanded receives all my small parcels in Guangzhou, consolidates them into a single 75kg box, and flies them to Lagos in 6 days. Then Chibueze ships it straight to my shop in Abuja. My profit margins have grown by over 30%."
+              </div>
+              <div class="slc-case-card__client">Aisha Bello</div>
+              <div class="slc-case-card__role">Creative Director &bull; Wuse 2, Abuja</div>
+            </div>
+
+            <div class="slc-case-card">
+              <div class="slc-case-card__quote">
+                "I import plumbing fixtures and hardware from Yiwu to Onitsha Main Market. Savelanded's sea groupage (LCL) is the most transparent service I have used. They charge strictly per CBM without hidden port charges. Star in China inspects my boxes before loading, so I never receive broken goods."
+              </div>
+              <div class="slc-case-card__client">Samuel Adeyemi</div>
+              <div class="slc-case-card__role">Principal Merchant, Hardware Imports &bull; Onitsha, Anambra</div>
+            </div>
+          </div>
+
+          <!-- ==========================================================================
+               SECTION M: FAQS (ALL 18 QUESTIONS)
+               ========================================================================== -->
+          <div class="slc-faq-subpage" id="section-faqs">
+            <h2>12. Frequently Asked Questions (Shipping from China to Nigeria)</h2>
+            <p style="color:var(--slc-gray-700); margin-bottom:20px;">
+              Direct, transparent answers to the 18 most critical questions about shipping rates, methods, customs clearance, and delivery across Nigeria.
+            </p>
+            
+            <div class="slc-faq-item">
+              <details>
+                <summary>1. How much does it cost to ship from China to Nigeria?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Shipping costs depend on the shipping method, weight, volume, and cargo nature. Air freight generally ranges between $7.80 and $13.50 per kg depending on total weight tier (higher volume qualifies for lower per-kg rates), plus local clearance. Sea freight LCL (groupage) is billed per Cubic Meter (CBM), typically starting from $180 to $280 per CBM for general merchandise, with full 20ft and 40ft container ocean baselines ranging from $2,800 to $4,800 depending on season. Savelanded maintains the exact same transparent base pricing structure as leading market providers like Dechaser, competing through superior operational transparency, customer care, and cargo safety.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>2. How much does it cost to ship 1kg from China to Nigeria?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>For small parcel air cargo under 10kg, rates typically range between $11.50 and $13.50 per kg for general goods, and $13.50 to $15.50 per kg for sensitive items containing batteries. Shipments are subject to a minimum parcel handling charge. Destination clearing in Lagos is either bundled or assessed at approximately ₦1,200 per kg.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>3. How long does air freight take?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Standard air freight from Guangzhou or Shenzhen to Lagos (Murtala Muhammed International Airport) typically takes 5 to 8 working days from flight departure. Express courier options take approximately 3 to 5 business days for urgent commercial samples and documents.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>4. How long does sea freight take?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Ocean freight sailing time from major Chinese ports (Ningbo-Zhoushan, Guangzhou Nansha, Shenzhen Shekou, Shanghai, Qingdao) to Lagos ports (Apapa, Tin Can Island, Lekki Deep Sea Port) takes approximately 35 to 45 sailing days. Terminal discharge and customs clearance typically require an additional 5 to 10 working days.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>5. Is air freight cheaper than sea freight?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>No. For commercial volume and heavy goods, sea freight is drastically more cost-effective than air freight—frequently saving importers 70% to 85% per unit. Air freight is only cheaper in total dollar spend for very small, lightweight packages (under 15–20kg) where paying for the minimum ocean CBM space would not be economical.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>6. What is the minimum shipping weight?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>For air cargo, Savelanded accepts commercial shipments starting from 1kg (billed at the minimum parcel tier threshold). For ocean freight LCL (groupage), our minimum accepted volume starts from as low as 0.1 CBM, allowing growing importers to access economical sea shipping without waiting to fill a full container.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>7. What is CBM?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>CBM stands for Cubic Meter (m³). It is the standard international metric unit used in ocean freight to measure cargo volume. One CBM equals a cube that measures 1 meter long, 1 meter wide, and 1 meter high (100cm × 100cm × 100cm = 1,000,000 cubic centimeters).</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>8. How do I calculate shipping volume?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>To calculate volume in CBM: multiply carton Length (cm) × Width (cm) × Height (cm), then divide by 1,000,000, and multiply by the total number of cartons. For example: 10 cartons measuring 60cm × 40cm × 50cm = (60 × 40 × 50 ÷ 1,000,000) × 10 = 1.20 CBM. You can use our on-page interactive CBM calculator for instant calculations.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>9. Can I combine goods from different suppliers?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Yes! Cargo consolidation is one of Savelanded's core specialties. You can order from 5, 10, or 20 different suppliers across 1688, Alibaba, or Taobao and have them deliver to our Guangzhou or Yiwu warehouse marked with your Client ID. We hold all packages, verify carton integrity, combine them into a single master shipment, and crate fragile goods, saving you up to 35% in dead freight charges.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>10. Can I ship goods from 1688 to Nigeria?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Absolutely. 1688 is China's largest domestic wholesale platform. You can either purchase directly and use our warehouse address for delivery, or engage Savelanded's Procurement Desk: provide your product links, pay us in Nigerian Naira (NGN) or USD, and we will settle the 1688 Chinese factory directly in Chinese Yuan (RMB) on your behalf.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>11. Can I ship batteries from China to Nigeria?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Yes. Savelanded operates dedicated sensitive cargo channels for products containing built-in lithium-ion batteries (smartphones, power banks, solar energy systems, laptops). These shipments require specialized airline hazard classifications and are routed on authorized dangerous goods (DG) flights and sea vessels.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>12. Can Savelanded help with customs clearance?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Yes. Savelanded provides comprehensive customs brokerage at Lagos Seaports (Apapa, Tin Can Island, Lekki Deep Sea Port) and Murtala Muhammed Airport (LOS). We manage documentation for formal commercial containers (Form M, PAAR, SONCAP) and offer all-inclusive DDP groupage where customs clearing and terminal duties are bundled into your per-kg or per-CBM rate.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>13. Does Savelanded provide door-to-door delivery?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Yes. We offer Delivered Duty Paid (DDP) door-to-door service. You can collect your cleared cargo directly from our Lagos consolidation hub at the Trade Fair Complex, or request onward doorstep delivery to your warehouse, store, or residence in Lagos, Abuja, Port Harcourt, Kano, Onitsha, Aba, Ibadan, or any of Nigeria's 36 states.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>14. Which cities in Nigeria can receive cargo?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>While international vessels and cargo flights arrive in Lagos, Savelanded provides secure, tracked interstate delivery to all major commercial centers across Nigeria, including Abuja (FCT), Port Harcourt (Rivers State), Kano, Onitsha (Anambra State), Aba (Abia State), Ibadan (Oyo State), Kaduna, Asaba, Benin City, and Warri.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>15. How do I get a shipping quotation?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>You can generate an instant estimate using our interactive rate calculator on this page, submit our online Quote Request form, or click the WhatsApp button to chat directly with CEO Wolex (+86 182 4854 7224) or our Nigeria Operations Lead Chibueze (+234 803 803 7353). Please provide carton dimensions, gross weight, cargo description, origin city, and destination.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>16. What documents do I need to import goods?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>For formal full container imports (FCL), Nigeria Customs Service requires an e-Form M, Pre-Arrival Assessment Report (PAAR), Bill of Lading, Commercial Invoice, Packing List, and a SONCAP Certificate (or NAFDAC permit for food/cosmetics/chemicals). However, for consolidated DDP groupage shipments with Savelanded, we clear your goods under our corporate trade master manifest, eliminating individual documentation complexity for you.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>17. Are customs duties included in shipping prices?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Under our Delivered Duty Paid (DDP) shipping service, customs duties, port handling charges, and terminal clearing fees are 100% included in the quoted per-kg or per-CBM price. For port-to-port ocean container shipping (FCL), statutory government customs duties and terminal dues are assessed separately based on your PAAR valuation.</p>
+                </div>
+              </details>
+            </div>
+
+            <div class="slc-faq-item">
+              <details>
+                <summary>18. Can I ship commercial and personal goods?</summary>
+                <div class="slc-faq-item__answer">
+                  <p>Yes. Savelanded handles both large commercial wholesale shipments for retailers and manufacturers as well as personal cargo, household goods, e-commerce orders, and business samples.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <!-- Reviewer & Authority Badge -->
+          <div class="slc-reviewer-badge" style="margin-top:36px;">
+            <div class="slc-reviewer-avatar">WO</div>
+            <div>
+              <strong>Verified by Savelanded International Freight Operations Desk</strong> &bull; China–Nigeria Trade Authority<br>
+              <span style="font-size:0.8rem; color:#718096;">Headquartered in Yiwu &amp; Guangzhou, China &bull; Nigerian Deconsolidation Hub at Trade Fair Complex, Lagos</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside>
+          <div class="slc-sidebar-card">
+            <h3 class="slc-sidebar-heading">All Trade Services</h3>
+            <ul class="slc-sidebar-nav">
+              <li><a href="air-freight.html" class="slc-sidebar-nav__link"><span>Air Freight from China</span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+              <li><a href="sea-freight.html" class="slc-sidebar-nav__link"><span>Sea Freight (FCL / LCL)</span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+              <li><a href="product-sourcing.html" class="slc-sidebar-nav__link"><span>Product Sourcing &amp; Vetting</span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+              <li><a href="procurement.html" class="slc-sidebar-nav__link"><span>Purchasing &amp; RMB Procurement</span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+              <li><a href="warehousing.html" class="slc-sidebar-nav__link"><span>Warehousing &amp; Consolidation</span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+              <li><a href="customs-clearance.html" class="slc-sidebar-nav__link"><span>Customs Clearance &amp; Documentation</span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+              <li><a href="import-export.html" class="slc-sidebar-nav__link"><span>International Import &amp; Export</span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+              <li><a href="door-to-door.html" class="slc-sidebar-nav__link"><span>Door-to-Door Delivery</span><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
+            </ul>
+          </div>
+
+          <div class="slc-sidebar-card slc-sidebar-card--dark">
+            <div style="font-family:var(--slc-font-head); font-size:1.15rem; font-weight:700; color:var(--slc-gold); margin-bottom:12px;">Instant China Cargo Support</div>
+            <p style="font-size:0.9rem; color:rgba(255,255,255,0.75); line-height:1.6; margin-bottom:20px;">
+              Connect directly with our China logistics directors or Nigerian clearing desk for live freight quotes, warehouse addresses, and factory payments.
+            </p>
+            <div style="display:flex; flex-direction:column; gap:12px;">
+              <a href="https://wa.me/8618248547224" target="_blank" rel="noopener noreferrer" class="slc-btn" style="width:100%; justify-content:center; background:#25D366; color:#ffffff;">
+                <span>WHATSAPP CEO WOLEX</span>
+              </a>
+              <a href="tel:+2348038037353" class="slc-btn slc-btn-gold" style="width:100%; justify-content:center;">
+                <span>CALL CHIBUEZE (NIGERIA)</span>
+              </a>
+              <a href="quote.html" class="slc-btn slc-btn-outline-gold" style="width:100%; justify-content:center;">
+                <span>REQUEST WRITTEN QUOTE</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- High-Impact Dual Action Section -->
+  <section class="slc-cta">
+    <div class="slc-container slc-cta__inner">
+      <span class="slc-cta__pill">Reliable China–Nigeria Trade Corridor</span>
+      <h2 class="slc-cta__title">
+        Ready to Ship <em>Without Clearance Delays</em> or Hidden Fees?
+      </h2>
+      <p class="slc-cta__desc">
+        Join hundreds of Nigerian wholesalers, manufacturers, and e-commerce leaders who rely on Savelanded for safe cargo consolidation in Guangzhou and Yiwu, transparent rates, and dependable doorstep delivery.
+      </p>
+      <div class="slc-cta__actions">
+        <a href="quote.html" class="slc-btn slc-btn-gold">
+          <span>REQUEST A SHIPPING QUOTE</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://wa.me/8618248547224" target="_blank" rel="noopener noreferrer" class="slc-btn" style="background:#25D366; color:#ffffff;">
+          <span>DIRECT WHATSAPP WITH CEO WOLEX</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="slc-footer">
+    <div class="slc-container">
+      
+      <div class="slc-footer__grid">
+        <div>
+          <a href="index.html" class="slc-footer__logo-wrap">
+            <div class="slc-footer__logo-img">
+              <img src="logo.jpg" alt="Savelanded Import and Export Company Limited Official Logo" width="48" height="48" loading="lazy" onerror="this.style.display='none'">
+            </div>
+            <div>
+              <div class="slc-footer__brand-title">SAVELANDED</div>
+              <div style="font-size:0.6875rem; color:var(--slc-copper); letter-spacing:0.1em; text-transform:uppercase;">Import &amp; Export Co. Ltd</div>
+            </div>
+          </a>
+          <p class="slc-footer__desc">
+            Reliable China–Nigeria sourcing, procurement, and international logistics connecting trusted Chinese suppliers with businesses across Nigeria.
+          </p>
+          <div style="font-family:var(--slc-font-head); font-size:0.75rem; font-weight:700; color:var(--slc-gold); letter-spacing:0.12em; text-transform:uppercase;">
+            Connecting China to Nigeria. Simplifying Global Trade.
+          </div>
+
+          <div class="slc-footer__social-links" style="display:flex; gap:12px; margin-top:20px; align-items:center;">
+            <a href="https://web.facebook.com/people/Savelanded-Import-Export-Company-LTD/61584779115044" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.08); color:#ffffff;" title="Follow Savelanded on Facebook">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/savelanded_impexp_comltd" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.08); color:#ffffff;" title="Follow Savelanded on Instagram">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@savelandedcompany" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.08); color:#ffffff;" title="Follow Savelanded on TikTok">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+            <a href="https://share.google/F4xa5WqkFDpGopYkM" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.08); color:#ffffff;" title="View Savelanded on Google Business Profile">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="slc-footer__heading">Quick Navigation</h3>
+          <ul class="slc-footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Savelanded</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="shipping.html">Shipping from China</a></li>
+            <li><a href="contact.html">Office Locations</a></li>
+            <li><a href="quote.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="slc-footer__heading">Services Directory</h3>
+          <ul class="slc-footer__links">
+            <li><a href="air-freight.html">Air Freight from China</a></li>
+            <li><a href="sea-freight.html">Sea Freight from China</a></li>
+            <li><a href="product-sourcing.html">Product Sourcing &amp; Vetting</a></li>
+            <li><a href="procurement.html">Purchasing &amp; Procurement</a></li>
+            <li><a href="warehousing.html">Warehousing Consolidation</a></li>
+            <li><a href="customs-clearance.html">Customs Clearance</a></li>
+            <li><a href="import-export.html">Import &amp; Export</a></li>
+            <li><a href="door-to-door.html">Door-to-Door Delivery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="slc-footer__heading">Business Contacts</h3>
+          <div class="slc-footer__office-block">
+            <div class="slc-footer__office-city">Yiwu Head Office (China)</div>
+            <div class="slc-footer__office-text">16, 2nd Street, Longgang Road, Yiwu City, Zhejiang Province.</div>
+          </div>
+          <div class="slc-footer__office-block">
+            <div class="slc-footer__office-city">Guangzhou Warehouse Branch</div>
+            <div class="slc-footer__office-text">Room 103, Warehouse 4, Huayag Warehouse, No. 498 Qinglong Road, Shijing Street, Baiyun District.</div>
+          </div>
+          <div class="slc-footer__office-block">
+            <div class="slc-footer__office-city">Lagos Second Branch (Nigeria)</div>
+            <div class="slc-footer__office-text">Zone B, Shop 13/14, 23/24, Edo Plaza, Balogun, Trade Fair Complex, Badagry Expressway, Ojo, Lagos.</div>
+          </div>
+          <div class="slc-footer__phones">
+            <a href="tel:+2348038037353">Nigeria Desk (Chibueze): +234 803 803 7353</a>
+            <a href="https://wa.me/8618248547224" target="_blank" rel="noopener noreferrer" style="color:#25D366; font-weight:700;">WhatsApp Hotline: +86 182 4854 7224</a>
+            <a href="tel:+8618248547224">CEO Wolex: +86 182 4854 7224</a>
+            <a href="tel:+8615757991458">Procurement (Star): +86 157 5799 1458</a>
+            <a href="mailto:admsavelandedimpexpcomltd@gmail.com">admsavelandedimpexpcomltd@gmail.com</a>
+            <a href="mailto:info@savelandedcompany.com">info@savelandedcompany.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slc-footer__bottom">
+        <div>
+          &copy; 2026 Savelanded Import and Export Company Limited. All rights reserved.
+        </div>
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+          <a href="about.html">Corporate Profile</a>
+          <a href="contact.html">Global Hubs</a>
+          <a href="quote.html">Instant Rates</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Unified Mobile Drawer JavaScript -->
+  <script>
+    (function() {
+      'use strict';
+      var toggle = document.getElementById('slc-menu-toggle');
+      var drawer = document.getElementById('slc-mobile-drawer');
+      var overlay = document.getElementById('slc-overlay');
+      var closeBtn = document.getElementById('slc-menu-close');
+
+      function openDrawer() {
+        if (drawer && overlay) {
+          drawer.classList.add('is-open');
+          overlay.classList.add('is-open');
+          overlay.classList.add('is-visible');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeDrawer() {
+        if (drawer && overlay) {
+          drawer.classList.remove('is-open');
+          overlay.classList.remove('is-open');
+          overlay.classList.remove('is-visible');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (toggle) toggle.addEventListener('click', openDrawer);
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (overlay) overlay.addEventListener('click', closeDrawer);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeDrawer();
+      });
+    })();
+  </script>
+
+  <!-- Independent Dual Calculator Engine with Dynamic WhatsApp Integration -->
+  <script>
+    var calcMode = 'air';
+
+    function setCalculatorMode(mode) {
+      calcMode = mode;
+      var btnAir = document.getElementById('tab-air');
+      var btnSea = document.getElementById('tab-sea');
+      var airWeightGroup = document.getElementById('calc-air-weight-group');
+      var summaryTitle = document.getElementById('calc-summary-title');
+      var pkgHeading = document.getElementById('calc-package-heading');
+
+      if (mode === 'air') {
+        btnAir.classList.add('is-active');
+        btnSea.classList.remove('is-active');
+        if (airWeightGroup) airWeightGroup.style.display = 'block';
+        summaryTitle.textContent = 'Calculated Chargeable Air Weight';
+        pkgHeading.textContent = 'Package Dimensions for Air Freight (Centimetres)';
+      } else {
+        btnSea.classList.add('is-active');
+        btnAir.classList.remove('is-active');
+        if (airWeightGroup) airWeightGroup.style.display = 'none';
+        summaryTitle.textContent = 'Calculated Total Ocean Volume (CBM)';
+        pkgHeading.textContent = 'Package Dimensions for Sea Freight (Centimetres)';
+      }
+      calculateFreight();
+    }
+
+    function calculateFreight() {
+      var l = Math.max(1, parseFloat(document.getElementById('calc-l').value) || 0);
+      var w = Math.max(1, parseFloat(document.getElementById('calc-w').value) || 0);
+      var h = Math.max(1, parseFloat(document.getElementById('calc-h').value) || 0);
+      var qty = Math.max(1, parseFloat(document.getElementById('calc-qty').value) || 1);
+      var scaleWeightPerBox = Math.max(0.1, parseFloat(document.getElementById('calc-weight').value) || 0);
+      var origin = document.getElementById('calc-origin').value;
+      var dest = document.getElementById('calc-dest').value;
+      var category = document.getElementById('calc-category').value;
+
+      var primaryDisplay = document.getElementById('calc-primary-display');
+      var detailBreakdown = document.getElementById('calc-detail-breakdown');
+      var rateGuideline = document.getElementById('calc-rate-guideline');
+      var whatsappLink = document.getElementById('calc-whatsapp-link');
+
+      var totalVolumeCm3 = l * w * h * qty;
+      var totalCBM = totalVolumeCm3 / 1000000;
+      var singleBoxCBM = (l * w * h) / 1000000;
+      var quoteMessage = '';
+
+      if (calcMode === 'air') {
+        var volumetricWeightPerBox = (l * w * h) / 6000;
+        var totalVolWeight = volumetricWeightPerBox * qty;
+        var totalScaleWeight = scaleWeightPerBox * qty;
+        var chargeableWeight = Math.max(totalVolWeight, totalScaleWeight);
+        var isVolumetricBilled = totalVolWeight > totalScaleWeight;
+
+        primaryDisplay.textContent = chargeableWeight.toFixed(2) + ' kg';
+        detailBreakdown.textContent = 'Volumetric Weight: ' + totalVolWeight.toFixed(2) + ' kg (' + volumetricWeightPerBox.toFixed(2) + ' kg/box) vs Actual Scale Weight: ' + totalScaleWeight.toFixed(2) + ' kg. Billed on ' + (isVolumetricBilled ? 'Volumetric Weight' : 'Actual Weight') + '.';
+
+        // Estimated Air Pricing
+        var estLow = 0;
+        var estHigh = 0;
+        var isSensitive = (category.indexOf('Sensitive') !== -1);
+
+        if (chargeableWeight <= 10) {
+          estLow = chargeableWeight * (isSensitive ? 13.50 : 11.50);
+          estHigh = chargeableWeight * (isSensitive ? 15.50 : 13.50);
+        } else if (chargeableWeight <= 45) {
+          estLow = chargeableWeight * (isSensitive ? 11.50 : 9.50);
+          estHigh = chargeableWeight * (isSensitive ? 13.50 : 11.50);
+        } else if (chargeableWeight <= 100) {
+          estLow = chargeableWeight * (isSensitive ? 10.50 : 8.50);
+          estHigh = chargeableWeight * (isSensitive ? 12.00 : 10.00);
+        } else {
+          estLow = chargeableWeight * (isSensitive ? 9.80 : 7.80);
+          estHigh = chargeableWeight * (isSensitive ? 11.20 : 9.20);
+        }
+
+        rateGuideline.textContent = 'Indicative Air Range: $' + estLow.toFixed(0) + ' – $' + estHigh.toFixed(0) + ' USD &bull; Transit: 5–8 working days (CAN/SZX to LOS)';
+
+        quoteMessage = 'Hello Savelanded! I would like an Air Freight quotation:%0A' +
+          '• Mode: Air Freight (5-8 working days)%0A' +
+          '• Origin: ' + encodeURIComponent(origin) + '%0A' +
+          '• Destination: ' + encodeURIComponent(dest) + '%0A' +
+          '• Category: ' + encodeURIComponent(category) + '%0A' +
+          '• Dimensions: ' + l + 'x' + w + 'x' + h + ' cm (' + qty + ' boxes)%0A' +
+          '• Chargeable Weight: ' + chargeableWeight.toFixed(2) + ' kg (Vol: ' + totalVolWeight.toFixed(2) + 'kg, Scale: ' + totalScaleWeight.toFixed(2) + 'kg)%0A' +
+          'Please send me the live rate and warehouse receiving instructions.';
+      } else {
+        // Sea Freight Mode (strictly independent)
+        var billableCBM = Math.max(0.1, totalCBM);
+        primaryDisplay.textContent = billableCBM.toFixed(2) + ' CBM';
+        detailBreakdown.textContent = 'Single Box Volume: ' + singleBoxCBM.toFixed(3) + ' CBM. Total Consignment (' + qty + ' cartons): ' + totalCBM.toFixed(2) + ' CBM. (Minimum billable: 0.1 CBM).';
+
+        var seaRateLow = (category.indexOf('Sensitive') !== -1) ? 260 : 180;
+        var seaRateHigh = (category.indexOf('Sensitive') !== -1) ? 360 : 280;
+        var estSeaLow = billableCBM * seaRateLow;
+        var estSeaHigh = billableCBM * seaRateHigh;
+
+        rateGuideline.textContent = 'Indicative Sea LCL Range: $' + estSeaLow.toFixed(0) + ' – $' + estSeaHigh.toFixed(0) + ' USD &bull; Sailing: 35–45 days to Lagos Port';
+
+        quoteMessage = 'Hello Savelanded! I would like a Sea Freight LCL quotation:%0A' +
+          '• Mode: Sea Freight LCL (35-45 sailing days)%0A' +
+          '• Origin: ' + encodeURIComponent(origin) + '%0A' +
+          '• Destination: ' + encodeURIComponent(dest) + '%0A' +
+          '• Category: ' + encodeURIComponent(category) + '%0A' +
+          '• Dimensions: ' + l + 'x' + w + 'x' + h + ' cm (' + qty + ' boxes)%0A' +
+          '• Total Volume: ' + billableCBM.toFixed(2) + ' CBM%0A' +
+          'Please send me the live CBM rate and container sailing schedule.';
+      }
+
+      if (whatsappLink) {
+        whatsappLink.href = 'https://wa.me/8618248547224?text=' + quoteMessage;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      calculateFreight();
+    });
+  </script>
+
+  <!-- Floating WhatsApp Direct Chat Widget -->
+  <a href="https://wa.me/8618248547224" class="slc-float-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with Savelanded on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.03C9.36 7.03 9.09 7.1 8.87 7.33C8.65 7.57 8.02 8.16 8.02 9.36C8.02 10.56 8.9 11.72 9.02 11.89C9.15 12.06 10.76 14.54 13.22 15.6C13.81 15.85 14.26 16 14.62 16.12C15.21 16.31 15.75 16.28 16.18 16.22C16.65 16.15 17.64 15.62 17.85 15.03C18.06 14.44 18.06 13.94 18 13.83C17.94 13.72 17.77 13.66 17.52 13.54C17.27 13.41 16.05 12.81 15.82 12.73C15.6 12.64 15.43 12.6 15.27 12.85C15.1 13.1 14.63 13.66 14.49 13.83C14.35 14 14.2 14.02 13.95 13.9C13.7 13.77 12.89 13.51 11.93 12.65C11.18 11.98 10.67 11.15 10.53 10.9C10.38 10.65 10.51 10.52 10.64 10.4C10.75 10.28 10.9 10.1 11.03 9.94C11.16 9.78 11.2 9.66 11.29 9.49C11.37 9.33 11.33 9.18 11.27 9.06C11.2 8.94 10.67 7.64 10.45 7.11C10.24 6.59 10.02 6.66 9.86 6.66C9.71 6.66 9.53 7.03 9.53 7.03Z"/></svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+</body>
+</html>
+'''
+    with open('shipping.html', 'w', encoding='utf-8') as f:
+        f.write(html_content)
+    print("Master Domination shipping.html written successfully! Length:", len(html_content))
+
+if __name__ == '__main__':
+    generate_master_shipping_page()
