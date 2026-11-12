@@ -62,3 +62,31 @@ All 13 website pages exist, open directly in any modern browser without servers 
 | 12 | `shipping.html` | Shipping Guide & Calculators | Air vs Sea decision matrix, **interactive Ocean CBM Calculator**, **interactive Air Volumetric Weight Calculator**, packaging standards. | **Verified (200 OK)** |
 | 13 | `contact.html` | Contact & Global Offices | Full directory for Yiwu, Guangzhou, and Lagos Trade Fair branch, executive hotlines, email desk, and direct inquiry email compiler. | **Verified (200 OK)** |
 | 14 | `quote.html` | Request a Quote Wizard | Full 3-step cargo quotation wizard (service selection, cargo weight/volume/cartons, client details) compiling pre-formatted email & WhatsApp draft. | **Verified (200 OK)** |
+
+
+---
+
+### 4. SEO & Schema.org Structured Data Audit
+
+All 14 pages now possess 100% complete technical SEO and structured data:
+
+| Page Name | Canonical URL | Title Tag | Meta Description | Open Graph & Twitter Cards | Schema.org Structured Data |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| `index.html` | `https://savelandedcompany.com/` | Yes | Yes | Yes | `LogisticsService`, `Organization`, `WebSite`, `FAQPage` |
+| `about.html` | `https://savelandedcompany.com/about.html` | Yes | Yes | Yes | `AboutPage`, `Organization` |
+| `services.html` | `https://savelandedcompany.com/services.html` | Yes | Yes | Yes | `CollectionPage`, `ItemList` (All 8 Services) |
+| `air-freight.html` | `https://savelandedcompany.com/air-freight.html` | Yes | Yes | Yes | `Service` (Air Freight & Express Cargo) |
+| `sea-freight.html` | `https://savelandedcompany.com/sea-freight.html` | Yes | Yes | Yes | `Service` (Ocean Freight FCL & LCL) |
+| `product-sourcing.html`| `https://savelandedcompany.com/product-sourcing.html` | Yes | Yes | Yes | `Service` (China Supplier & Factory Sourcing) |
+| `procurement.html` | `https://savelandedcompany.com/procurement.html` | Yes | Yes | Yes | `Service` (Procurement, FX & Escrow Purchasing) |
+| `warehousing.html` | `https://savelandedcompany.com/warehousing.html` | Yes | Yes | Yes | `Service` (Warehousing & Cargo Consolidation) |
+| `customs-clearance.html`| `https://savelandedcompany.com/customs-clearance.html` | Yes | Yes | Yes | `Service` (Customs Clearance & Form M/PAAR) |
+| `import-export.html` | `https://savelandedcompany.com/import-export.html` | Yes | Yes | Yes | `Service` (International Trade & Compliance) |
+| `door-to-door.html` | `https://savelandedcompany.com/door-to-door.html` | Yes | Yes | Yes | `Service` (Door-to-Door Cargo Delivery) |
+| `shipping.html` | `https://savelandedcompany.com/shipping.html` | Yes | Yes | Yes | `HowTo` (CBM & Volumetric Calculations) |
+| `contact.html` | `https://savelandedcompany.com/contact.html` | Yes | Yes | Yes | `ContactPage`, `LocalBusiness` (3 Hubs) |
+| `quote.html` | `https://savelandedcompany.com/quote.html` | Yes | Yes | Yes | `WebPage`, `QuoteAction` |
+
+**Search Engine Indexing Assets:**
+- `sitemap.xml`: Complete XML sitemap at root listing all 14 canonical URLs with lastmod, changefreq, and priorities.
+- `robots.txt`: Robots configuration allowing crawling and pointing directly to `sitemap.xml`.

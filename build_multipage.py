@@ -1,5 +1,6 @@
 import os
 import re
+import json
 
 # Comprehensive Mobile-Responsive & Subpage CSS
 SUBPAGE_AND_MOBILE_CSS = """
@@ -519,12 +520,183 @@ img {
   line-height: 1.6;
 }
 
+/* AI Engine & GEO Quick Summary Card */
+.slc-ai-summary {
+  background: linear-gradient(135deg, rgba(248, 210, 146, 0.12) 0%, rgba(255, 243, 232, 0.6) 100%);
+  border: 1px solid rgba(248, 210, 146, 0.85);
+  border-left: 5px solid var(--slc-gold);
+  border-radius: var(--slc-radius-md);
+  padding: 22px 24px;
+  margin: 24px 0 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+.slc-ai-summary__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--slc-font-head);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--slc-copper);
+  margin-bottom: 10px;
+}
+.slc-ai-summary__badge svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+.slc-ai-summary__title {
+  font-family: var(--slc-font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--slc-black);
+  margin-bottom: 10px;
+}
+.slc-ai-summary__content {
+  font-size: 0.95rem;
+  line-height: 1.68;
+  color: var(--slc-charcoal);
+}
+.slc-ai-summary__content p:last-child {
+  margin-bottom: 0;
+}
+.slc-ai-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(184, 140, 117, 0.35);
+}
+.slc-ai-fact {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--slc-charcoal);
+}
+.slc-ai-fact strong {
+  color: var(--slc-black);
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--slc-copper);
+}
+
+/* On-Page Table of Contents (TOC) */
+.slc-toc {
+  background-color: var(--slc-ivory);
+  border: 1px solid rgba(248, 210, 146, 0.7);
+  border-radius: var(--slc-radius-md);
+  padding: 20px 24px;
+  margin: 24px 0 32px;
+}
+.slc-toc__title {
+  font-family: var(--slc-font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--slc-black);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.slc-toc__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.slc-toc__link {
+  font-size: 0.925rem;
+  color: var(--slc-charcoal);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--slc-transition);
+}
+.slc-toc__link:hover {
+  color: var(--slc-copper);
+  padding-left: 4px;
+}
+
+/* Subpage FAQ Accordions */
+.slc-faq-subpage {
+  margin: 36px 0;
+}
+.slc-faq-item {
+  border: 1px solid var(--slc-gray-200);
+  border-radius: var(--slc-radius-md);
+  margin-bottom: 12px;
+  background-color: var(--slc-white);
+  overflow: hidden;
+  transition: var(--slc-transition);
+}
+.slc-faq-item:hover {
+  border-color: rgba(248, 210, 146, 0.7);
+}
+.slc-faq-item details {
+  width: 100%;
+}
+.slc-faq-item summary {
+  font-family: var(--slc-font-head);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--slc-black);
+  padding: 18px 22px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+.slc-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.slc-faq-item summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--slc-copper);
+  transition: transform 0.25s ease;
+}
+.slc-faq-item details[open] summary::after {
+  transform: rotate(45deg);
+}
+.slc-faq-item details[open] summary {
+  background-color: var(--slc-ivory-alt);
+  border-bottom: 1px solid var(--slc-gray-200);
+}
+.slc-faq-item__answer {
+  padding: 18px 22px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--slc-charcoal);
+  background-color: var(--slc-white);
+}
+
+/* Authoritative External Citation Link */
+.slc-ext-link {
+  color: var(--slc-copper);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--slc-transition);
+}
+.slc-ext-link:hover {
+  color: var(--slc-black);
+}
+
 /* ==========================================================================
    BREAKPOINTS: TABLET & MOBILE (< 1024px, < 768px, < 480px)
    ========================================================================== */
 
 @media (max-width: 1024px) {
-  /* Switch desktop nav to mobile hamburger cleanly at 1024px */
   .slc-nav-wrap, .slc-header__cta {
     display: none !important;
   }
@@ -733,11 +905,9 @@ def update_css():
     with open(css_path, "r", encoding="utf-8") as f:
         existing = f.read()
 
-    # Remove old announcement CSS if present
     existing = re.sub(r'/\* =+\s*SECTION 1: TOP ANNOUNCEMENT BAR.*?(?=/\* =+\s*SECTION 2: FLOATING)', '', existing, flags=re.DOTALL)
     existing = re.sub(r'\.slc-announcement[^{]*\{[^}]*\}', '', existing)
 
-    # Append or replace subpage and mobile CSS
     if "MOBILE RESPONSIVENESS OVERHAUL" in existing:
         base_css = existing.split("/* ==========================================================================\n   MOBILE RESPONSIVENESS OVERHAUL")[0]
         new_css = base_css.strip() + "\n\n" + SUBPAGE_AND_MOBILE_CSS.strip()
@@ -746,13 +916,11 @@ def update_css():
 
     with open(css_path, "w", encoding="utf-8") as f:
         f.write(new_css)
-    print("Updated assets/css/savelanded.css with complete mobile responsive rules.")
 
     theme_css_path = "savelanded-theme/assets/css/style.css"
     if os.path.exists(theme_css_path):
         with open(theme_css_path, "w", encoding="utf-8") as f:
             f.write(new_css)
-        print("Updated savelanded-theme/assets/css/style.css")
 
 def get_header(active_page=""):
     home_active = ' is-active' if active_page == 'home' else ''
@@ -771,7 +939,7 @@ def get_header(active_page=""):
       <!-- Brand Logo -->
       <a href="index.html" class="slc-brand" aria-label="Savelanded Home">
         <div class="slc-brand__logo">
-          <img src="logo.jpg" alt="Savelanded Logo" width="52" height="52" onerror="this.style.display='none'">
+          <img src="logo.jpg" alt="Savelanded Import and Export Company Limited Logo" width="52" height="52" onerror="this.style.display='none'">
         </div>
         <div>
           <div class="slc-brand__name">SAVELANDED</div>
@@ -877,7 +1045,7 @@ def get_header(active_page=""):
   <aside class="slc-mobile-drawer" id="slc-mobile-drawer" aria-label="Mobile Navigation Drawer">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; padding-bottom:14px; border-bottom:1px solid var(--slc-gray-200);">
       <div style="display:flex; align-items:center; gap:10px;">
-        <img src="logo.jpg" alt="Savelanded" width="36" height="36" style="border-radius:4px;">
+        <img src="logo.jpg" alt="Savelanded Import and Export Company Limited Logo" width="36" height="36" style="border-radius:4px;">
         <span style="font-family:var(--slc-font-head); font-weight:800; font-size:1.15rem; color:var(--slc-black);">SAVELANDED</span>
       </div>
       <button type="button" id="slc-menu-close" style="background:none; border:none; cursor:pointer; font-size:1.8rem; line-height:1; color:var(--slc-black); padding:4px 8px;" aria-label="Close Navigation">&times;</button>
@@ -945,7 +1113,7 @@ def get_footer():
         <div>
           <a href="index.html" class="slc-footer__logo-wrap">
             <div class="slc-footer__logo-img">
-              <img src="logo.jpg" alt="Savelanded Logo" width="48" height="48" onerror="this.style.display='none'">
+              <img src="logo.jpg" alt="Savelanded Import and Export Company Limited Official Logo" width="48" height="48" loading="lazy" onerror="this.style.display='none'">
             </div>
             <div>
               <div class="slc-footer__brand-title">SAVELANDED</div>
@@ -1054,7 +1222,6 @@ def get_footer():
       if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
       if (overlay) overlay.addEventListener('click', closeDrawer);
 
-      // Close drawer on ESC
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeDrawer();
       });
@@ -1062,7 +1229,19 @@ def get_footer():
   </script>
 '''
 
-def get_page_head(title, description, canonical_slug=""):
+def get_page_head(title, description, canonical_slug="", keywords="", schema_data=None):
+    keywords_meta = f'<meta name="keywords" content="{keywords}">' if keywords else '<meta name="keywords" content="China to Nigeria shipping, freight forwarding China Nigeria, product sourcing China, air freight Lagos, sea freight Nigeria, cargo consolidation Yiwu Guangzhou">'
+    
+    schema_script = ""
+    if schema_data:
+        schema_script = f'''
+  <!-- Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+{json.dumps(schema_data, indent=2, ensure_ascii=False)}
+  </script>'''
+
+    canonical_url = f"https://savelandedcompany.com/{canonical_slug}" if canonical_slug else "https://savelandedcompany.com/"
+
     return f'''<!DOCTYPE html>
 <html lang="en" class="slc-html">
 <head>
@@ -1072,15 +1251,34 @@ def get_page_head(title, description, canonical_slug=""):
   
   <title>{title} | Savelanded Import &amp; Export Co. Ltd</title>
   <meta name="description" content="{description}">
-  <link rel="canonical" href="https://savelandedcompany.com/{canonical_slug}">
+  {keywords_meta}
+  <meta name="author" content="Savelanded Import and Export Company Limited">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="{canonical_url}">
   
+  <!-- International SEO: Hreflang Tagging -->
+  <link rel="alternate" hreflang="en-ng" href="{canonical_url}">
+  <link rel="alternate" hreflang="en" href="{canonical_url}">
+  <link rel="alternate" hreflang="x-default" href="{canonical_url}">
+  
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://savelandedcompany.com/{canonical_slug}">
+  <meta property="og:site_name" content="Savelanded Import and Export Company Limited">
+  <meta property="og:url" content="{canonical_url}">
   <meta property="og:title" content="{title} | Savelanded">
   <meta property="og:description" content="{description}">
-  <meta property="og:image" content="logo.jpg">
+  <meta property="og:image" content="https://savelandedcompany.com/logo.jpg">
+  <meta property="og:locale" content="en_NG">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{title} | Savelanded">
+  <meta name="twitter:description" content="{description}">
+  <meta name="twitter:image" content="https://savelandedcompany.com/logo.jpg">
 
   <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <link rel="apple-touch-icon" href="logo.jpg">
 
   <!-- Google Fonts: Sora, DM Sans, Cormorant Garamond -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1089,6 +1287,7 @@ def get_page_head(title, description, canonical_slug=""):
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="assets/css/savelanded.css">
+{schema_script}
 </head>
 <body class="slc-body">
 '''
@@ -1135,4 +1334,4 @@ def get_service_sidebar(active_slug):
     </aside>
     '''
 
-print("Updated build_multipage.py initialized.")
+print("Updated build_multipage.py with full SEO and Schema.org generator.")
