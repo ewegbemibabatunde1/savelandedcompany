@@ -7,12 +7,12 @@ update_css()
 # Base Organization Reference for Schema.org
 ORG_SCHEMA = {
     "@type": "Organization",
-    "@id": "https://savelandedcompany.com/#organization",
+    "@id": "https://savelandedcompany.vercel.app/#organization",
     "name": "Savelanded Import and Export Company Limited",
     "alternateName": "Savelanded",
-    "url": "https://savelandedcompany.com/",
-    "logo": "https://savelandedcompany.com/logo.jpg",
-    "image": "https://savelandedcompany.com/logo.jpg",
+    "url": "https://savelandedcompany.vercel.app/",
+    "logo": "https://savelandedcompany.vercel.app/logo.jpg",
+    "image": "https://savelandedcompany.vercel.app/logo.jpg",
     "email": "svgadmsavelandedimpexpcomltd@gmail.com",
     "telephone": "+8618248547224",
     "slogan": "Connecting China to Nigeria. Simplifying Global Trade.",
@@ -62,15 +62,15 @@ about_schema = {
         ORG_SCHEMA,
         {
             "@type": "AboutPage",
-            "@id": "https://savelandedcompany.com/about.html#webpage",
-            "url": "https://savelandedcompany.com/about.html",
+            "@id": "https://savelandedcompany.vercel.app/about.html#webpage",
+            "url": "https://savelandedcompany.vercel.app/about.html",
             "name": "About Savelanded Import and Export Company Limited",
             "description": "Learn about Savelanded - your trusted partner connecting China manufacturers with Nigerian businesses through sourcing, procurement, and logistics.",
             "isPartOf": {
                 "@type": "WebSite",
-                "@id": "https://savelandedcompany.com/#website",
+                "@id": "https://savelandedcompany.vercel.app/#website",
                 "name": "Savelanded",
-                "url": "https://savelandedcompany.com/"
+                "url": "https://savelandedcompany.vercel.app/"
             }
         }
     ]
@@ -276,19 +276,19 @@ services_schema = {
         ORG_SCHEMA,
         {
             "@type": "CollectionPage",
-            "@id": "https://savelandedcompany.com/services.html#webpage",
-            "url": "https://savelandedcompany.com/services.html",
+            "@id": "https://savelandedcompany.vercel.app/services.html#webpage",
+            "url": "https://savelandedcompany.vercel.app/services.html",
             "name": "Comprehensive China–Nigeria Logistics & Sourcing Services",
             "description": "Explore Savelanded's 8 core logistics and trade services connecting China to Nigeria.",
             "hasPart": [
-                {"@type": "Service", "name": "Air Freight from China to Nigeria", "url": "https://savelandedcompany.com/air-freight.html"},
-                {"@type": "Service", "name": "Sea Freight from China to Nigeria", "url": "https://savelandedcompany.com/sea-freight.html"},
-                {"@type": "Service", "name": "Product Sourcing & Supplier Verification", "url": "https://savelandedcompany.com/product-sourcing.html"},
-                {"@type": "Service", "name": "Purchasing and Procurement", "url": "https://savelandedcompany.com/procurement.html"},
-                {"@type": "Service", "name": "Warehousing & Cargo Consolidation", "url": "https://savelandedcompany.com/warehousing.html"},
-                {"@type": "Service", "name": "Customs Clearance & Documentation", "url": "https://savelandedcompany.com/customs-clearance.html"},
-                {"@type": "Service", "name": "International Import & Export", "url": "https://savelandedcompany.com/import-export.html"},
-                {"@type": "Service", "name": "Door-to-Door Delivery in Nigeria", "url": "https://savelandedcompany.com/door-to-door.html"}
+                {"@type": "Service", "name": "Air Freight from China to Nigeria", "url": "https://savelandedcompany.vercel.app/air-freight.html"},
+                {"@type": "Service", "name": "Sea Freight from China to Nigeria", "url": "https://savelandedcompany.vercel.app/sea-freight.html"},
+                {"@type": "Service", "name": "Product Sourcing & Supplier Verification", "url": "https://savelandedcompany.vercel.app/product-sourcing.html"},
+                {"@type": "Service", "name": "Purchasing and Procurement", "url": "https://savelandedcompany.vercel.app/procurement.html"},
+                {"@type": "Service", "name": "Warehousing & Cargo Consolidation", "url": "https://savelandedcompany.vercel.app/warehousing.html"},
+                {"@type": "Service", "name": "Customs Clearance & Documentation", "url": "https://savelandedcompany.vercel.app/customs-clearance.html"},
+                {"@type": "Service", "name": "International Import & Export", "url": "https://savelandedcompany.vercel.app/import-export.html"},
+                {"@type": "Service", "name": "Door-to-Door Delivery in Nigeria", "url": "https://savelandedcompany.vercel.app/door-to-door.html"}
             ]
         }
     ]
@@ -490,11 +490,11 @@ def make_service_schema(service_name, service_type, url_slug, desc):
             ORG_SCHEMA,
             {
                 "@type": "Service",
-                "@id": f"https://savelandedcompany.com/{url_slug}#service",
+                "@id": f"https://savelandedcompany.vercel.app/{url_slug}#service",
                 "name": service_name,
                 "serviceType": service_type,
-                "url": f"https://savelandedcompany.com/{url_slug}",
-                "provider": {"@id": "https://savelandedcompany.com/#organization"},
+                "url": f"https://savelandedcompany.vercel.app/{url_slug}",
+                "provider": {"@id": "https://savelandedcompany.vercel.app/#organization"},
                 "areaServed": [
                     {"@type": "Country", "name": "Nigeria"},
                     {"@type": "Country", "name": "China"}
@@ -1551,7 +1551,7 @@ shipping_schema = {
         ORG_SCHEMA,
         {
             "@type": "HowTo",
-            "@id": "https://savelandedcompany.com/shipping.html#howto",
+            "@id": "https://savelandedcompany.vercel.app/shipping.html#howto",
             "name": "How to Calculate China to Nigeria Freight Costs (CBM and Air Volumetric Weight)",
             "description": "Step-by-step guidance on calculating ocean freight volume (CBM) and air cargo chargeable weight for shipments from China to Nigeria.",
             "step": [
@@ -1791,8 +1791,8 @@ contact_schema = {
         ORG_SCHEMA,
         {
             "@type": "ContactPage",
-            "@id": "https://savelandedcompany.com/contact.html#webpage",
-            "url": "https://savelandedcompany.com/contact.html",
+            "@id": "https://savelandedcompany.vercel.app/contact.html#webpage",
+            "url": "https://savelandedcompany.vercel.app/contact.html",
             "name": "Contact Savelanded & Global Offices",
             "description": "Connect with Savelanded's offices in Yiwu, Guangzhou, and Lagos for cargo rates, warehouse receiving, and procurement assistance."
         }
@@ -1942,7 +1942,7 @@ contact_body = """
           'Email: ' + email + '\\n' +
           'Category: ' + category + '\\n\\n' +
           'Message / Details:\\n' + msg + '\\n\\n' +
-          'Sent via savelandedcompany.com contact portal'
+          'Sent via savelandedcompany.vercel.app contact portal'
         );
 
         window.location.href = 'mailto:svgadmsavelandedimpexpcomltd@gmail.com?subject=' + subject + '&body=' + body;
@@ -1966,8 +1966,8 @@ quote_schema = {
         ORG_SCHEMA,
         {
             "@type": "WebPage",
-            "@id": "https://savelandedcompany.com/quote.html#webpage",
-            "url": "https://savelandedcompany.com/quote.html",
+            "@id": "https://savelandedcompany.vercel.app/quote.html#webpage",
+            "url": "https://savelandedcompany.vercel.app/quote.html",
             "name": "Request an Accurate China–Nigeria Freight Quote",
             "description": "Itemized cargo quotation request wizard for air freight, sea freight, product sourcing, and RMB procurement coordination."
         }
@@ -2141,7 +2141,7 @@ quote_body = """
           '- Email: ' + email + '\\n\\n' +
           'ADDITIONAL NOTES:\\n' + notes + '\\n\\n' +
           '================================================\\n' +
-          'Transmitted via Savelanded Web Portal (savelandedcompany.com)'
+          'Transmitted via Savelanded Web Portal (savelandedcompany.vercel.app)'
         );
 
         window.location.href = 'mailto:svgadmsavelandedimpexpcomltd@gmail.com?subject=' + subject + '&body=' + body;

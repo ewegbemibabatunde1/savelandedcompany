@@ -491,7 +491,30 @@
               Provide your cargo details below. We generate a pre-formatted quotation draft ready for instant email and WhatsApp transmission.
             </p>
 
-            <form id="quote-form-el" onsubmit="handleQuoteSubmit(event)">
+            
+          <!-- What Customers Need Before Requesting a Quote -->
+          <div style="margin-bottom:32px; padding:24px; background:#fdfbf7; border-left:4px solid var(--slc-gold); border-radius:0 8px 8px 0;">
+            <h2 style="font-family:var(--slc-font-head); font-size:1.25rem; font-weight:700; color:var(--slc-burgundy); margin-bottom:10px;">
+              What You Need Before Requesting a Freight or Sourcing Quote
+            </h2>
+            <p style="font-size:0.92rem; color:#4a5568; line-height:1.6; margin-bottom:14px;">
+              To ensure our operations team can provide you with a fast, 100% accurate quotation with zero guesswork, please have the following shipment information ready:
+            </p>
+            <div class="slc-step-grid" style="margin:0;">
+              <div style="font-size:0.88rem; color:#2d3748;">
+                &bull; <strong>Product Nature:</strong> Exact description (e.g. shoes, phone chargers, machine parts)<br>
+                &bull; <strong>Supplier Location:</strong> City where goods are produced (e.g. Yiwu, Guangzhou, Shenzhen)<br>
+                &bull; <strong>Packaging Specs:</strong> Number of cartons, dimensions per carton (L &times; W &times; H cm)
+              </div>
+              <div style="font-size:0.88rem; color:#2d3748;">
+                &bull; <strong>Gross Weight:</strong> Total weight in kg across all cartons<br>
+                &bull; <strong>Battery / Liquid Status:</strong> Disclose whether goods contain lithium batteries or liquids<br>
+                &bull; <strong>Destination City:</strong> Lagos Trade Fair pickup or nationwide delivery address
+              </div>
+            </div>
+          </div>
+
+          <form id="quote-form-el" onsubmit="handleQuoteSubmit(event)">
               <div class="slc-form-grid">
                 
                 <div class="slc-form-group">

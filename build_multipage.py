@@ -1240,7 +1240,8 @@ def get_page_head(title, description, canonical_slug="", keywords="", schema_dat
 {json.dumps(schema_data, indent=2, ensure_ascii=False)}
   </script>'''
 
-    canonical_url = f"https://savelandedcompany.vercel.app/{canonical_slug}" if canonical_slug else "https://savelandedcompany.vercel.app/"
+    clean_slug = canonical_slug[:-5] if canonical_slug.endswith('.html') else canonical_slug
+    canonical_url = f"https://savelandedcompany.vercel.app/{clean_slug}" if clean_slug else "https://savelandedcompany.vercel.app/"
 
     return f'''<!DOCTYPE html>
 <html lang="en" class="slc-html">
