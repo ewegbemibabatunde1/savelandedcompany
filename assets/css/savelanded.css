@@ -4,44 +4,69 @@
        Copper Peach (#B88C75), Warm Ivory (#FFF3E8), Charcoal (#191919), White (#FFFFFF)
        ========================================================================== */
 
-    :root {
-      --slc-black: #000000;
-      --slc-charcoal: #191919;
-      --slc-dark-bg: #0e0e0e;
-      --slc-dark-surface: #161616;
-      --slc-gold: #F8D292;
-      --slc-gold-hover: #e8bf7b;
-      --slc-copper: #B88C75;
-      --slc-copper-light: #d6a892;
-      --slc-ivory: #FFF3E8;
-      --slc-ivory-alt: #FBF6F0;
-      --slc-white: #FFFFFF;
-      --slc-gray-100: #F8F9FA;
-      --slc-gray-200: #E9ECEF;
-      --slc-gray-300: #DEE2E6;
-      --slc-gray-500: #8E959E;
-      --slc-gray-700: #495057;
-      --slc-gray-800: #2B303A;
-      
-      --slc-border-subtle: rgba(248, 210, 146, 0.25);
-      --slc-border-dark: rgba(255, 255, 255, 0.1);
-      
-      --slc-font-head: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
-      --slc-font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      --slc-font-accent: 'Cormorant Garamond', Georgia, serif;
-      
-      --slc-radius-sm: 6px;
-      --slc-radius-md: 12px;
-      --slc-radius-lg: 18px;
-      --slc-radius-xl: 26px;
-      --slc-radius-pill: 9999px;
-      
-      --slc-transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-      --slc-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
-      --slc-shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
-      --slc-shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.14);
-      --slc-shadow-gold: 0 8px 26px rgba(248, 210, 146, 0.3);
-    }
+
+:root {
+  /* Typography */
+  --slc-font-head: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  --slc-font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --slc-font-accent: 'Cormorant Garamond', Georgia, serif;
+
+  /* Brand Colors — Savelanded Luxury Burgundy + Gold */
+  --slc-black: #000000;
+  --slc-charcoal: #191919;
+  --slc-dark-bg: #0e0e0e;
+  --slc-dark-surface: #161616;
+  --slc-white: #ffffff;
+
+  --slc-burgundy: #801823;
+  --slc-burgundy-dark: #5c141c;
+  --slc-burgundy-light: #9e2330;
+  --slc-wine: #801823;             /* alias */
+  --slc-wine-dark: #5c141c;        /* alias */
+  --slc-copper: #801823;           /* red-wine accent (replaces faded peach) */
+  --slc-copper-light: #9e2330;
+
+  --slc-gold: #c9933b;             /* warm metallic gold */
+  --slc-gold-rich: #c9933b;
+  --slc-gold-hover: #b88228;
+  --slc-gold-dark: #a67424;
+  --slc-gold-glow: #e8b86d;
+  --slc-gold-light: #f5dba8;
+
+  --slc-ivory: #FFF8F0;
+  --slc-ivory-alt: #FBF6F0;
+
+  /* Grays */
+  --slc-gray-100: #f8f9fa;
+  --slc-gray-200: #e9ecef;
+  --slc-gray-300: #dee2e6;
+  --slc-gray-500: #8e959e;
+  --slc-gray-700: #495057;
+  --slc-gray-800: #2b303a;
+
+  /* Borders */
+  --slc-border-subtle: rgba(201,147,59,0.3);
+  --slc-border-dark: rgba(255,255,255,0.1);
+
+  /* Radius */
+  --slc-radius-sm: 6px;
+  --slc-radius-md: 12px;
+  --slc-radius-lg: 18px;
+  --slc-radius-xl: 26px;
+  --slc-radius-pill: 9999px;
+
+  /* Transitions */
+  --slc-transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Shadows */
+  --slc-shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+  --slc-shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+  --slc-shadow-lg: 0 20px 48px rgba(0,0,0,0.14);
+  --slc-shadow-gold: 0 8px 26px rgba(201,147,59,0.3);
+}
+
+
+    
 
     *, *::before, *::after {
       box-sizing: border-box;
@@ -2706,307 +2731,27 @@ img {
   }
 }
 
+
+
 /* ==========================================================================
-   ADVANCED SEO, AEO, GEO & COMPARISON STYLING
+   AUTHORITATIVE COMPARISON TABLE SYSTEM (consolidated — single source)
+   Replaces all previous duplicate definitions
    ========================================================================== */
 
-/* Responsive Comparison Table */
+/* Wrapper */
 .slc-comparison-table-wrapper {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin: 28px 0;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  border: 1px solid rgba(0,0,0,0.08);
-  background: #ffffff;
-}
-
-.slc-comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.slc-comparison-table thead th {
-  background: var(--slc-burgundy, #6a1a24);
-  color: #ffffff;
-  padding: 16px 20px;
-  font-family: var(--slc-font-head, 'Sora', sans-serif);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-}
-
-.slc-comparison-table tbody td {
-  padding: 16px 20px;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  color: var(--slc-gray-800, #2d3748);
-  vertical-align: top;
-}
-
-.slc-comparison-table tbody tr:nth-child(even) {
-  background-color: #faf8f5;
-}
-
-.slc-comparison-table tbody tr:hover {
-  background-color: #f5f0eb;
-}
-
-.slc-comparison-table td strong {
-  color: var(--slc-burgundy, #6a1a24);
-}
-
-/* Feature & Step Grids */
-.slc-step-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin: 28px 0;
-}
-
-.slc-step-card {
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  padding: 24px;
-  position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.slc-step-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
-
-.slc-step-num {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: var(--slc-gold, #c5a059);
-  color: #ffffff;
-  font-weight: 700;
-  border-radius: 50%;
-  font-size: 1rem;
-  margin-bottom: 14px;
-}
-
-.slc-step-title {
-  font-family: var(--slc-font-head, 'Sora', sans-serif);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--slc-burgundy, #6a1a24);
-  margin-bottom: 10px;
-}
-
-.slc-step-text {
-  font-size: 0.92rem;
-  color: var(--slc-gray-700, #4a5568);
-  line-height: 1.6;
-}
-
-/* Regulatory & Authority Badges */
-.slc-tag {
-  display: inline-block;
-  padding: 4px 10px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-radius: 20px;
-  background: #f0e6d6;
-  color: #8c6225;
-  margin-right: 6px;
-  margin-bottom: 6px;
-}
-
-.slc-tag--official {
-  background: #e6f4ea;
-  color: #137333;
-}
-
-.slc-tag--warning {
-  background: #fce8e6;
-  color: #c5221f;
-}
-
-/* Definition Cards for AEO & Terminology */
-.slc-definition-box {
-  background: #fdfbf7;
-  border-left: 4px solid var(--slc-gold, #c5a059);
-  padding: 20px 24px;
-  margin: 24px 0;
-  border-radius: 0 8px 8px 0;
-}
-
-.slc-definition-term {
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--slc-burgundy, #6a1a24);
-  margin-bottom: 6px;
-}
-
-.slc-definition-desc {
-  font-size: 0.95rem;
-  color: var(--slc-gray-700, #4a5568);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Author / Reviewer Attribution */
-.slc-reviewer-badge {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: #f7fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin: 28px 0 20px;
-  font-size: 0.88rem;
-  color: #4a5568;
-}
-
-.slc-reviewer-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--slc-burgundy, #6a1a24);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-  .slc-comparison-table thead th,
-  .slc-comparison-table tbody td {
-    padding: 12px 14px;
-    font-size: 0.88rem;
-  }
-}
-
-
-/* ==========================================================================
-   SAVELANDED LUXURY CORPORATE BRAND COLOR & RESPONSIVENESS RESTORATION
-   ========================================================================== */
-
-:root {
-  /* Vibrant, non-faded brand colors */
-  --slc-burgundy: #801823;
-  --slc-burgundy-dark: #5c141c;
-  --slc-burgundy-light: #9e2330;
-  
-  --slc-gold-rich: #c9933b;
-  --slc-gold-glow: #e8b86d;
-  --slc-gold-dark: #a67424;
-
-  /* Re-energize base brand variables */
-  --slc-copper: #801823 !important; /* Replaces faded dusty pink/brown with rich signature wine */
-  --slc-copper-light: #9e2330 !important;
-  --slc-gold: #c9933b !important; /* Replaces pale washed-out cream with warm metallic gold */
-  --slc-gold-hover: #b88228 !important;
-  --slc-border-subtle: rgba(201, 147, 59, 0.35) !important;
-}
-
-/* Ensure high contrast and rich brand accents */
-.slc-pill-badge--light {
-  background: rgba(128, 24, 35, 0.08) !important;
-  color: #801823 !important;
-  border: 1px solid rgba(128, 24, 35, 0.22) !important;
-  box-shadow: 0 2px 8px rgba(128, 24, 35, 0.04) !important;
-}
-
-.slc-pill-badge--dark {
-  background: rgba(201, 147, 59, 0.15) !important;
-  color: #fce7c8 !important;
-  border: 1px solid rgba(201, 147, 59, 0.35) !important;
-}
-
-.slc-pill-dot {
-  background: #801823 !important;
-}
-
-.slc-pill-badge--dark .slc-pill-dot {
-  background: #c9933b !important;
-}
-
-.slc-btn-copper {
-  background-color: #801823 !important;
-  border-color: #801823 !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(128, 24, 35, 0.25) !important;
-}
-
-.slc-btn-copper:hover {
-  background-color: #5c141c !important;
-  border-color: #5c141c !important;
-  color: #ffffff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(128, 24, 35, 0.35) !important;
-}
-
-.slc-btn-gold {
-  background-color: #c9933b !important;
-  border-color: #c9933b !important;
-  color: #ffffff !important;
-  font-weight: 700 !important;
-  box-shadow: 0 4px 14px rgba(201, 147, 59, 0.3) !important;
-}
-
-.slc-btn-gold:hover {
-  background-color: #a67424 !important;
-  border-color: #a67424 !important;
-  color: #ffffff !important;
-  transform: translateY(-2px);
-}
-
-.slc-section-desc em, .slc-lead em, em {
-  color: #801823 !important;
-  font-style: italic;
-  font-weight: 600;
-}
-
-/* Desktop Table View Refinements */
-@media (min-width: 881px) {
-  .slc-comparison-table-wrapper {
-    max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .slc-comparison-table td:first-child {
-    width: 22%;
-    font-weight: 700;
-  }
-  .slc-comparison-table td:last-child {
-    text-align: center;
-    width: 14%;
-  }
-}
-
-
-/* ==========================================================================
-   ADVANCED RESPONSIVE COMPARISON TABLE & MOBILE DATA CARDS
-   ========================================================================== */
-
-.slc-comparison-table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 36px 0;
+  margin: 36px auto;
+  max-width: 1140px;
   border-radius: 16px;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(138, 43, 54, 0.15);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.08);
+  border: 1px solid rgba(128,24,35,0.14);
   background: #ffffff;
 }
 
+/* Base table */
 .slc-comparison-table {
   width: 100%;
   border-collapse: collapse;
@@ -3015,1078 +2760,211 @@ img {
   line-height: 1.6;
 }
 
+/* Head */
 .slc-comparison-table thead {
   background: linear-gradient(135deg, #5c141c 0%, #801823 100%);
 }
-
 .slc-comparison-table thead th {
   color: #ffffff;
-  padding: 18px 22px;
+  padding: 18px 20px;
   font-family: var(--slc-font-head, 'Sora', sans-serif);
   font-weight: 700;
-  font-size: 0.88rem;
-  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   border: none;
   white-space: nowrap;
+  vertical-align: middle;
 }
+.slc-comparison-table thead th:first-child { border-top-left-radius: 15px; }
+.slc-comparison-table thead th:last-child  { border-top-right-radius: 15px; }
 
-.slc-comparison-table thead th:first-child {
-  border-top-left-radius: 15px;
-}
-.slc-comparison-table thead th:last-child {
-  border-top-right-radius: 15px;
-}
-
+/* Body */
 .slc-comparison-table tbody td {
-  padding: 18px 22px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  color: var(--slc-charcoal, #191919);
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  color: #191919;
   vertical-align: middle;
   font-size: 0.9375rem;
 }
-
-.slc-comparison-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.slc-comparison-table tbody tr:nth-child(even) {
-  background-color: #faf7f4;
-}
-
-.slc-comparison-table tbody tr:hover {
-  background-color: #f3ece4;
-}
-
+.slc-comparison-table tbody tr:last-child td { border-bottom: none; }
+.slc-comparison-table tbody tr:nth-child(even) { background: #faf7f4; }
+.slc-comparison-table tbody tr:hover { background: #f3ece4; }
 .slc-comparison-table td strong {
   color: #801823;
   font-weight: 700;
   font-family: var(--slc-font-head, 'Sora', sans-serif);
 }
 
-/* Vibrant Corporate Outline & Action Buttons */
-.slc-btn-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 9px 18px;
-  font-family: var(--slc-font-head, 'Sora', sans-serif);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #801823 !important;
-  background-color: #ffffff !important;
-  border: 1.5px solid #801823 !important;
-  border-radius: 9999px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 8px rgba(128, 24, 35, 0.08);
-}
-
-.slc-btn-outline:hover {
-  background-color: #801823 !important;
-  color: #ffffff !important;
-  border-color: #801823 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(128, 24, 35, 0.25);
-}
-
-/* Mobile Responsive Transformation (< 880px) */
-@media (max-width: 880px) {
-  .slc-comparison-table-wrapper {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    overflow-x: visible !important;
-    margin: 24px 0 !important;
-  }
-
-  .slc-comparison-table {
-    display: block !important;
-    width: 100% !important;
-  }
-
-  .slc-comparison-table thead {
-    display: none !important; /* Hide standard tabular header on mobile */
-  }
-
-  .slc-comparison-table tbody {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 18px !important;
-    width: 100% !important;
-  }
-
-  .slc-comparison-table tbody tr {
-    display: flex !important;
-    flex-direction: column !important;
-    background: #ffffff !important;
-    border-radius: 14px !important;
-    border: 1.5px solid rgba(128, 24, 35, 0.12) !important;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06) !important;
-    padding: 18px 20px !important;
-    position: relative !important;
-    overflow: hidden !important;
-  }
-
-  .slc-comparison-table tbody tr::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: linear-gradient(180deg, #801823 0%, #c9933b 100%);
-  }
-
-  .slc-comparison-table tbody td {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 4px !important;
-    padding: 10px 0 !important;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.08) !important;
-    text-align: left !important;
-    font-size: 0.92rem !important;
-  }
-
-  .slc-comparison-table tbody td:last-child {
-    border-bottom: none !important;
-    padding-top: 14px !important;
-  }
-
-  .slc-comparison-table tbody td::before {
-    content: attr(data-label);
-    font-family: var(--slc-font-head, 'Sora', sans-serif);
-    font-size: 0.72rem !important;
-    font-weight: 800 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.06em !important;
-    color: #801823 !important;
-  }
-
-  .slc-comparison-table tbody td:first-child::before {
-    display: none !important; /* The item name stands on its own */
-  }
-
-  .slc-comparison-table tbody td:first-child {
-    font-size: 1.15rem !important;
-    padding-bottom: 12px !important;
-    border-bottom: 2px solid rgba(128, 24, 35, 0.15) !important;
-  }
-
-  .slc-comparison-table tbody td:first-child strong {
-    font-size: 1.15rem !important;
-    color: #801823 !important;
-  }
-
-  .slc-comparison-table tbody td .slc-btn-outline {
-    width: 100% !important;
-    padding: 12px !important;
-    text-align: center !important;
-    font-size: 0.88rem !important;
-  }
-}
-
-
-
-/* Floating Luxury WhatsApp Action Pill */
-.slc-float-whatsapp {
-  position: fixed;
-  bottom: 26px;
-  right: 26px;
-  z-index: 9999;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #25D366;
-  color: #ffffff !important;
-  font-family: var(--slc-font-head, 'Sora', sans-serif);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 12px 20px 12px 16px;
-  border-radius: 9999px;
-  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
-  text-decoration: none !important;
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.slc-float-whatsapp:hover {
-  background: #20ba5a;
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.6);
-  color: #ffffff !important;
-}
-
-.slc-float-whatsapp svg {
-  width: 24px;
-  height: 24px;
-  fill: #ffffff;
-}
-
-@media (max-width: 600px) {
-  .slc-float-whatsapp {
-    bottom: 20px;
-    right: 20px;
-    padding: 12px;
-    border-radius: 50%;
-  }
-  .slc-float-whatsapp span {
-    display: none;
-  }
-}
-
-
-/* ==========================================================================
-   SAVELANDED 100% UNIVERSAL RESPONSIVE ENGINE (MOBILE + TABLET + DESKTOP)
-   ========================================================================== */
-
-/* 1. Universal Layout & Box Sizing Protection */
-html, body {
-  width: 100% !important;
-  max-width: 100vw !important;
-  overflow-x: hidden !important;
-  position: relative !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  -webkit-text-size-adjust: 100% !important;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box !important;
-}
-
-img, video, iframe, svg, canvas {
-  max-width: 100% !important;
-  height: auto !important;
-}
-
-/* 2. Fluid Containers */
-.slc-container {
-  width: 100% !important;
-  max-width: 1240px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: clamp(16px, 4vw, 32px) !important;
-  padding-right: clamp(16px, 4vw, 32px) !important;
-}
-
-/* 3. Fluid Responsive Typography */
-h1, .slc-hero__title, .slc-page-hero__title {
-  font-size: clamp(1.85rem, 5vw, 3.4rem) !important;
-  line-height: 1.15 !important;
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-}
-
-h2, .slc-section-title, .slc-prose h2 {
-  font-size: clamp(1.45rem, 3.8vw, 2.3rem) !important;
-  line-height: 1.25 !important;
-  word-wrap: break-word !important;
-}
-
-h3, .slc-feature-box__title, .slc-prose h3 {
-  font-size: clamp(1.15rem, 2.6vw, 1.45rem) !important;
-  line-height: 1.35 !important;
-}
-
-p, .slc-prose p, .slc-section-desc {
-  word-wrap: break-word !important;
-  overflow-wrap: break-word !important;
-}
-
-/* 4. Complete Mobile Card Transformation for ALL Tables (< 880px) */
-@media (max-width: 880px) {
-  .slc-table-wrap,
-  .slc-comparison-table-wrapper {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    overflow-x: visible !important;
-    margin: 24px 0 !important;
-    width: 100% !important;
-  }
-
-  .slc-spec-table,
-  .slc-comparison-table {
-    display: block !important;
-    width: 100% !important;
-    border: none !important;
-  }
-
-  .slc-spec-table thead,
-  .slc-comparison-table thead {
-    display: none !important; /* Hide rigid tabular header on mobile */
-  }
-
-  .slc-spec-table tbody,
-  .slc-comparison-table tbody {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 16px !important;
-    width: 100% !important;
-  }
-
-  .slc-spec-table tbody tr,
-  .slc-comparison-table tbody tr {
-    display: flex !important;
-    flex-direction: column !important;
-    background: #ffffff !important;
-    border-radius: 14px !important;
-    border: 1.5px solid rgba(128, 24, 35, 0.15) !important;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06) !important;
-    padding: 16px 18px !important;
-    position: relative !important;
-    overflow: hidden !important;
-  }
-
-  .slc-spec-table tbody tr::before,
-  .slc-comparison-table tbody tr::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: linear-gradient(180deg, #801823 0%, #c9933b 100%);
-  }
-
-  .slc-spec-table tbody td,
-  .slc-comparison-table tbody td {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 4px !important;
-    padding: 8px 0 !important;
-    border: none !important;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.08) !important;
-    text-align: left !important;
-    font-size: 0.92rem !important;
-    background: transparent !important;
-  }
-
-  .slc-spec-table tbody td:last-child,
-  .slc-comparison-table tbody td:last-child {
-    border-bottom: none !important;
-    padding-top: 12px !important;
-  }
-
-  .slc-spec-table tbody td::before,
-  .slc-comparison-table tbody td::before {
-    content: attr(data-label);
-    font-family: var(--slc-font-head, 'Sora', sans-serif);
-    font-size: 0.72rem !important;
-    font-weight: 800 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.06em !important;
-    color: #801823 !important;
-  }
-
-  .slc-spec-table tbody td:first-child,
-  .slc-comparison-table tbody td:first-child {
-    padding-bottom: 10px !important;
-    border-bottom: 2px solid rgba(128, 24, 35, 0.15) !important;
-  }
-
-  .slc-spec-table tbody td:first-child strong,
-  .slc-comparison-table tbody td:first-child strong {
-    font-size: 1.1rem !important;
-    color: #801823 !important;
-  }
-}
-
-/* 5. Desktop Table View Perfect Alignment (>= 881px) */
-@media (min-width: 881px) {
-  .slc-table-wrap,
-  .slc-comparison-table-wrapper {
-    width: 100% !important;
-    max-width: 1140px !important;
-    margin: 32px auto !important;
-    border-radius: 14px !important;
-    overflow: hidden !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
-    border: 1px solid rgba(128, 24, 35, 0.14) !important;
-  }
-
-  .slc-spec-table,
-  .slc-comparison-table {
-    width: 100% !important;
-    border-collapse: collapse !important;
-    display: table !important;
-  }
-
-  .slc-spec-table thead,
-  .slc-comparison-table thead {
-    display: table-header-group !important;
-    background: linear-gradient(135deg, #5c141c 0%, #801823 100%) !important;
-  }
-
-  .slc-spec-table th,
-  .slc-comparison-table thead th {
-    color: #ffffff !important;
-    padding: 16px 20px !important;
-    font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
-    font-weight: 700 !important;
-    font-size: 0.85rem !important;
-    letter-spacing: 0.04em !important;
-    text-transform: uppercase !important;
-    border: none !important;
-  }
-
-  .slc-spec-table tbody,
-  .slc-comparison-table tbody {
-    display: table-row-group !important;
-  }
-
-  .slc-spec-table tbody tr,
-  .slc-comparison-table tbody tr {
-    display: table-row !important;
-  }
-
-  .slc-spec-table tbody td,
-  .slc-comparison-table tbody td {
-    display: table-cell !important;
-    padding: 16px 20px !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
-    vertical-align: middle !important;
-  }
-}
-
-/* 6. Layout With Sidebar Responsive Rules */
-.slc-layout-with-sidebar {
-  display: grid !important;
-  grid-template-columns: 2fr 1fr !important;
-  gap: 40px !important;
-  align-items: start !important;
-}
-
-@media (max-width: 991px) {
-  .slc-layout-with-sidebar {
-    grid-template-columns: 1fr !important;
-    gap: 36px !important;
-  }
-  
-  .slc-layout-with-sidebar > aside {
-    order: 2 !important;
-    width: 100% !important;
-  }
-
-  .slc-layout-with-sidebar > .slc-prose,
-  .slc-layout-with-sidebar > div:first-child {
-    order: 1 !important;
-    width: 100% !important;
-  }
-}
-
-/* 7. Feature Grids, Step Grids & Cards */
-.slc-step-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
-  gap: 20px !important;
-  margin: 28px 0 !important;
-}
-
-.slc-feature-grid-3 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
-  gap: 24px !important;
-  margin: 32px 0 !important;
-}
-
-.slc-feature-grid-2 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
-  gap: 24px !important;
-  margin: 32px 0 !important;
-}
-
-/* 8. Mobile Buttons & Touch Targets */
-@media (max-width: 640px) {
-  .slc-hero__actions,
-  .slc-page-hero__actions,
-  .slc-cta__actions {
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 12px !important;
-  }
-
-  .slc-hero__actions .slc-btn,
-  .slc-page-hero__actions .slc-btn,
-  .slc-cta__actions .slc-btn {
-    width: 100% !important;
-    justify-content: center !important;
-    padding: 14px 20px !important;
-  }
-
-  .slc-form-grid {
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-  }
-
-  .slc-calc-card,
-  .slc-form-card,
-  .slc-ai-summary,
-  .slc-toc {
-    padding: 20px 16px !important;
-  }
-}
-
-/* 9. Header & Drawer Responsiveness */
-@media (max-width: 991px) {
-  .slc-nav,
-  .slc-nav-wrap,
-  .slc-header__cta {
-    display: none !important;
-  }
-
-  .slc-menu-toggle {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 44px !important;
-    height: 44px !important;
-    background: #f7fafc !important;
-    border: 1.5px solid #cbd5e0 !important;
-    border-radius: 8px !important;
-    cursor: pointer !important;
-  }
-
-  .slc-header__inner {
-    height: 72px !important;
-  }
-}
-
-/* 10. Word Break & Code Blocks */
-code, pre {
-  max-width: 100% !important;
-  word-break: break-all !important;
-  white-space: pre-wrap !important;
-}
-
-
-/* ==========================================================================
-   MASTER SHIPPING PAGE ENHANCEMENTS
-   ========================================================================== */
-
-/* Pricing Tables and Grids */
-.slc-pricing-notice {
-  background: #fef8f0;
-  border-left: 4px solid var(--slc-gold);
-  padding: 14px 18px;
-  border-radius: 6px;
-  margin-bottom: 24px;
-  font-size: 0.9rem;
-  color: #7a4f01;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-.slc-pricing-notice svg {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  fill: var(--slc-gold);
-  margin-top: 2px;
-}
-
-.slc-rate-table-wrapper {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 20px 0 32px 0;
-  border: 1px solid var(--slc-gray-200);
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
-}
-
-.slc-rate-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.925rem;
-  text-align: left;
-}
-
-.slc-rate-table th {
-  background: var(--slc-wine);
-  color: #ffffff;
-  padding: 14px 16px;
-  font-family: var(--slc-font-head);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  border-bottom: 2px solid var(--slc-gold);
-}
-
-.slc-rate-table td {
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--slc-gray-200);
-  vertical-align: middle;
-}
-
-.slc-rate-table tr:last-child td {
-  border-bottom: none;
-}
-
-.slc-rate-table tr:hover td {
-  background: #faf7f2;
-}
-
-.slc-badge-pill {
-  display: inline-block;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.slc-badge-pill--green {
-  background: #e6f7ec;
-  color: #0d6832;
-}
-
-.slc-badge-pill--gold {
-  background: #fef3d6;
-  color: #8c6008;
-}
-
-.slc-badge-pill--wine {
-  background: #fae8ea;
-  color: var(--slc-wine);
-}
-
-/* Hubs & City Grids */
-.slc-hub-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin: 24px 0 32px 0;
-}
-
-.slc-hub-card {
-  background: #ffffff;
-  border: 1px solid var(--slc-gray-200);
-  border-radius: 10px;
-  padding: 22px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-}
-
-.slc-hub-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--slc-gold);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-}
-
-.slc-hub-card__title {
-  font-family: var(--slc-font-head);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--slc-wine);
-  margin-top: 0;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.slc-hub-card__subtitle {
-  font-size: 0.85rem;
-  color: var(--slc-copper);
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.slc-hub-card__desc {
-  font-size: 0.9rem;
-  color: var(--slc-gray-700);
-  line-height: 1.6;
-}
-
-/* Interactive Calculator Tabs & Result Styling */
-.slc-calc-tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.slc-calc-tab-btn {
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-family: var(--slc-font-head);
-  font-weight: 700;
-  font-size: 0.9rem;
-  border: 1px solid var(--slc-gray-300);
-  background: #ffffff;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.slc-calc-tab-btn.is-active {
-  background: var(--slc-wine);
-  color: #ffffff;
-  border-color: var(--slc-wine);
-}
-
-.slc-calc-whatsapp-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: #25D366;
-  color: #ffffff;
-  font-family: var(--slc-font-head);
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 12px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-top: 14px;
-  transition: background 0.2s ease, transform 0.2s ease;
-  width: 100%;
-}
-
-.slc-calc-whatsapp-btn:hover {
-  background: #1eb956;
-  transform: translateY(-1px);
-  color: #ffffff;
-}
-
-/* Case Studies / Testimonials */
-.slc-case-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin: 24px 0 32px 0;
-}
-
-.slc-case-card {
-  background: #faf7f2;
-  border-left: 4px solid var(--slc-wine);
-  border-radius: 0 10px 10px 0;
-  padding: 22px;
-}
-
-.slc-case-card__quote {
-  font-style: italic;
-  font-size: 0.925rem;
-  color: var(--slc-gray-800);
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-
-.slc-case-card__client {
-  font-family: var(--slc-font-head);
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--slc-wine);
-}
-
-.slc-case-card__role {
-  font-size: 0.8rem;
-  color: var(--slc-copper);
-}
-
-@media (max-width: 880px) {
-  .slc-rate-table thead {
-    display: none;
-  }
-  .slc-rate-table, .slc-rate-table tbody, .slc-rate-table tr, .slc-rate-table td {
-    display: block;
-    width: 100%;
-  }
-  .slc-rate-table tr {
-    margin-bottom: 16px;
-    border: 1px solid var(--slc-gray-300);
-    border-radius: 8px;
-    padding: 8px 12px;
-    background: #ffffff;
-  }
-  .slc-rate-table td {
-    border-bottom: 1px dashed var(--slc-gray-200);
-    padding: 10px 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: right;
-  }
-  .slc-rate-table td::before {
-    content: attr(data-label);
-    font-weight: 700;
-    color: var(--slc-wine);
-    font-size: 0.85rem;
-    text-align: left;
-    padding-right: 12px;
-  }
-}
-
-
-/* ==========================================================================
-   COMPARISON TABLE — DESKTOP TABLET REFINEMENT (fix 6-column overflow)
-   Added by fix_all_issues.py
-   ========================================================================== */
-
-/* Medium screens: allow wrapping in table header cells */
+/* Column sizing on large desktop (>1200px): all good with nowrap */
+/* Medium desktop (881–1200px): allow wrapping, reduce font */
 @media (max-width: 1200px) and (min-width: 881px) {
   .slc-comparison-table thead th {
-    white-space: normal !important;
-    font-size: 0.8rem !important;
-    padding: 14px 14px !important;
-    letter-spacing: 0.02em !important;
+    white-space: normal;
+    font-size: 0.78rem;
+    padding: 14px 12px;
+    letter-spacing: 0.01em;
   }
   .slc-comparison-table tbody td {
-    padding: 14px 14px !important;
-    font-size: 0.88rem !important;
+    padding: 14px 12px;
+    font-size: 0.875rem;
   }
-  /* Slim the Action column */
-  .slc-comparison-table tbody td:last-child,
-  .slc-comparison-table thead th:last-child {
-    width: 90px !important;
-    min-width: 90px !important;
+  .slc-comparison-table thead th:last-child,
+  .slc-comparison-table tbody td:last-child {
+    width: 96px;
+    min-width: 96px;
   }
-  /* Give the cargo description column more room */
-  .slc-comparison-table tbody td:nth-child(5),
-  .slc-comparison-table thead th:nth-child(5) {
-    min-width: 160px !important;
+  .slc-comparison-table thead th:nth-child(5),
+  .slc-comparison-table tbody td:nth-child(5) {
+    min-width: 150px;
   }
 }
 
-/* Large desktop: enforce nowrap only on first 2 columns */
-@media (min-width: 1201px) {
-  .slc-comparison-table thead th {
-    white-space: nowrap !important;
-  }
-  .slc-comparison-table tbody td {
-    padding: 18px 20px !important;
-  }
-}
-
-/* Tablet portrait (641px–880px): switch to compact horizontal scroll */
+/* Tablet (641–880px): horizontal-scroll table (not card) */
 @media (max-width: 880px) and (min-width: 641px) {
   .slc-comparison-table-wrapper {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    border-radius: 12px !important;
-    border: 1px solid rgba(128,24,35,0.14) !important;
-    background: #ffffff !important;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 24px 0;
   }
   .slc-comparison-table {
-    display: table !important;
-    min-width: 640px !important;
+    display: table;
+    min-width: 660px;
   }
-  .slc-comparison-table thead {
-    display: table-header-group !important;
+  .slc-comparison-table thead { display: table-header-group; }
+  .slc-comparison-table tbody { display: table-row-group; }
+  .slc-comparison-table tbody tr { display: table-row; }
+  .slc-comparison-table tbody td { display: table-cell; padding: 12px 10px; font-size: 0.84rem; }
+  .slc-comparison-table thead th { padding: 12px 10px; font-size: 0.75rem; }
+}
+
+/* Mobile (≤640px): stacked card per row */
+@media (max-width: 640px) {
+  .slc-comparison-table-wrapper {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow-x: visible;
+    margin: 20px 0;
+    border-radius: 0;
   }
+  .slc-comparison-table { display: block; }
+  .slc-comparison-table thead { display: none; }
   .slc-comparison-table tbody {
-    display: table-row-group !important;
-    flex-direction: unset !important;
-    gap: unset !important;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
   .slc-comparison-table tbody tr {
-    display: table-row !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1.5px solid rgba(128,24,35,0.12);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    padding: 18px 18px 18px 24px;
+    position: relative;
+    overflow: hidden;
   }
   .slc-comparison-table tbody tr::before {
-    display: none !important;
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 5px; height: 100%;
+    background: linear-gradient(180deg, #801823 0%, #c9933b 100%);
   }
   .slc-comparison-table tbody td {
-    display: table-cell !important;
-    padding: 12px 14px !important;
-    border-bottom: 1px solid rgba(0,0,0,0.06) !important;
-    font-size: 0.85rem !important;
-    flex-direction: unset !important;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 9px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.08);
+    font-size: 0.9rem;
+    background: transparent;
   }
+  .slc-comparison-table tbody td:last-child { border-bottom: none; padding-top: 12px; }
   .slc-comparison-table tbody td::before {
-    display: none !important;
+    content: attr(data-label);
+    font-family: var(--slc-font-head, 'Sora', sans-serif);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #801823;
+  }
+  .slc-comparison-table tbody td:first-child::before { display: none; }
+  .slc-comparison-table tbody td:first-child {
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(128,24,35,0.14);
+  }
+  .slc-comparison-table tbody td:first-child strong { font-size: 1.1rem; color: #801823; }
+  .slc-comparison-table tbody td .slc-btn-outline {
+    width: 100%;
+    padding: 11px;
+    text-align: center;
+    font-size: 0.85rem;
   }
 }
 
-/* Rate table (pricing tables on /shipping): improved mobile display */
-@media (max-width: 880px) {
-  .slc-rate-table-wrapper {
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-    overflow-x: visible !important;
-    padding: 0 !important;
-  }
-  .slc-rate-table {
-    display: block !important;
-  }
-  .slc-rate-table thead {
-    display: none !important;
-  }
-  .slc-rate-table tbody,
-  .slc-rate-table tr,
-  .slc-rate-table td {
-    display: block !important;
-    width: 100% !important;
-  }
-  .slc-rate-table tr {
-    margin-bottom: 16px !important;
-    background: #ffffff !important;
-    border: 1.5px solid rgba(128,24,35,0.12) !important;
-    border-radius: 12px !important;
-    padding: 14px 16px !important;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.05) !important;
-  }
-  .slc-rate-table td {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: flex-start !important;
-    gap: 12px !important;
-    padding: 8px 0 !important;
-    border-bottom: 1px dashed rgba(0,0,0,0.08) !important;
-    font-size: 0.9rem !important;
-    text-align: right !important;
-  }
-  .slc-rate-table td:last-child {
-    border-bottom: none !important;
-  }
-  .slc-rate-table td::before {
-    content: attr(data-label) !important;
-    font-weight: 700 !important;
-    color: #801823 !important;
-    font-size: 0.8rem !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.04em !important;
-    text-align: left !important;
-    flex: 1 !important;
-    white-space: nowrap !important;
-  }
+
+
+
+
+/* Skip to content link (accessibility) */
+.slc-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: #801823;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 0 0 8px 8px;
+  font-family: var(--slc-font-head, 'Sora', sans-serif);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  z-index: 99999;
+  transition: top 0.2s ease;
+}
+.slc-skip-link:focus {
+  top: 0;
+  outline: 3px solid #c9933b;
+  outline-offset: 2px;
 }
 
-/* Hero section fix: prevent text overflow on small screens */
-@media (max-width: 480px) {
-  .slc-hero__title,
-  .slc-page-hero__title,
-  h1 {
-    font-size: clamp(1.6rem, 7vw, 2.2rem) !important;
-    line-height: 1.2 !important;
-  }
-  h2, .slc-section-title {
-    font-size: clamp(1.25rem, 5.5vw, 1.8rem) !important;
-  }
-  .slc-container {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
-  }
+/* Social icon touch target fix (WCAG 2.5.5: min 44×44px) */
+.slc-social-icon-link {
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-/* Stats / counters row: prevent overflow on mobile */
-@media (max-width: 600px) {
-  .slc-stats-grid,
-  .slc-stats-row {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 16px !important;
-  }
-  .slc-stat-value {
-    font-size: clamp(1.6rem, 7vw, 2.4rem) !important;
-  }
+/* Focus visible for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #c9933b;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
-/* Nav drawer fix: ensure full-width on mobile */
-@media (max-width: 991px) {
-  .slc-drawer {
-    width: 100% !important;
-    max-width: 340px !important;
-  }
-  .slc-drawer__nav {
-    padding: 20px 0 !important;
-  }
-  .slc-drawer__nav a {
-    font-size: 1.1rem !important;
-    padding: 14px 24px !important;
-    display: block !important;
-  }
+/* Ensure drawer close button is 44px */
+.slc-drawer-close,
+.slc-drawer__close {
+  min-width: 44px !important;
+  min-height: 44px !important;
 }
 
-/* Footer grid: single column on mobile */
-@media (max-width: 640px) {
-  .slc-footer__grid {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-  }
-  .slc-footer__bottom {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 12px !important;
-  }
-}
-
-/* TOC (table of contents on /shipping): wraps on mobile */
-@media (max-width: 640px) {
-  .slc-toc__list {
-    columns: 1 !important;
-  }
-  .slc-toc {
-    padding: 18px 16px !important;
-  }
-}
-
-/* Calculator card: full width on mobile */
-@media (max-width: 640px) {
-  .slc-calc-card {
-    padding: 20px 16px !important;
-  }
-  .slc-calc-tabs {
-    flex-direction: column !important;
-    gap: 8px !important;
-  }
-  .slc-calc-tab-btn {
-    width: 100% !important;
-    text-align: center !important;
-  }
-}
-
-/* Pricing notice: stack icon and text on tiny screens */
-@media (max-width: 480px) {
-  .slc-pricing-notice {
-    flex-direction: column !important;
-    gap: 8px !important;
-  }
-}
-
-/* Hub cards: single column on very small phones */
-@media (max-width: 480px) {
-  .slc-hub-grid,
-  .slc-case-grid,
-  .slc-step-grid,
-  .slc-feature-grid-3,
-  .slc-feature-grid-2 {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* AEO snippet / fact chips: wrap on mobile */
-@media (max-width: 600px) {
-  .slc-aeo-chips,
-  .slc-fact-chips {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-}
-
-/* Page hero actions: stack vertically on mobile */
-@media (max-width: 480px) {
-  .slc-page-hero__actions {
-    flex-direction: column !important;
-    gap: 10px !important;
-    width: 100% !important;
-  }
-  .slc-page-hero__actions .slc-btn,
-  .slc-page-hero__actions a {
-    width: 100% !important;
-    text-align: center !important;
-    justify-content: center !important;
-  }
+/* Menu toggle: ensure 44px touch target */
+.slc-menu-toggle {
+  min-width: 44px !important;
+  min-height: 44px !important;
 }
