@@ -1,19 +1,92 @@
 import os
 import re
 
-# Additional CSS for subpages
-SUBPAGE_CSS = """
+# Comprehensive Mobile-Responsive & Subpage CSS
+SUBPAGE_AND_MOBILE_CSS = """
 /* ==========================================================================
-   SECTION 14: SUBPAGE HERO & BREADCRUMBS
+   MOBILE RESPONSIVENESS OVERHAUL & SUBPAGE STYLING (.slc-)
    ========================================================================== */
 
+/* Universal Responsive Base */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header Sticky at Top 0 (No Announcement Bar) */
+.slc-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: var(--slc-transition);
+}
+
+.slc-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Mobile Drawer & Overlay */
+.slc-mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 85%;
+  max-width: 340px;
+  background: var(--slc-white);
+  z-index: 2000;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.25);
+  padding: 24px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slc-mobile-drawer.is-open {
+  transform: translateX(0);
+}
+
+.slc-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1999;
+  display: none;
+}
+
+.slc-overlay.is-open,
+.slc-overlay.is-visible {
+  display: block;
+}
+
+/* Subpage Hero */
 .slc-page-hero {
   position: relative;
   background-color: var(--slc-dark-bg);
   background-image: 
     radial-gradient(circle at 80% 20%, rgba(248, 210, 146, 0.08) 0%, transparent 45%),
     radial-gradient(circle at 20% 80%, rgba(184, 140, 117, 0.06) 0%, transparent 45%);
-  padding: 130px 0 70px;
+  padding: 80px 0 55px;
   border-bottom: 1px solid var(--slc-border-dark);
   color: var(--slc-white);
 }
@@ -22,10 +95,10 @@ SUBPAGE_CSS = """
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   font-size: 0.85rem;
   color: var(--slc-gray-500);
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .slc-breadcrumbs a {
@@ -61,7 +134,7 @@ SUBPAGE_CSS = """
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .slc-page-hero__pill::before {
@@ -74,12 +147,13 @@ SUBPAGE_CSS = """
 
 .slc-page-hero__title {
   font-family: var(--slc-font-head);
-  font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+  font-size: clamp(1.85rem, 5.5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: var(--slc-white);
+  word-break: break-word;
 }
 
 .slc-page-hero__title em {
@@ -90,26 +164,23 @@ SUBPAGE_CSS = """
 }
 
 .slc-page-hero__lead {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.84);
   max-width: 820px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .slc-page-hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 14px;
   align-items: center;
 }
 
-/* ==========================================================================
-   SECTION 15: SUBPAGE CONTENT & GRIDS
-   ========================================================================== */
-
+/* Subpage Content & Grids */
 .slc-content-section {
-  padding: 80px 0;
+  padding: 70px 0;
 }
 
 .slc-content-section--ivory {
@@ -132,19 +203,12 @@ SUBPAGE_CSS = """
   align-items: start;
 }
 
-@media (max-width: 991px) {
-  .slc-layout-with-sidebar {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
 .slc-sidebar-card {
   background-color: var(--slc-white);
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--slc-radius-lg);
-  padding: 28px;
-  margin-bottom: 28px;
+  padding: 26px;
+  margin-bottom: 24px;
   box-shadow: var(--slc-shadow-sm);
 }
 
@@ -158,8 +222,8 @@ SUBPAGE_CSS = """
   font-family: var(--slc-font-head);
   font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
   border-bottom: 2px solid var(--slc-gold);
 }
 
@@ -174,10 +238,10 @@ SUBPAGE_CSS = """
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px;
+  padding: 12px 14px;
   border-radius: var(--slc-radius-sm);
   background-color: var(--slc-gray-100);
-  font-size: 0.9375rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--slc-charcoal);
   transition: var(--slc-transition);
@@ -193,22 +257,22 @@ SUBPAGE_CSS = """
 .slc-feature-grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px;
-  margin: 36px 0;
+  gap: 24px;
+  margin: 32px 0;
 }
 
 .slc-feature-grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
-  margin: 36px 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
 }
 
 .slc-feature-box {
   background-color: var(--slc-white);
   border: 1px solid var(--slc-gray-200);
   border-radius: var(--slc-radius-md);
-  padding: 30px;
+  padding: 26px;
   transition: var(--slc-transition);
 }
 
@@ -219,36 +283,36 @@ SUBPAGE_CSS = """
 }
 
 .slc-feature-box__icon {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--slc-radius-md);
   background-color: var(--slc-ivory);
   border: 1px solid rgba(248, 210, 146, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   color: var(--slc-copper);
 }
 
 .slc-feature-box__icon svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   fill: currentColor;
 }
 
 .slc-feature-box__title {
   font-family: var(--slc-font-head);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: var(--slc-black);
 }
 
 .slc-feature-box__desc {
-  font-size: 0.95rem;
+  font-size: 0.925rem;
   color: var(--slc-gray-700);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .slc-checklist {
@@ -256,14 +320,14 @@ SUBPAGE_CSS = """
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin: 24px 0;
+  margin: 22px 0;
 }
 
 .slc-checklist__item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  font-size: 1rem;
+  gap: 12px;
+  font-size: 0.95rem;
   line-height: 1.6;
 }
 
@@ -283,69 +347,60 @@ SUBPAGE_CSS = """
 }
 
 .slc-prose {
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.75;
   color: var(--slc-charcoal);
 }
 
 .slc-prose h2 {
   font-family: var(--slc-font-head);
-  font-size: 1.85rem;
+  font-size: clamp(1.5rem, 3.2vw, 1.85rem);
   font-weight: 700;
   color: var(--slc-black);
-  margin: 40px 0 16px;
+  margin: 36px 0 14px;
 }
 
 .slc-prose h3 {
   font-family: var(--slc-font-head);
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   font-weight: 700;
   color: var(--slc-black);
-  margin: 32px 0 14px;
+  margin: 28px 0 12px;
 }
 
 .slc-prose p {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .slc-prose ul {
-  margin-bottom: 24px;
-  padding-left: 24px;
+  margin-bottom: 22px;
+  padding-left: 20px;
 }
 
 .slc-prose li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-/* ==========================================================================
-   SECTION 16: FORMS & SPEC TABLES
-   ========================================================================== */
-
+/* Forms & Tables */
 .slc-form-card {
   background-color: var(--slc-white);
   border: 1px solid var(--slc-gray-200);
   border-radius: var(--slc-radius-xl);
-  padding: 40px;
+  padding: 36px;
   box-shadow: var(--slc-shadow-md);
 }
 
 .slc-form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-@media (max-width: 640px) {
-  .slc-form-grid {
-    grid-template-columns: 1fr;
-  }
+  gap: 18px;
 }
 
 .slc-form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 18px;
+  gap: 6px;
+  margin-bottom: 16px;
 }
 
 .slc-form-group--full {
@@ -354,7 +409,7 @@ SUBPAGE_CSS = """
 
 .slc-label {
   font-family: var(--slc-font-head);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--slc-black);
 }
@@ -363,11 +418,11 @@ SUBPAGE_CSS = """
 .slc-select,
 .slc-textarea {
   width: 100%;
-  padding: 13px 16px;
+  padding: 12px 14px;
   border: 1px solid var(--slc-gray-300);
   border-radius: var(--slc-radius-sm);
   font-family: var(--slc-font-body);
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   color: var(--slc-charcoal);
   background-color: var(--slc-white);
   transition: var(--slc-transition);
@@ -382,23 +437,24 @@ SUBPAGE_CSS = """
 }
 
 .slc-textarea {
-  min-height: 120px;
+  min-height: 110px;
   resize: vertical;
 }
 
 .slc-table-wrap {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: var(--slc-radius-md);
   border: 1px solid var(--slc-gray-200);
-  margin: 28px 0;
+  margin: 24px 0;
   box-shadow: var(--slc-shadow-sm);
 }
 
 .slc-spec-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9375rem;
+  font-size: 0.9rem;
   text-align: left;
 }
 
@@ -407,15 +463,15 @@ SUBPAGE_CSS = """
   color: var(--slc-gold);
   font-family: var(--slc-font-head);
   font-weight: 700;
-  padding: 16px 20px;
+  padding: 14px 16px;
   letter-spacing: 0.05em;
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .slc-spec-table td {
-  padding: 16px 20px;
+  padding: 14px 16px;
   border-bottom: 1px solid var(--slc-gray-200);
   color: var(--slc-charcoal);
 }
@@ -428,56 +484,274 @@ SUBPAGE_CSS = """
   background-color: var(--slc-ivory-alt);
 }
 
-/* Interactive Calculator Box */
 .slc-calc-card {
   background-color: var(--slc-ivory);
   border: 1px solid rgba(248, 210, 146, 0.6);
   border-radius: var(--slc-radius-lg);
-  padding: 32px;
-  margin: 36px 0;
+  padding: 28px;
+  margin: 28px 0;
 }
 
 .slc-calc-result {
   background-color: var(--slc-black);
   color: var(--slc-white);
   border-radius: var(--slc-radius-md);
-  padding: 24px;
+  padding: 20px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 .slc-calc-val {
   font-family: var(--slc-font-head);
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--slc-gold);
   line-height: 1.2;
 }
 
-/* Callout Note */
 .slc-callout {
   border-left: 4px solid var(--slc-gold);
   background-color: var(--slc-ivory-alt);
-  padding: 20px 24px;
+  padding: 18px 20px;
   border-radius: 0 var(--slc-radius-md) var(--slc-radius-md) 0;
-  margin: 28px 0;
-  font-size: 0.95rem;
+  margin: 24px 0;
+  font-size: 0.925rem;
   line-height: 1.6;
+}
+
+/* ==========================================================================
+   BREAKPOINTS: TABLET & MOBILE (< 1024px, < 768px, < 480px)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  /* Switch desktop nav to mobile hamburger cleanly at 1024px */
+  .slc-nav-wrap, .slc-header__cta {
+    display: none !important;
+  }
+  .slc-menu-toggle {
+    display: block !important;
+  }
+  .slc-services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .slc-trust-strip__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .slc-how-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .slc-how-image-box {
+    height: 320px !important;
+  }
+  .slc-about__grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+  .slc-layout-with-sidebar {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+  .slc-footer__grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 36px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .slc-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .slc-header__inner {
+    height: 68px !important;
+  }
+  .slc-brand__logo {
+    width: 42px !important;
+    height: 42px !important;
+  }
+  .slc-brand__name {
+    font-size: 1.05rem !important;
+  }
+  .slc-brand__sub {
+    font-size: 0.6rem !important;
+  }
+  
+  /* Hero on Mobile */
+  .slc-hero {
+    min-height: auto !important;
+    padding: 60px 0 50px !important;
+  }
+  .slc-hero__title {
+    font-size: clamp(1.75rem, 6.5vw, 2.6rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
+  }
+  .slc-hero__desc {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 28px !important;
+  }
+  .slc-hero__actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    margin-bottom: 32px !important;
+  }
+  .slc-hero__actions .slc-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 20px !important;
+  }
+  .slc-hero__corridor-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding-top: 20px !important;
+  }
+  .slc-hero__cities {
+    flex-wrap: wrap !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.1em !important;
+    gap: 8px !important;
+  }
+
+  /* Trust Strip on Mobile */
+  .slc-trust-strip {
+    padding: 24px 0 !important;
+  }
+  .slc-trust-strip__grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* About Visual on Mobile */
+  .slc-visual-frame {
+    height: 260px !important;
+  }
+  .slc-float-pill {
+    position: static !important;
+    margin: 8px 0 0 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    box-shadow: var(--slc-shadow-sm) !important;
+  }
+
+  /* Services Grid on Mobile */
+  .slc-services-dark {
+    padding: 60px 0 !important;
+  }
+  .slc-services-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    margin-bottom: 32px !important;
+  }
+  .slc-services-header .slc-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  .slc-services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* How It Works on Mobile */
+  .slc-how-lux {
+    padding: 60px 0 !important;
+  }
+  .slc-how-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    margin-bottom: 32px !important;
+  }
+  .slc-how-header .slc-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Shipping & Locations on Mobile */
+  .slc-shipping, .slc-locations, .slc-testimonials, .slc-faq, .slc-cta {
+    padding: 60px 0 !important;
+  }
+  .slc-shipping-grid, .slc-locations-grid, .slc-testimonials-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .slc-compare-card, .slc-form-card, .slc-calc-card, .slc-feature-box, .slc-sidebar-card {
+    padding: 22px 16px !important;
+  }
+  
+  /* Subpage Hero on Mobile */
+  .slc-page-hero {
+    padding: 50px 0 36px !important;
+  }
+  .slc-page-hero__actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+  .slc-page-hero__actions .slc-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Forms & CTA */
+  .slc-form-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .slc-cta__actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+  .slc-cta__actions .slc-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  
+  /* Footer on Mobile */
+  .slc-footer {
+    padding: 50px 0 24px !important;
+  }
+  .slc-footer__grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .slc-footer__bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
 }
 """
 
 def update_css():
-    with open("assets/css/savelanded.css", "r", encoding="utf-8") as f:
+    css_path = "assets/css/savelanded.css"
+    with open(css_path, "r", encoding="utf-8") as f:
         existing = f.read()
-    if "SECTION 14: SUBPAGE HERO" not in existing:
-        with open("assets/css/savelanded.css", "a", encoding="utf-8") as f:
-            f.write(SUBPAGE_CSS)
-        print("Updated assets/css/savelanded.css with subpage styles.")
-    # Also update theme style
+
+    # Remove old announcement CSS if present
+    existing = re.sub(r'/\* =+\s*SECTION 1: TOP ANNOUNCEMENT BAR.*?(?=/\* =+\s*SECTION 2: FLOATING)', '', existing, flags=re.DOTALL)
+    existing = re.sub(r'\.slc-announcement[^{]*\{[^}]*\}', '', existing)
+
+    # Append or replace subpage and mobile CSS
+    if "MOBILE RESPONSIVENESS OVERHAUL" in existing:
+        base_css = existing.split("/* ==========================================================================\n   MOBILE RESPONSIVENESS OVERHAUL")[0]
+        new_css = base_css.strip() + "\n\n" + SUBPAGE_AND_MOBILE_CSS.strip()
+    else:
+        new_css = existing.strip() + "\n\n" + SUBPAGE_AND_MOBILE_CSS.strip()
+
+    with open(css_path, "w", encoding="utf-8") as f:
+        f.write(new_css)
+    print("Updated assets/css/savelanded.css with complete mobile responsive rules.")
+
     theme_css_path = "savelanded-theme/assets/css/style.css"
     if os.path.exists(theme_css_path):
         with open(theme_css_path, "w", encoding="utf-8") as f:
-            f.write(existing + ("\n" + SUBPAGE_CSS if "SECTION 14: SUBPAGE HERO" not in existing else ""))
+            f.write(new_css)
         print("Updated savelanded-theme/assets/css/style.css")
 
 def get_header(active_page=""):
@@ -489,29 +763,7 @@ def get_header(active_page=""):
 
     return f'''
   <!-- ==========================================================================
-       SECTION 1: ANNOUNCEMENT BAR
-       ========================================================================== -->
-  <aside class="slc-announcement" aria-label="Official Trade Corridor Notice">
-    <div class="slc-container slc-announcement__inner">
-      <div class="slc-announcement__left">
-        <span class="slc-announcement__tag">Direct Trade Corridor</span>
-        <span>Your Trusted China–Nigeria Sourcing, Procurement and Logistics Partner.</span>
-      </div>
-      <div class="slc-announcement__right">
-        <a href="tel:+8618248547224" class="slc-announcement__link" title="Call CEO Wolex">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
-          <span>CEO: +86 182 4854 7224</span>
-        </a>
-        <a href="mailto:svgadmsavelandedimpexpcomltd@gmail.com" class="slc-announcement__link" title="Official Email Desk">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <span>svgadmsavelandedimpexpcomltd@gmail.com</span>
-        </a>
-      </div>
-    </div>
-  </aside>
-
-  <!-- ==========================================================================
-       SECTION 2: MAIN MULTIPAGE NAVIGATION
+       PRIMARY MULTIPAGE HEADER & NAVIGATION (Sticky at top:0)
        ========================================================================== -->
   <header class="slc-header">
     <div class="slc-container slc-header__inner">
@@ -622,17 +874,20 @@ def get_header(active_page=""):
 
   <!-- Mobile Drawer & Overlay -->
   <div class="slc-overlay" id="slc-overlay"></div>
-  <aside class="slc-mobile-drawer" id="slc-mobile-drawer">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
-      <span style="font-family:var(--slc-font-head); font-weight:800; font-size:1.15rem;">SAVELANDED</span>
-      <button type="button" id="slc-menu-close" style="background:none; border:none; cursor:pointer; font-size:1.5rem;">&times;</button>
+  <aside class="slc-mobile-drawer" id="slc-mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; padding-bottom:14px; border-bottom:1px solid var(--slc-gray-200);">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="logo.jpg" alt="Savelanded" width="36" height="36" style="border-radius:4px;">
+        <span style="font-family:var(--slc-font-head); font-weight:800; font-size:1.15rem; color:var(--slc-black);">SAVELANDED</span>
+      </div>
+      <button type="button" id="slc-menu-close" style="background:none; border:none; cursor:pointer; font-size:1.8rem; line-height:1; color:var(--slc-black); padding:4px 8px;" aria-label="Close Navigation">&times;</button>
     </div>
     <ul style="list-style:none; display:flex; flex-direction:column; gap:16px;">
       <li><a href="index.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem;">Home</a></li>
       <li><a href="about.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem;">About Us</a></li>
       <li>
-        <a href="services.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem;">All Services</a>
-        <ul style="list-style:none; padding-left:16px; margin-top:8px; display:flex; flex-direction:column; gap:8px; font-size:0.9rem; border-left:2px solid var(--slc-gold);">
+        <a href="services.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem; display:block; margin-bottom:8px;">All Services</a>
+        <ul style="list-style:none; padding-left:14px; display:flex; flex-direction:column; gap:10px; font-size:0.925rem; border-left:2px solid var(--slc-gold);">
           <li><a href="air-freight.html">Air Freight</a></li>
           <li><a href="sea-freight.html">Sea Freight</a></li>
           <li><a href="product-sourcing.html">Product Sourcing &amp; Verification</a></li>
@@ -646,8 +901,9 @@ def get_header(active_page=""):
       <li><a href="shipping.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem;">Shipping Solutions</a></li>
       <li><a href="contact.html" style="font-family:var(--slc-font-head); font-weight:700; font-size:1.05rem;">Contact &amp; Locations</a></li>
     </ul>
-    <div style="margin-top:36px;">
-      <a href="quote.html" class="slc-btn slc-btn-gold" style="width:100%;">REQUEST A QUOTE</a>
+    <div style="margin-top:32px; display:flex; flex-direction:column; gap:12px;">
+      <a href="quote.html" class="slc-btn slc-btn-gold" style="width:100%; justify-content:center;">REQUEST A QUOTE</a>
+      <a href="tel:+8618248547224" class="slc-btn slc-btn-outline" style="width:100%; justify-content:center;">CALL CEO WOLEX</a>
     </div>
   </aside>
 '''
@@ -745,8 +1001,8 @@ def get_footer():
             <div class="slc-footer__office-text">Zone B, Shop 13/14, 23/24, Edo Plaza, Balogun, Trade Fair Complex, Badagry Expressway, Ojo, Lagos.</div>
           </div>
           <div class="slc-footer__phones">
-            <a href="tel:+8618248547224">CEO: +86 182 4854 7224</a>
-            <a href="tel:+8615757991458">Procurement: +86 157 5799 1458</a>
+            <a href="tel:+8618248547224">CEO Wolex: +86 182 4854 7224</a>
+            <a href="tel:+8615757991458">Procurement (Star): +86 157 5799 1458</a>
             <a href="mailto:svgadmsavelandedimpexpcomltd@gmail.com">svgadmsavelandedimpexpcomltd@gmail.com</a>
           </div>
         </div>
@@ -757,7 +1013,7 @@ def get_footer():
         <div>
           &copy; 2026 Savelanded Import and Export Company Limited. All rights reserved.
         </div>
-        <div style="display:flex; gap:20px;">
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
           <a href="about.html">Corporate Profile</a>
           <a href="contact.html">Global Hubs</a>
           <a href="quote.html">Instant Rates</a>
@@ -767,7 +1023,7 @@ def get_footer():
     </div>
   </footer>
 
-  <!-- Core JavaScript -->
+  <!-- Unified Mobile & Interactive JavaScript -->
   <script>
     (function() {
       'use strict';
@@ -779,6 +1035,7 @@ def get_footer():
       function openDrawer() {
         if (drawer && overlay) {
           drawer.classList.add('is-open');
+          overlay.classList.add('is-open');
           overlay.classList.add('is-visible');
           document.body.style.overflow = 'hidden';
         }
@@ -787,6 +1044,7 @@ def get_footer():
       function closeDrawer() {
         if (drawer && overlay) {
           drawer.classList.remove('is-open');
+          overlay.classList.remove('is-open');
           overlay.classList.remove('is-visible');
           document.body.style.overflow = '';
         }
@@ -795,6 +1053,11 @@ def get_footer():
       if (toggle) toggle.addEventListener('click', openDrawer);
       if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
       if (overlay) overlay.addEventListener('click', closeDrawer);
+
+      // Close drawer on ESC
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeDrawer();
+      });
     })();
   </script>
 '''
@@ -804,7 +1067,7 @@ def get_page_head(title, description, canonical_slug=""):
 <html lang="en" class="slc-html">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <title>{title} | Savelanded Import &amp; Export Co. Ltd</title>
@@ -872,5 +1135,4 @@ def get_service_sidebar(active_slug):
     </aside>
     '''
 
-print("Builder library initialized successfully.")
-
+print("Updated build_multipage.py initialized.")

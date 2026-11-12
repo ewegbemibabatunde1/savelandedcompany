@@ -226,63 +226,6 @@
     }
 
     /* ==========================================================================
-       SECTION 1: TOP ANNOUNCEMENT BAR
-       ========================================================================== */
-    .slc-announcement {
-      background-color: var(--slc-black);
-      color: var(--slc-white);
-      padding: 9px 0;
-      font-size: 0.8125rem;
-      border-bottom: 1px solid rgba(248, 210, 146, 0.2);
-    }
-    .slc-announcement__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .slc-announcement__left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--slc-ivory);
-      font-weight: 500;
-    }
-    .slc-announcement__tag {
-      background: rgba(248, 210, 146, 0.15);
-      color: var(--slc-gold);
-      font-family: var(--slc-font-head);
-      font-size: 0.6875rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: var(--slc-radius-pill);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid rgba(248, 210, 146, 0.3);
-    }
-    .slc-announcement__right {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .slc-announcement__link {
-      color: rgba(255, 255, 255, 0.85);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: var(--slc-transition);
-    }
-    .slc-announcement__link:hover {
-      color: var(--slc-gold);
-    }
-    .slc-announcement__link svg {
-      width: 14px;
-      height: 14px;
-      fill: currentColor;
-    }
-
-    /* ==========================================================================
        SECTION 2: FLOATING GLASSMORPHIC HEADER & MULTIPAGE NAVIGATION
        ========================================================================== */
     .slc-header {
@@ -1372,92 +1315,223 @@
       fill: currentColor;
     }
 
-    /* Responsive */
-    @media (max-width: 1080px) {
-      .slc-services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .slc-trust-strip__grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .slc-how-layout {
-        grid-template-columns: 1fr;
-      }
-      .slc-how-image-box {
-        height: 360px;
-      }
-      .slc-footer__grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    /* Universal Responsive Base */
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
+      width: 100%;
     }
-    @media (max-width: 860px) {
-      .slc-nav, .slc-header__cta {
-        display: none;
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .slc-overlay.is-visible,
+    .slc-overlay.is-open {
+      display: block;
+    }
+
+    /* Mobile Responsive Overhaul */
+    @media (max-width: 1024px) {
+      .slc-nav-wrap, .slc-header__cta {
+        display: none !important;
       }
       .slc-menu-toggle {
-        display: block;
+        display: block !important;
       }
-      .slc-about__grid {
-        grid-template-columns: 1fr;
-      }
-      .slc-visual-frame {
-        height: 380px;
-      }
-      .slc-float-pill {
-        position: static;
-        margin-top: 10px;
-        display: inline-flex;
-      }
-      .slc-shipping-grid, .slc-locations-grid, .slc-testimonials-grid {
-        grid-template-columns: 1fr;
+      .slc-services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
       }
       .slc-trust-strip__grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr) !important;
       }
-    }
-    @media (max-width: 600px) {
-      .slc-services-grid {
-        grid-template-columns: 1fr;
+      .slc-how-layout {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
       }
-      .slc-hero {
-        padding: 80px 0 70px;
+      .slc-how-image-box {
+        height: 320px !important;
       }
-      .slc-hero__actions {
-        flex-direction: column;
-        width: 100%;
-      }
-      .slc-hero__actions .slc-btn {
-        width: 100%;
+      .slc-about__grid {
+        grid-template-columns: 1fr !important;
+        gap: 36px !important;
       }
       .slc-footer__grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 36px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .slc-container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+      .slc-header__inner {
+        height: 68px !important;
+      }
+      .slc-brand__logo {
+        width: 42px !important;
+        height: 42px !important;
+      }
+      .slc-brand__name {
+        font-size: 1.05rem !important;
+      }
+      .slc-brand__sub {
+        font-size: 0.6rem !important;
+      }
+      
+      /* Hero on Mobile */
+      .slc-hero {
+        min-height: auto !important;
+        padding: 60px 0 50px !important;
+      }
+      .slc-hero__title {
+        font-size: clamp(1.75rem, 6.5vw, 2.6rem) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 16px !important;
+      }
+      .slc-hero__desc {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 28px !important;
+      }
+      .slc-hero__actions {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+        margin-bottom: 32px !important;
+      }
+      .slc-hero__actions .slc-btn {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 14px 20px !important;
+      }
+      .slc-hero__corridor-bar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+        padding-top: 20px !important;
+      }
+      .slc-hero__cities {
+        flex-wrap: wrap !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 0.1em !important;
+        gap: 8px !important;
+      }
+
+      /* Trust Strip on Mobile */
+      .slc-trust-strip {
+        padding: 24px 0 !important;
+      }
+      .slc-trust-strip__grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+
+      /* About Visual on Mobile */
+      .slc-about {
+        padding: 60px 0 !important;
+      }
+      .slc-visual-frame {
+        height: 260px !important;
+      }
+      .slc-float-pill {
+        position: static !important;
+        margin: 8px 0 0 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        box-shadow: var(--slc-shadow-sm) !important;
+      }
+
+      /* Services Grid on Mobile */
+      .slc-services-dark {
+        padding: 60px 0 !important;
+      }
+      .slc-services-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        margin-bottom: 32px !important;
+      }
+      .slc-services-header .slc-btn {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+      .slc-services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+
+      /* How It Works on Mobile */
+      .slc-how-lux {
+        padding: 60px 0 !important;
+      }
+      .slc-how-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        margin-bottom: 32px !important;
+      }
+      .slc-how-header .slc-btn {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+
+      /* Shipping & Locations on Mobile */
+      .slc-shipping, .slc-locations, .slc-testimonials, .slc-faq, .slc-cta {
+        padding: 60px 0 !important;
+      }
+      .slc-shipping-grid, .slc-locations-grid, .slc-testimonials-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+      .slc-compare-card, .slc-loc-card, .slc-test-card, .slc-faq-item {
+        padding: 22px 16px !important;
+      }
+      
+      /* CTA Section on Mobile */
+      .slc-cta__actions {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        gap: 12px !important;
+      }
+      .slc-cta__actions .slc-btn {
+        width: 100% !important;
+        justify-content: center !important;
+      }
+      
+      /* Footer on Mobile */
+      .slc-footer {
+        padding: 50px 0 24px !important;
+      }
+      .slc-footer__grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+      .slc-footer__bottom {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+      }
+      .slc-back-to-top {
+        bottom: 16px !important;
+        right: 16px !important;
+        width: 40px !important;
+        height: 40px !important;
       }
     }
   </style>
 </head>
 <body class="slc-body">
 
-  <!-- ==========================================================================
-       SECTION 1: ANNOUNCEMENT BAR
-       ========================================================================== -->
-  <aside class="slc-announcement" aria-label="Official Trade Corridor Notice">
-    <div class="slc-container slc-announcement__inner">
-      <div class="slc-announcement__left">
-        <span class="slc-announcement__tag">Direct Trade Corridor</span>
-        <span>Your Trusted China–Nigeria Sourcing, Procurement and Logistics Partner.</span>
-      </div>
-      <div class="slc-announcement__right">
-        <a href="tel:+8618248547224" class="slc-announcement__link" title="Call CEO Wolex">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
-          <span>CEO: +86 182 4854 7224</span>
-        </a>
-        <a href="mailto:svgadmsavelandedimpexpcomltd@gmail.com" class="slc-announcement__link" title="Official Email Desk">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <span>svgadmsavelandedimpexpcomltd@gmail.com</span>
-        </a>
-      </div>
-    </div>
-  </aside>
+  
 
   <!-- ==========================================================================
        SECTION 2: MAIN MULTIPAGE NAVIGATION
@@ -2174,7 +2248,7 @@
                 16, 2nd Street, Longgang Road,<br>Yiwu City, Zhejiang Province, China.<br>
                 <em style="font-size:0.75rem; color:var(--slc-copper);">(Address provisional pending final confirmation)</em>
               </div>
-              <div style="font-size:0.875rem; font-weight:600;">Contact: svgStar &bull; <a href="tel:+8615757991458">+86 157 5799 1458</a></div>
+              <div style="font-size:0.875rem; font-weight:600;">Contact: Star &bull; <a href="tel:+8615757991458">+86 157 5799 1458</a></div>
             </div>
           </article>
 
@@ -2371,7 +2445,7 @@
               <span class="slc-faq-icon"><svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg></span>
             </button>
             <div class="slc-faq-panel">
-              <p>You can reach Wolex CEO directly at +86 182 4854 7224, our Yiwu contact svgStar at +86 157 5799 1458, or email our administrative desk at svgadmsavelandedimpexpcomltd@gmail.com.</p>
+              <p>You can reach Wolex CEO directly at +86 182 4854 7224, our Yiwu contact Star at +86 157 5799 1458, or email our administrative desk at svgadmsavelandedimpexpcomltd@gmail.com.</p>
             </div>
           </div>
 
@@ -2404,7 +2478,7 @@
           </a>
         </div>
         <div class="slc-cta__direct">
-          Direct Inquiries: <a href="tel:+8618248547224">+86 182 4854 7224</a> (Wolex CEO) &bull; <a href="tel:+8615757991458">+86 157 5799 1458</a> (svgStar)
+          Direct Inquiries: <a href="tel:+8618248547224">+86 182 4854 7224</a> (Wolex CEO) &bull; <a href="tel:+8615757991458">+86 157 5799 1458</a> (Star)
         </div>
       </div>
     </section>
@@ -2478,7 +2552,7 @@
           </div>
           <div style="margin-top:14px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.1); font-size:0.8125rem;">
             <div>Wolex CEO: <a href="tel:+8618248547224" style="color:var(--slc-gold);">+86 182 4854 7224</a></div>
-            <div>svgStar: <a href="tel:+8615757991458" style="color:var(--slc-gold);">+86 157 5799 1458</a></div>
+            <div>Star: <a href="tel:+8615757991458" style="color:var(--slc-gold);">+86 157 5799 1458</a></div>
             <div>Email: <a href="mailto:svgadmsavelandedimpexpcomltd@gmail.com" style="color:var(--slc-gold);">svgadmsavelandedimpexpcomltd@gmail.com</a></div>
           </div>
         </div>

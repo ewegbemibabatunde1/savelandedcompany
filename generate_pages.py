@@ -133,7 +133,7 @@ about_body = """
               </div>
             </div>
             <div class="slc-feature-box" style="border-top:3px solid var(--slc-copper);">
-              <div style="font-family:var(--slc-font-head); font-size:1.2rem; font-weight:700;">svgStar</div>
+              <div style="font-family:var(--slc-font-head); font-size:1.2rem; font-weight:700;">Star</div>
               <div style="font-size:0.85rem; color:var(--slc-copper); font-weight:600; text-transform:uppercase; margin-bottom:12px;">Procurement Specialist &amp; Operations</div>
               <p style="font-size:0.9rem; color:var(--slc-gray-700); line-height:1.6;">
                 Directing factory negotiations, supplier verification, 1688 procurement, and China warehouse intake coordination.
@@ -751,7 +751,7 @@ sourcing_body = f"""
       </p>
       <div class="slc-page-hero__actions">
         <a href="quote.html" class="slc-btn slc-btn-gold">REQUEST SOURCING ASSISTANCE</a>
-        <a href="tel:+8615757991458" class="slc-btn slc-btn-outline-gold">SPEAK WITH SVGSTAR</a>
+        <a href="tel:+8615757991458" class="slc-btn slc-btn-outline-gold">SPEAK WITH STAR</a>
       </div>
     </div>
   </header>
@@ -874,7 +874,7 @@ procurement_body = f"""
       </p>
       <div class="slc-page-hero__actions">
         <a href="quote.html" class="slc-btn slc-btn-gold">REQUEST PROCUREMENT DESK</a>
-        <a href="tel:+8615757991458" class="slc-btn slc-btn-outline-gold">CALL SVGSTAR (+86 157 5799 1458)</a>
+        <a href="tel:+8615757991458" class="slc-btn slc-btn-outline-gold">CALL STAR (+86 157 5799 1458)</a>
       </div>
     </div>
   </header>
@@ -1629,7 +1629,7 @@ contact_body = """
             Huayag Warehouse, No. 498 Qinglong Road, Baiyun District, Guangzhou, China.
           </p>
           <div style="font-size:0.875rem; border-top:1px solid var(--slc-gray-200); padding-top:14px;">
-            <strong>Lead Contact:</strong> svgStar (Procurement)<br>
+            <strong>Lead Contact:</strong> Star (Procurement)<br>
             <strong>Phone / WeChat:</strong> <a href="tel:+8615757991458" style="color:var(--slc-charcoal); font-weight:700;">+86 157 5799 1458</a>
           </div>
         </div>
