@@ -3824,3 +3824,269 @@ code, pre {
     padding-right: 12px;
   }
 }
+
+
+/* ==========================================================================
+   COMPARISON TABLE — DESKTOP TABLET REFINEMENT (fix 6-column overflow)
+   Added by fix_all_issues.py
+   ========================================================================== */
+
+/* Medium screens: allow wrapping in table header cells */
+@media (max-width: 1200px) and (min-width: 881px) {
+  .slc-comparison-table thead th {
+    white-space: normal !important;
+    font-size: 0.8rem !important;
+    padding: 14px 14px !important;
+    letter-spacing: 0.02em !important;
+  }
+  .slc-comparison-table tbody td {
+    padding: 14px 14px !important;
+    font-size: 0.88rem !important;
+  }
+  /* Slim the Action column */
+  .slc-comparison-table tbody td:last-child,
+  .slc-comparison-table thead th:last-child {
+    width: 90px !important;
+    min-width: 90px !important;
+  }
+  /* Give the cargo description column more room */
+  .slc-comparison-table tbody td:nth-child(5),
+  .slc-comparison-table thead th:nth-child(5) {
+    min-width: 160px !important;
+  }
+}
+
+/* Large desktop: enforce nowrap only on first 2 columns */
+@media (min-width: 1201px) {
+  .slc-comparison-table thead th {
+    white-space: nowrap !important;
+  }
+  .slc-comparison-table tbody td {
+    padding: 18px 20px !important;
+  }
+}
+
+/* Tablet portrait (641px–880px): switch to compact horizontal scroll */
+@media (max-width: 880px) and (min-width: 641px) {
+  .slc-comparison-table-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(128,24,35,0.14) !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+  }
+  .slc-comparison-table {
+    display: table !important;
+    min-width: 640px !important;
+  }
+  .slc-comparison-table thead {
+    display: table-header-group !important;
+  }
+  .slc-comparison-table tbody {
+    display: table-row-group !important;
+    flex-direction: unset !important;
+    gap: unset !important;
+  }
+  .slc-comparison-table tbody tr {
+    display: table-row !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .slc-comparison-table tbody tr::before {
+    display: none !important;
+  }
+  .slc-comparison-table tbody td {
+    display: table-cell !important;
+    padding: 12px 14px !important;
+    border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+    font-size: 0.85rem !important;
+    flex-direction: unset !important;
+  }
+  .slc-comparison-table tbody td::before {
+    display: none !important;
+  }
+}
+
+/* Rate table (pricing tables on /shipping): improved mobile display */
+@media (max-width: 880px) {
+  .slc-rate-table-wrapper {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    overflow-x: visible !important;
+    padding: 0 !important;
+  }
+  .slc-rate-table {
+    display: block !important;
+  }
+  .slc-rate-table thead {
+    display: none !important;
+  }
+  .slc-rate-table tbody,
+  .slc-rate-table tr,
+  .slc-rate-table td {
+    display: block !important;
+    width: 100% !important;
+  }
+  .slc-rate-table tr {
+    margin-bottom: 16px !important;
+    background: #ffffff !important;
+    border: 1.5px solid rgba(128,24,35,0.12) !important;
+    border-radius: 12px !important;
+    padding: 14px 16px !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05) !important;
+  }
+  .slc-rate-table td {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 8px 0 !important;
+    border-bottom: 1px dashed rgba(0,0,0,0.08) !important;
+    font-size: 0.9rem !important;
+    text-align: right !important;
+  }
+  .slc-rate-table td:last-child {
+    border-bottom: none !important;
+  }
+  .slc-rate-table td::before {
+    content: attr(data-label) !important;
+    font-weight: 700 !important;
+    color: #801823 !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    text-align: left !important;
+    flex: 1 !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Hero section fix: prevent text overflow on small screens */
+@media (max-width: 480px) {
+  .slc-hero__title,
+  .slc-page-hero__title,
+  h1 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem) !important;
+    line-height: 1.2 !important;
+  }
+  h2, .slc-section-title {
+    font-size: clamp(1.25rem, 5.5vw, 1.8rem) !important;
+  }
+  .slc-container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+
+/* Stats / counters row: prevent overflow on mobile */
+@media (max-width: 600px) {
+  .slc-stats-grid,
+  .slc-stats-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+  .slc-stat-value {
+    font-size: clamp(1.6rem, 7vw, 2.4rem) !important;
+  }
+}
+
+/* Nav drawer fix: ensure full-width on mobile */
+@media (max-width: 991px) {
+  .slc-drawer {
+    width: 100% !important;
+    max-width: 340px !important;
+  }
+  .slc-drawer__nav {
+    padding: 20px 0 !important;
+  }
+  .slc-drawer__nav a {
+    font-size: 1.1rem !important;
+    padding: 14px 24px !important;
+    display: block !important;
+  }
+}
+
+/* Footer grid: single column on mobile */
+@media (max-width: 640px) {
+  .slc-footer__grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .slc-footer__bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+}
+
+/* TOC (table of contents on /shipping): wraps on mobile */
+@media (max-width: 640px) {
+  .slc-toc__list {
+    columns: 1 !important;
+  }
+  .slc-toc {
+    padding: 18px 16px !important;
+  }
+}
+
+/* Calculator card: full width on mobile */
+@media (max-width: 640px) {
+  .slc-calc-card {
+    padding: 20px 16px !important;
+  }
+  .slc-calc-tabs {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .slc-calc-tab-btn {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+/* Pricing notice: stack icon and text on tiny screens */
+@media (max-width: 480px) {
+  .slc-pricing-notice {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+}
+
+/* Hub cards: single column on very small phones */
+@media (max-width: 480px) {
+  .slc-hub-grid,
+  .slc-case-grid,
+  .slc-step-grid,
+  .slc-feature-grid-3,
+  .slc-feature-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* AEO snippet / fact chips: wrap on mobile */
+@media (max-width: 600px) {
+  .slc-aeo-chips,
+  .slc-fact-chips {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* Page hero actions: stack vertically on mobile */
+@media (max-width: 480px) {
+  .slc-page-hero__actions {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .slc-page-hero__actions .slc-btn,
+  .slc-page-hero__actions a {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
