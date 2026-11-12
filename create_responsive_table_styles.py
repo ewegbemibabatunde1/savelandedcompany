@@ -1,0 +1,212 @@
+# -*- coding: utf-8 -*-
+"""
+Mobile & Desktop Responsive Card Transformer for Comparison Tables
+Converts .slc-comparison-table-wrapper into high-end responsive card structures
+on mobile devices while rendering a luxury corporate table on desktop.
+"""
+
+RESPONSIVE_COMPARISON_CSS = """
+/* ==========================================================================
+   ADVANCED RESPONSIVE COMPARISON TABLE & MOBILE DATA CARDS
+   ========================================================================== */
+
+.slc-comparison-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 36px 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(138, 43, 54, 0.15);
+  background: #ffffff;
+}
+
+.slc-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.slc-comparison-table thead {
+  background: linear-gradient(135deg, #5c141c 0%, #801823 100%);
+}
+
+.slc-comparison-table thead th {
+  color: #ffffff;
+  padding: 18px 22px;
+  font-family: var(--slc-font-head, 'Sora', sans-serif);
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+  white-space: nowrap;
+}
+
+.slc-comparison-table thead th:first-child {
+  border-top-left-radius: 15px;
+}
+.slc-comparison-table thead th:last-child {
+  border-top-right-radius: 15px;
+}
+
+.slc-comparison-table tbody td {
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--slc-charcoal, #191919);
+  vertical-align: middle;
+  font-size: 0.9375rem;
+}
+
+.slc-comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.slc-comparison-table tbody tr:nth-child(even) {
+  background-color: #faf7f4;
+}
+
+.slc-comparison-table tbody tr:hover {
+  background-color: #f3ece4;
+}
+
+.slc-comparison-table td strong {
+  color: #801823;
+  font-weight: 700;
+  font-family: var(--slc-font-head, 'Sora', sans-serif);
+}
+
+/* Vibrant Corporate Outline & Action Buttons */
+.slc-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 18px;
+  font-family: var(--slc-font-head, 'Sora', sans-serif);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #801823 !important;
+  background-color: #ffffff !important;
+  border: 1.5px solid #801823 !important;
+  border-radius: 9999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(128, 24, 35, 0.08);
+}
+
+.slc-btn-outline:hover {
+  background-color: #801823 !important;
+  color: #ffffff !important;
+  border-color: #801823 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(128, 24, 35, 0.25);
+}
+
+/* Mobile Responsive Transformation (< 880px) */
+@media (max-width: 880px) {
+  .slc-comparison-table-wrapper {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow-x: visible !important;
+    margin: 24px 0 !important;
+  }
+
+  .slc-comparison-table {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .slc-comparison-table thead {
+    display: none !important; /* Hide standard tabular header on mobile */
+  }
+
+  .slc-comparison-table tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  .slc-comparison-table tbody tr {
+    display: flex !important;
+    flex-direction: column !important;
+    background: #ffffff !important;
+    border-radius: 14px !important;
+    border: 1.5px solid rgba(128, 24, 35, 0.12) !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06) !important;
+    padding: 18px 20px !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .slc-comparison-table tbody tr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, #801823 0%, #c9933b 100%);
+  }
+
+  .slc-comparison-table tbody td {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.08) !important;
+    text-align: left !important;
+    font-size: 0.92rem !important;
+  }
+
+  .slc-comparison-table tbody td:last-child {
+    border-bottom: none !important;
+    padding-top: 14px !important;
+  }
+
+  .slc-comparison-table tbody td::before {
+    content: attr(data-label);
+    font-family: var(--slc-font-head, 'Sora', sans-serif);
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    color: #801823 !important;
+  }
+
+  .slc-comparison-table tbody td:first-child::before {
+    display: none !important; /* The item name stands on its own */
+  }
+
+  .slc-comparison-table tbody td:first-child {
+    font-size: 1.15rem !important;
+    padding-bottom: 12px !important;
+    border-bottom: 2px solid rgba(128, 24, 35, 0.15) !important;
+  }
+
+  .slc-comparison-table tbody td:first-child strong {
+    font-size: 1.15rem !important;
+    color: #801823 !important;
+  }
+
+  .slc-comparison-table tbody td .slc-btn-outline {
+    width: 100% !important;
+    padding: 12px !important;
+    text-align: center !important;
+    font-size: 0.88rem !important;
+  }
+}
+"""
+
+with open('responsive_table_styles.css', 'w', encoding='utf-8') as f:
+    f.write(RESPONSIVE_COMPARISON_CSS)
+
+print("Created responsive_table_styles.css")
+
