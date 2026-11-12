@@ -5,18 +5,18 @@ import re
 # Comprehensive Entity-Enhanced Organization Schema for Knowledge Graphs
 ORG_ENTITY_SCHEMA = {
     "@type": "LogisticsService",
-    "@id": "https://savelandedcompany.com/#organization",
+    "@id": "https://savelandedcompany.vercel.app/#organization",
     "name": "Savelanded Import and Export Company Limited",
     "alternateName": ["Savelanded", "Savelanded Logistics", "Savelanded Co. Ltd"],
     "legalName": "Savelanded Import and Export Company Limited",
-    "url": "https://savelandedcompany.com/",
+    "url": "https://savelandedcompany.vercel.app/",
     "logo": {
         "@type": "ImageObject",
-        "@id": "https://savelandedcompany.com/#logo",
-        "url": "https://savelandedcompany.com/logo.jpg",
+        "@id": "https://savelandedcompany.vercel.app/#logo",
+        "url": "https://savelandedcompany.vercel.app/logo.jpg",
         "caption": "Savelanded Import and Export Company Limited Corporate Logo"
     },
-    "image": "https://savelandedcompany.com/logo.jpg",
+    "image": "https://savelandedcompany.vercel.app/logo.jpg",
     "email": "svgadmsavelandedimpexpcomltd@gmail.com",
     "telephone": "+8618248547224",
     "priceRange": "$$",
@@ -33,24 +33,24 @@ ORG_ENTITY_SCHEMA = {
         "Door-to-Door Delivery Across 36 Nigerian States"
     ],
     "sameAs": [
-        "https://savelandedcompany.com/"
+        "https://savelandedcompany.vercel.app/"
     ],
     "founder": {
         "@type": "Person",
-        "@id": "https://savelandedcompany.com/#wolex",
+        "@id": "https://savelandedcompany.vercel.app/#wolex",
         "name": "Wolex",
         "jobTitle": "Chief Executive Officer & Founder",
         "telephone": "+8618248547224",
-        "worksFor": {"@id": "https://savelandedcompany.com/#organization"}
+        "worksFor": {"@id": "https://savelandedcompany.vercel.app/#organization"}
     },
     "employee": [
         {
             "@type": "Person",
-            "@id": "https://savelandedcompany.com/#star",
+            "@id": "https://savelandedcompany.vercel.app/#star",
             "name": "Star",
             "jobTitle": "Lead Operations & China Procurement Specialist",
             "telephone": "+8615757991458",
-            "worksFor": {"@id": "https://savelandedcompany.com/#organization"}
+            "worksFor": {"@id": "https://savelandedcompany.vercel.app/#organization"}
         }
     ],
     "address": [
@@ -85,7 +85,7 @@ ORG_ENTITY_SCHEMA = {
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Air Freight Shipping from China to Nigeria",
-                    "url": "https://savelandedcompany.com/air-freight.html"
+                    "url": "https://savelandedcompany.vercel.app/air-freight.html"
                 }
             },
             {
@@ -93,7 +93,7 @@ ORG_ENTITY_SCHEMA = {
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Sea Freight Shipping from China to Nigeria (FCL & LCL)",
-                    "url": "https://savelandedcompany.com/sea-freight.html"
+                    "url": "https://savelandedcompany.vercel.app/sea-freight.html"
                 }
             },
             {
@@ -101,7 +101,7 @@ ORG_ENTITY_SCHEMA = {
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Product Sourcing & Factory Verification in China",
-                    "url": "https://savelandedcompany.com/product-sourcing.html"
+                    "url": "https://savelandedcompany.vercel.app/product-sourcing.html"
                 }
             },
             {
@@ -109,7 +109,7 @@ ORG_ENTITY_SCHEMA = {
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Purchasing and RMB Procurement in China",
-                    "url": "https://savelandedcompany.com/procurement.html"
+                    "url": "https://savelandedcompany.vercel.app/procurement.html"
                 }
             },
             {
@@ -117,7 +117,7 @@ ORG_ENTITY_SCHEMA = {
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Warehousing & Cargo Consolidation in Yiwu & Guangzhou",
-                    "url": "https://savelandedcompany.com/warehousing.html"
+                    "url": "https://savelandedcompany.vercel.app/warehousing.html"
                 }
             },
             {
@@ -125,7 +125,7 @@ ORG_ENTITY_SCHEMA = {
                 "itemOffered": {
                     "@type": "Service",
                     "name": "Customs Clearance & Documentation at Lagos Ports",
-                    "url": "https://savelandedcompany.com/customs-clearance.html"
+                    "url": "https://savelandedcompany.vercel.app/customs-clearance.html"
                 }
             },
             {
@@ -133,7 +133,7 @@ ORG_ENTITY_SCHEMA = {
                 "itemOffered": {
                     "@type": "Service",
                     "name": "International Import and Export Compliance",
-                    "url": "https://savelandedcompany.com/import-export.html"
+                    "url": "https://savelandedcompany.vercel.app/import-export.html"
                 }
             },
             {
@@ -141,7 +141,7 @@ ORG_ENTITY_SCHEMA = {
                 "itemOffered": {
                     "@type": "Service",
                     "name": "All-Inclusive Door-to-Door Delivery in Nigeria",
-                    "url": "https://savelandedcompany.com/door-to-door.html"
+                    "url": "https://savelandedcompany.vercel.app/door-to-door.html"
                 }
             }
         ]
@@ -174,7 +174,7 @@ def make_breadcrumb_schema(items):
             "@type": "ListItem",
             "position": idx,
             "name": name,
-            "item": f"https://savelandedcompany.com/{url}" if url else "https://savelandedcompany.com/"
+            "item": f"https://savelandedcompany.vercel.app/{url}" if url else "https://savelandedcompany.vercel.app/"
         })
     return {
         "@type": "BreadcrumbList",

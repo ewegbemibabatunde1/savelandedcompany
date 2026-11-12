@@ -1,87 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://savelandedcompany.com/</loc>
+    <loc>https://savelandedcompany.vercel.app/</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/about</loc>
+    <loc>https://savelandedcompany.vercel.app/about</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/services</loc>
+    <loc>https://savelandedcompany.vercel.app/services</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/air-freight</loc>
+    <loc>https://savelandedcompany.vercel.app/air-freight</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/sea-freight</loc>
+    <loc>https://savelandedcompany.vercel.app/sea-freight</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/product-sourcing</loc>
+    <loc>https://savelandedcompany.vercel.app/product-sourcing</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/procurement</loc>
+    <loc>https://savelandedcompany.vercel.app/procurement</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/warehousing</loc>
+    <loc>https://savelandedcompany.vercel.app/warehousing</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/customs-clearance</loc>
+    <loc>https://savelandedcompany.vercel.app/customs-clearance</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/import-export</loc>
+    <loc>https://savelandedcompany.vercel.app/import-export</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/door-to-door</loc>
+    <loc>https://savelandedcompany.vercel.app/door-to-door</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/shipping</loc>
+    <loc>https://savelandedcompany.vercel.app/shipping</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/quote</loc>
+    <loc>https://savelandedcompany.vercel.app/quote</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://savelandedcompany.com/contact</loc>
+    <loc>https://savelandedcompany.vercel.app/contact</loc>
     <lastmod>2026-11-12</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 </urlset>

@@ -1240,7 +1240,7 @@ def get_page_head(title, description, canonical_slug="", keywords="", schema_dat
 {json.dumps(schema_data, indent=2, ensure_ascii=False)}
   </script>'''
 
-    canonical_url = f"https://savelandedcompany.com/{canonical_slug}" if canonical_slug else "https://savelandedcompany.com/"
+    canonical_url = f"https://savelandedcompany.vercel.app/{canonical_slug}" if canonical_slug else "https://savelandedcompany.vercel.app/"
 
     return f'''<!DOCTYPE html>
 <html lang="en" class="slc-html">
@@ -1274,7 +1274,7 @@ def get_page_head(title, description, canonical_slug="", keywords="", schema_dat
   <meta property="og:url" content="{canonical_url}">
   <meta property="og:title" content="{title} | Savelanded">
   <meta property="og:description" content="{description}">
-  <meta property="og:image" content="https://savelandedcompany.com/logo.jpg">
+  <meta property="og:image" content="https://savelandedcompany.vercel.app/logo.jpg">
   <meta property="og:locale" content="en_NG">
   <meta property="og:locale:alternate" content="en_US">
 
@@ -1282,7 +1282,7 @@ def get_page_head(title, description, canonical_slug="", keywords="", schema_dat
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{title} | Savelanded">
   <meta name="twitter:description" content="{description}">
-  <meta name="twitter:image" content="https://savelandedcompany.com/logo.jpg">
+  <meta name="twitter:image" content="https://savelandedcompany.vercel.app/logo.jpg">
 
   <link rel="icon" type="image/jpeg" href="logo.jpg">
   <link rel="apple-touch-icon" href="logo.jpg">

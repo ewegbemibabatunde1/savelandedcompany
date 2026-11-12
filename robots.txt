@@ -38,4 +38,4 @@ Disallow: /*.py$
 Disallow: /__pycache__/
 
 # Sitemaps
-Sitemap: https://savelandedcompany.com/sitemap.xml
+Sitemap: https://savelandedcompany.vercel.app/sitemap.xml
