@@ -8,3 +8,4 @@ if idx != -1:
     print(text[idx:idx+1000])
 else:
     print("Target not found")
+

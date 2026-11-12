@@ -11,3 +11,4 @@ if target in content:
     print("SUCCESS: Expanded quote.html with Preparation Guidance.")
 else:
     print("Target not found in quote.html")
+

@@ -12,3 +12,4 @@ if target in text:
     print("SUCCESS: Updated canonical URL clean slug in build_multipage.py")
 else:
     print("Target not found in build_multipage.py")
+

@@ -229,3 +229,4 @@ if __name__ == '__main__':
     update_homepage()
 
     print("\nALL 14 PAGES EXPANSION APPLIED SUCCESSFULLY.")
+
