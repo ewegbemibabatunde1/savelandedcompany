@@ -25,3 +25,4 @@ with open('index.html', 'w', encoding='utf-8') as f:
     f.write(text)
 
 print("SUCCESS: Updated index.html footer contacts and social links.")
+

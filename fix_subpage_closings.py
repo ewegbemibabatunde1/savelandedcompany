@@ -23,3 +23,4 @@ for f in html_files:
         print(f"Appended closing tags and Floating WhatsApp to {f}")
     else:
         print(f"{f} already has Floating WhatsApp")
+

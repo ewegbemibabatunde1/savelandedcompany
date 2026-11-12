@@ -210,3 +210,4 @@ if __name__ == '__main__':
     update_html_files()
     update_templates()
     print("\nALL VERIFIED BUSINESS DETAILS SUCCESSFULLY DEPLOYED.")
+

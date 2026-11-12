@@ -17,3 +17,4 @@ for f in html_files:
         print(f"Added floating WhatsApp button to {f}")
     else:
         print(f"Floating WhatsApp already in {f}")
+

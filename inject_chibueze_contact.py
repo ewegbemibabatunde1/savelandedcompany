@@ -21,3 +21,4 @@ if target in text:
     print("SUCCESS: Embedded WhatsApp and Chibueze in contact.html")
 else:
     print("Target not found")
+
