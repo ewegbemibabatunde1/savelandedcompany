@@ -22,3 +22,4 @@ print('Has </html> (target True):', has_html_close)
 print('Has correct canonical (target True):', has_canonical)
 print('Has floating WhatsApp (target True):', has_whatsapp)
 print('Has dynamic calculation engine (target True):', has_calc)
+

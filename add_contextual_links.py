@@ -43,3 +43,4 @@ def enrich_pages():
 
 if __name__ == '__main__':
     enrich_pages()
+
