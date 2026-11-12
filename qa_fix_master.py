@@ -627,3 +627,4 @@ if __name__ == '__main__':
     print('Final CSS size:', os.path.getsize(CSS_PATH), 'bytes')
     print('=' * 65)
     print('\nRun: python audit_all_pages.py  to verify no SEO regressions')
+
