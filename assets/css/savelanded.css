@@ -1319,7 +1319,8 @@
         grid-template-columns: repeat(2, 1fr);
       }
       .slc-trust-strip__grid {
-        grid-template-columns: repeat(3, 1fr);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
       }
       .slc-how-layout {
         grid-template-columns: 1fr;
@@ -2539,7 +2540,8 @@ img {
     grid-template-columns: repeat(2, 1fr) !important;
   }
   .slc-trust-strip__grid {
-    grid-template-columns: repeat(3, 1fr) !important;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr) !important;
   }
   .slc-how-layout {
     grid-template-columns: 1fr !important;
@@ -2967,4 +2969,94 @@ textarea:focus-visible,
 .slc-menu-toggle {
   min-width: 44px !important;
   min-height: 44px !important;
+}
+
+
+/* ==========================================================================
+   SAVELANDED HOMEPAGE REFINEMENTS (Trust Strip 5-in-row, Services 4-in-row, Large Workflow Image)
+   ========================================================================== */
+.slc-trust-strip__grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 16px !important;
+  align-items: flex-start !important;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .slc-trust-strip__grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 16px !important;
+    padding-bottom: 8px !important;
+  }
+  .slc-trust-item {
+    flex: 0 0 220px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .slc-trust-strip__grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+}
+
+.slc-services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 22px !important;
+}
+
+@media (max-width: 1024px) and (min-width: 641px) {
+  .slc-services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .slc-services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+}
+
+.slc-how-layout {
+  display: grid !important;
+  grid-template-columns: 1.25fr 1fr !important;
+  gap: 48px !important;
+  align-items: stretch !important;
+}
+
+.slc-how-image-box {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 640px !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 1024px) and (min-width: 641px) {
+  .slc-how-layout {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+  .slc-how-image-box {
+    height: 480px !important;
+    min-height: 480px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .slc-how-layout {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .slc-how-image-box {
+    height: 360px !important;
+    min-height: 360px !important;
+  }
 }
