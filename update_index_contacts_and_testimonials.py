@@ -168,3 +168,4 @@ with open(INDEX_PATH, "w", encoding="utf-8") as f:
     f.write(content)
 
 print("index.html updated successfully with removed contact lines and 6 testimonials (3 in a row)!")
+

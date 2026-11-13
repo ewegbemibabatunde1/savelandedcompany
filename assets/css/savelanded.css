@@ -3060,3 +3060,212 @@ textarea:focus-visible,
     min-height: 360px !important;
   }
 }
+
+
+/* ==========================================================================
+   SHIPPING MASTER PAGE SYSTEM (.slc-rate-table, .slc-hub-card, .slc-step-card)
+   ========================================================================== */
+.slc-pricing-notice {
+  background: #fef8f0 !important;
+  border-left: 4px solid #c9933b !important;
+  border-radius: 0 10px 10px 0 !important;
+  padding: 16px 20px !important;
+  margin: 24px 0 28px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+  font-size: 0.92rem !important;
+  line-height: 1.6 !important;
+  color: #5c3e06 !important;
+}
+.slc-pricing-notice svg {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  max-width: 22px !important;
+  flex-shrink: 0 !important;
+  fill: #c9933b !important;
+  margin-top: 2px !important;
+}
+.slc-rate-table-wrapper {
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  margin: 24px 0 32px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(128, 24, 35, 0.14) !important;
+  background: #ffffff !important;
+}
+.slc-rate-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  font-size: 0.925rem !important;
+  text-align: left !important;
+}
+.slc-rate-table th {
+  background: linear-gradient(135deg, #5c141c 0%, #801823 100%) !important;
+  color: #ffffff !important;
+  padding: 16px 20px !important;
+  font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  border-bottom: 2px solid #c9933b !important;
+  white-space: nowrap !important;
+}
+.slc-rate-table td {
+  padding: 15px 20px !important;
+  border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+  color: #191919 !important;
+  vertical-align: middle !important;
+}
+.slc-rate-table tr:nth-child(even) {
+  background-color: #faf7f4 !important;
+}
+.slc-rate-table tr:hover {
+  background-color: #f3ece4 !important;
+}
+.slc-rate-table td strong {
+  color: #801823 !important;
+}
+.slc-badge-pill {
+  display: inline-block !important;
+  padding: 4px 10px !important;
+  border-radius: 9999px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+.slc-badge-pill--green {
+  background: #e6f7ec !important;
+  color: #0d6832 !important;
+}
+.slc-badge-pill--gold {
+  background: #fef3d6 !important;
+  color: #8c6008 !important;
+}
+.slc-badge-pill--wine {
+  background: #fae8ea !important;
+  color: #801823 !important;
+}
+.slc-hub-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 20px !important;
+  margin: 24px 0 36px !important;
+}
+.slc-hub-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(128, 24, 35, 0.14) !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  border-left: 4px solid #801823 !important;
+}
+.slc-hub-card__title {
+  font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: #801823 !important;
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+.slc-hub-card__subtitle {
+  font-size: 0.825rem !important;
+  color: #c9933b !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+}
+.slc-hub-card__desc {
+  font-size: 0.9rem !important;
+  color: #4a5568 !important;
+  line-height: 1.6 !important;
+}
+.slc-calc-tabs {
+  display: flex !important;
+  gap: 12px !important;
+  margin-bottom: 24px !important;
+  flex-wrap: wrap !important;
+}
+.slc-calc-tab-btn {
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  border: 1.5px solid #dee2e6 !important;
+  background: #ffffff !important;
+  color: #2b303a !important;
+  cursor: pointer !important;
+}
+.slc-calc-tab-btn.is-active {
+  background: #801823 !important;
+  color: #ffffff !important;
+  border-color: #801823 !important;
+}
+.slc-calc-whatsapp-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: #25D366 !important;
+  color: #ffffff !important;
+  font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  padding: 14px 24px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  margin-top: 18px !important;
+  width: 100% !important;
+}
+.slc-step-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 20px !important;
+  margin: 28px 0 36px !important;
+}
+.slc-step-card {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(128, 24, 35, 0.12) !important;
+  border-radius: 12px !important;
+  padding: 24px 22px !important;
+}
+.slc-step-card__num {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  background: #801823 !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  border-radius: 50% !important;
+  margin-bottom: 14px !important;
+  border: 2px solid #c9933b !important;
+}
+.slc-step-card__title {
+  font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #801823 !important;
+  margin-bottom: 8px !important;
+}
+.slc-step-card__desc {
+  font-size: 0.88rem !important;
+  color: #4a5568 !important;
+  line-height: 1.6 !important;
+}
+.slc-case-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 20px !important;
+}
+.slc-case-card {
+  background: #faf7f2 !important;
+  border-left: 4px solid #801823 !important;
+  border-radius: 0 12px 12px 0 !important;
+  padding: 24px 22px !important;
+}
