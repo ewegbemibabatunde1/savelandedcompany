@@ -276,7 +276,7 @@
           "name": "How is volumetric weight calculated for air cargo to Lagos?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Following IATA (International Air Transport Association) rules, volumetric weight in kilograms is calculated as (Length × Width × Height in cm) ÷ 6,000. Airlines charge the higher number between the actual scale weight and the volumetric weight."
+            "text": "Following IATA (International Air Transport Association) rules, volumetric weight in kilograms is calculated as (Length &times; Width &times; Height in cm) &divide; 6,000. Airlines charge the higher number between the actual scale weight and the volumetric weight."
           }
         },
         {
@@ -690,6 +690,602 @@
   </style>
   <!-- End SAVELANDED SUBPAGE responsive style -->
 
+
+  <!-- SLC AIR FREIGHT RESPONSIVE DOMINATION & LUXURY BRANDING -->
+  <style id="slc-air-freight-master">
+    /* ======================================================
+       AIR FREIGHT MASTER RESPONSIVE & BRAND INTEGRATION
+       Eliminates 2-column sidebar crunch, full 1140px width
+       Brand colors: Burgundy #801823, Gold #c9933b, Ivory #faf7f2
+       ====================================================== */
+
+    /* 1. Full width layout & elimination of 2-column sidebar crunch */
+    .slc-layout-with-sidebar {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 40px !important;
+      width: 100% !important;
+      max-width: 1140px !important;
+      margin: 0 auto !important;
+    }
+    .slc-layout-with-sidebar > .slc-prose {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    .slc-layout-with-sidebar > aside {
+      width: 100% !important;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+      gap: 24px !important;
+      margin-top: 36px !important;
+      order: 3 !important;
+    }
+
+    /* 2. Constrain ALL SVGs on page */
+    .slc-ai-summary__badge svg,
+    .slc-toc__title svg,
+    .slc-step-card__num svg {
+      width: 18px !important;
+      height: 18px !important;
+      min-width: 18px !important;
+      max-width: 18px !important;
+      flex-shrink: 0 !important;
+    }
+
+    /* 3. Executive AI Summary Box */
+    .slc-ai-summary {
+      background: #fdfbf7 !important;
+      border: 1.5px solid rgba(201, 147, 59, 0.35) !important;
+      border-radius: 14px !important;
+      padding: 28px 30px !important;
+      margin-bottom: 32px !important;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04) !important;
+    }
+    .slc-ai-summary__badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      background: rgba(128, 24, 35, 0.08) !important;
+      color: #801823 !important;
+      border: 1px solid rgba(128, 24, 35, 0.22) !important;
+      padding: 5px 14px !important;
+      border-radius: 9999px !important;
+      font-size: 0.78rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      margin-bottom: 14px !important;
+    }
+    .slc-ai-summary__badge svg {
+      fill: #801823 !important;
+    }
+    .slc-ai-summary__title {
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-size: 1.45rem !important;
+      font-weight: 800 !important;
+      color: #191919 !important;
+      margin-bottom: 14px !important;
+      line-height: 1.3 !important;
+    }
+    .slc-ai-summary__content p {
+      font-size: 0.95rem !important;
+      line-height: 1.7 !important;
+      color: #2d3748 !important;
+    }
+    .slc-ai-summary__content strong {
+      color: #801823 !important;
+    }
+    .slc-ai-facts {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 12px !important;
+      margin-top: 20px !important;
+    }
+    .slc-ai-fact {
+      background: #ffffff !important;
+      border: 1px solid rgba(201, 147, 59, 0.25) !important;
+      border-left: 3px solid #801823 !important;
+      padding: 12px 16px !important;
+      border-radius: 8px !important;
+      font-size: 0.88rem !important;
+      line-height: 1.4 !important;
+      color: #2d3748 !important;
+    }
+    .slc-ai-fact strong {
+      display: block !important;
+      font-size: 0.75rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      color: #801823 !important;
+      margin-bottom: 2px !important;
+    }
+
+    /* 4. Table of Contents */
+    .slc-toc {
+      background: #fdfbf7 !important;
+      border: 1px solid rgba(201, 147, 59, 0.3) !important;
+      border-radius: 12px !important;
+      padding: 22px 26px !important;
+      margin: 28px 0 !important;
+    }
+    .slc-toc__title {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      color: #801823 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      margin-bottom: 14px !important;
+    }
+    .slc-toc__title svg {
+      fill: #801823 !important;
+    }
+    .slc-toc__list {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+      gap: 10px !important;
+    }
+    .slc-toc__link {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      color: #2d3748 !important;
+      font-size: 0.9rem !important;
+      text-decoration: none !important;
+      font-weight: 500 !important;
+      transition: color 0.2s ease, transform 0.2s ease !important;
+    }
+    .slc-toc__link:hover {
+      color: #801823 !important;
+      transform: translateX(4px) !important;
+    }
+    .slc-toc__link span {
+      color: #c9933b !important;
+      font-weight: 700 !important;
+    }
+
+    /* 5. Luxury Spec Table (Operational Matrix) */
+    .slc-table-wrap {
+      width: 100% !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      margin: 24px 0 !important;
+      border-radius: 12px !important;
+      border: 1.5px solid rgba(128, 24, 35, 0.14) !important;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04) !important;
+      background: #ffffff !important;
+    }
+    .slc-spec-table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      font-size: 0.925rem !important;
+      text-align: left !important;
+      line-height: 1.5 !important;
+    }
+    .slc-spec-table th {
+      background: linear-gradient(135deg, #5c141c 0%, #801823 100%) !important;
+      color: #ffffff !important;
+      padding: 16px 20px !important;
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      border: none !important;
+      border-bottom: 2px solid #c9933b !important;
+      white-space: nowrap !important;
+    }
+    .slc-spec-table td {
+      padding: 15px 20px !important;
+      border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+      color: #191919 !important;
+      vertical-align: middle !important;
+    }
+    .slc-spec-table tr:nth-child(even) {
+      background-color: #faf7f4 !important;
+    }
+    .slc-spec-table tr:hover {
+      background-color: #f3ece4 !important;
+    }
+    .slc-spec-table td strong {
+      color: #801823 !important;
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+    }
+
+    /* 6. Chargeable Weight Calculation Comparison Table */
+    .slc-comparison-table-wrapper {
+      width: 100% !important;
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      margin: 24px 0 !important;
+      border-radius: 12px !important;
+      border: 1.5px solid rgba(128, 24, 35, 0.14) !important;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04) !important;
+      background: #ffffff !important;
+    }
+    .slc-comparison-table {
+      width: 100% !important;
+      min-width: 760px !important;
+      border-collapse: collapse !important;
+      font-size: 0.9rem !important;
+      text-align: left !important;
+      line-height: 1.55 !important;
+    }
+    .slc-comparison-table th {
+      background: linear-gradient(135deg, #5c141c 0%, #801823 100%) !important;
+      color: #ffffff !important;
+      padding: 16px 18px !important;
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-weight: 700 !important;
+      font-size: 0.85rem !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      border: none !important;
+      border-bottom: 2px solid #c9933b !important;
+      white-space: nowrap !important;
+    }
+    .slc-comparison-table td {
+      padding: 15px 18px !important;
+      border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+      color: #191919 !important;
+      vertical-align: middle !important;
+    }
+    .slc-comparison-table tr:nth-child(even) {
+      background-color: #faf7f4 !important;
+    }
+    .slc-comparison-table tr:hover {
+      background-color: #f3ece4 !important;
+    }
+    .slc-comparison-table td strong {
+      color: #801823 !important;
+    }
+
+    /* 7. Volumetric Formula Callouts & Definition Boxes */
+    .slc-callout,
+    .slc-definition-box {
+      background: #fdfbf7 !important;
+      border: 1px solid rgba(201, 147, 59, 0.35) !important;
+      border-left: 4px solid #801823 !important;
+      border-radius: 12px !important;
+      padding: 22px 26px !important;
+      margin: 24px 0 !important;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03) !important;
+    }
+    .slc-definition-term {
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-size: 1.1rem !important;
+      font-weight: 800 !important;
+      color: #801823 !important;
+      margin-bottom: 8px !important;
+    }
+    .slc-definition-desc {
+      margin: 0 !important;
+      font-size: 0.95rem !important;
+      line-height: 1.65 !important;
+      color: #2d3748 !important;
+    }
+    .slc-callout code,
+    .slc-definition-box code {
+      display: inline-block !important;
+      background: rgba(128, 24, 35, 0.08) !important;
+      color: #801823 !important;
+      font-weight: 700 !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      font-size: 0.92rem !important;
+      margin: 6px 0 !important;
+      border: 1px solid rgba(128, 24, 35, 0.15) !important;
+    }
+
+    /* 8. Step-by-Step Air Cargo Process Checklist */
+    .slc-checklist {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 24px 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 16px !important;
+    }
+    .slc-checklist__item {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 16px !important;
+      padding: 16px 20px !important;
+      background: #ffffff !important;
+      border: 1px solid rgba(0,0,0,0.07) !important;
+      border-radius: 10px !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02) !important;
+    }
+    .slc-checklist__icon {
+      background: #801823 !important;
+      color: #ffffff !important;
+      border: 2px solid #c9933b !important;
+      width: 34px !important;
+      height: 34px !important;
+      min-width: 34px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-weight: 800 !important;
+      font-size: 0.9rem !important;
+      line-height: 1 !important;
+      flex-shrink: 0 !important;
+      margin-top: 2px !important;
+    }
+    .slc-checklist__item strong {
+      color: #191919 !important;
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+    }
+
+    /* 9. Restrictions & Dangerous Goods 3-Card Grid */
+    .slc-step-grid {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 24px !important;
+      margin: 24px 0 !important;
+    }
+    .slc-step-card {
+      background: #ffffff !important;
+      border: 1.5px solid rgba(128, 24, 35, 0.12) !important;
+      border-radius: 14px !important;
+      padding: 24px !important;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+    .slc-step-card:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08) !important;
+    }
+    .slc-step-title {
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-size: 1.15rem !important;
+      font-weight: 700 !important;
+      color: #191919 !important;
+      margin: 12px 0 8px !important;
+    }
+    .slc-step-text {
+      font-size: 0.9rem !important;
+      line-height: 1.6 !important;
+      color: #4a5568 !important;
+      margin: 0 !important;
+    }
+    .slc-tag {
+      display: inline-block !important;
+      padding: 4px 10px !important;
+      border-radius: 6px !important;
+      font-size: 0.75rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.04em !important;
+      width: fit-content !important;
+      background: rgba(128, 24, 35, 0.08) !important;
+      color: #801823 !important;
+      border: 1px solid rgba(128, 24, 35, 0.22) !important;
+    }
+    .slc-tag--official {
+      background: #eef7ee !important;
+      color: #1e7e34 !important;
+      border: 1px solid #c3e6cb !important;
+    }
+    .slc-tag--warning {
+      background: #fff3cd !important;
+      color: #856404 !important;
+      border: 1px solid #ffeeba !important;
+    }
+
+    /* 10. Reviewer Badge */
+    .slc-reviewer-badge {
+      display: flex !important;
+      align-items: center !important;
+      gap: 16px !important;
+      background: #fdfbf7 !important;
+      border: 1.5px solid rgba(201, 147, 59, 0.3) !important;
+      border-radius: 12px !important;
+      padding: 18px 24px !important;
+      margin: 32px 0 !important;
+    }
+    .slc-reviewer-avatar {
+      background: #801823 !important;
+      color: #ffffff !important;
+      border: 2px solid #c9933b !important;
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-weight: 800 !important;
+      font-size: 0.95rem !important;
+    }
+
+    /* 11. FAQ Subpage */
+    .slc-faq-subpage {
+      margin-top: 40px !important;
+    }
+    .slc-faq-item details {
+      background: #ffffff !important;
+      border: 1px solid rgba(0,0,0,0.08) !important;
+      border-radius: 10px !important;
+      margin-bottom: 12px !important;
+      padding: 16px 20px !important;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+    }
+    .slc-faq-item details[open] {
+      border-color: rgba(128, 24, 35, 0.25) !important;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04) !important;
+    }
+    .slc-faq-item summary {
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-weight: 700 !important;
+      color: #191919 !important;
+      font-size: 1rem !important;
+      cursor: pointer !important;
+      outline: none !important;
+    }
+    .slc-faq-item summary:hover {
+      color: #801823 !important;
+    }
+    .slc-faq-item__answer {
+      margin-top: 12px !important;
+      font-size: 0.925rem !important;
+      line-height: 1.65 !important;
+      color: #4a5568 !important;
+    }
+
+    /* 12. Aside Sidebar Cards in Wide Layout */
+    .slc-sidebar-card {
+      background: #fdfbf7 !important;
+      border: 1.5px solid rgba(201, 147, 59, 0.3) !important;
+      border-radius: 14px !important;
+      padding: 26px !important;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03) !important;
+    }
+    .slc-sidebar-heading {
+      font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      font-size: 1.2rem !important;
+      font-weight: 800 !important;
+      color: #801823 !important;
+      margin-bottom: 18px !important;
+      border-bottom: 2px solid rgba(201, 147, 59, 0.3) !important;
+      padding-bottom: 8px !important;
+    }
+    .slc-sidebar-nav {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 8px !important;
+    }
+    .slc-sidebar-nav__link {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 10px 14px !important;
+      border-radius: 8px !important;
+      text-decoration: none !important;
+      color: #2d3748 !important;
+      font-size: 0.9rem !important;
+      font-weight: 600 !important;
+      background: #ffffff !important;
+      border: 1px solid rgba(0,0,0,0.06) !important;
+      transition: all 0.2s ease !important;
+    }
+    .slc-sidebar-nav__link:hover {
+      background: rgba(128, 24, 35, 0.06) !important;
+      color: #801823 !important;
+      border-color: rgba(128, 24, 35, 0.2) !important;
+    }
+    .slc-sidebar-nav__link.is-active {
+      background: #801823 !important;
+      color: #ffffff !important;
+      border-color: #801823 !important;
+    }
+    .slc-sidebar-nav__link.is-active svg {
+      fill: #ffffff !important;
+    }
+    .slc-sidebar-card--dark {
+      background: #191919 !important;
+      border: 1.5px solid #c9933b !important;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
+    }
+
+    /* 13. Mobile Table Transformation & Breakpoints */
+    @media (max-width: 992px) {
+      .slc-step-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .slc-step-grid {
+        grid-template-columns: 1fr !important;
+      }
+      .slc-spec-table thead {
+        display: none !important;
+      }
+      .slc-spec-table,
+      .slc-spec-table tbody,
+      .slc-spec-table tr,
+      .slc-spec-table td {
+        display: block !important;
+        width: 100% !important;
+      }
+      .slc-spec-table tr {
+        margin-bottom: 16px !important;
+        border: 1.5px solid rgba(128, 24, 35, 0.14) !important;
+        border-radius: 12px !important;
+        padding: 14px 16px !important;
+        background: #ffffff !important;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.05) !important;
+      }
+      .slc-spec-table td {
+        border-bottom: 1px dashed rgba(0,0,0,0.08) !important;
+        padding: 10px 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 4px !important;
+      }
+      .slc-spec-table td:last-child {
+        border-bottom: none !important;
+      }
+      .slc-spec-table td::before {
+        content: attr(data-label) !important;
+        font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+        font-weight: 800 !important;
+        color: #801823 !important;
+        font-size: 0.72rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .slc-ai-summary {
+        padding: 20px 16px !important;
+      }
+      .slc-ai-summary__title {
+        font-size: 1.25rem !important;
+      }
+      .slc-ai-facts {
+        grid-template-columns: 1fr !important;
+      }
+      .slc-toc__list {
+        grid-template-columns: 1fr !important;
+      }
+      .slc-callout,
+      .slc-definition-box {
+        padding: 16px !important;
+      }
+      .slc-checklist__item {
+        padding: 12px 14px !important;
+      }
+      .slc-reviewer-badge {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 16px !important;
+      }
+      .slc-layout-with-sidebar > aside {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+
 </head>
 <body class="slc-body">
 <a href="#main-content" class="slc-skip-link">Skip to main content</a>
@@ -882,10 +1478,10 @@
       </div>
       <h2 class="slc-ai-summary__title">Air Freight from China to Nigeria Summary</h2>
       <div class="slc-ai-summary__content">
-        <p>Savelanded operates direct, scheduled commercial air cargo flights departing Guangzhou (CAN) and Shenzhen (SZX) arriving at Murtala Muhammed International Airport (LOS) in Lagos. Transit time is 5 to 8 working days for standard freight and 3 to 5 working days for express cargo. Billing is charged per kilogram based on whichever is greater: gross scale weight or dimensional volumetric weight ([L × W × H cm] ÷ 6,000). Goods are cleared through Lagos airport customs and made available for collection at our Trade Fair Complex depot or delivered to your doorstep.</p>
+        <p>Savelanded operates direct, scheduled commercial air cargo flights departing Guangzhou (CAN) and Shenzhen (SZX) arriving at Murtala Muhammed International Airport (LOS) in Lagos. Transit time is 5 to 8 working days for standard freight and 3 to 5 working days for express cargo. Billing is charged per kilogram based on whichever is greater: gross scale weight or dimensional volumetric weight ([L &times; W &times; H cm] &divide; 6,000). Goods are cleared through Lagos airport customs and made available for collection at our Trade Fair Complex depot or delivered to your doorstep.</p>
       </div>
       <div class="slc-ai-facts">
-        <div class="slc-ai-fact"><strong>Transit Time</strong> 5 – 8 working days (3 – 5 days express)</div><div class="slc-ai-fact"><strong>Flight Origin Hubs</strong> Guangzhou Baiyun (CAN), Shenzhen (SZX)</div><div class="slc-ai-fact"><strong>Destination Airport</strong> Lagos MMIA (LOS) / NAHCO & SAHCO Sheds</div><div class="slc-ai-fact"><strong>Billing Formula</strong> Per kg (Max of Scale Weight vs [L×W×H] ÷ 6,000)</div><div class="slc-ai-fact"><strong>Dispatch Hotline</strong> +86 182 4854 7224 (CEO Wolex)</div>
+        <div class="slc-ai-fact"><strong>Transit Time</strong> 5 &ndash; 8 working days (3 &ndash; 5 days express)</div><div class="slc-ai-fact"><strong>Flight Origin Hubs</strong> Guangzhou Baiyun (CAN), Shenzhen (SZX)</div><div class="slc-ai-fact"><strong>Destination Airport</strong> Lagos MMIA (LOS) / NAHCO & SAHCO Sheds</div><div class="slc-ai-fact"><strong>Billing Formula</strong> Per kg (Max of Scale Weight vs [L&times;W&times;H] &divide; 6,000)</div><div class="slc-ai-fact"><strong>Dispatch Hotline</strong> +86 182 4854 7224 (CEO Wolex)</div>
       </div>
     <div class="slc-callout" style="margin:20px 0; border-left:4px solid var(--slc-wine); background:#faf7f2;">For comprehensive cargo comparisons, indicative rates, and our live dimensional calculator, consult our master <a href="shipping.html" style="color:var(--slc-wine); font-weight:700; text-decoration:underline;">China to Nigeria Shipping Guide & Rate Calculator</a>.</div>
 </section>
@@ -940,8 +1536,8 @@
                 </tr>
                 <tr>
                   <td data-label="Parameter"><strong>Transit Time</strong></td>
-                  <td data-label="Standard Air Cargo">5 – 8 Working Days</td>
-                  <td data-label="Express Air Cargo">3 – 5 Working Days</td>
+                  <td data-label="Standard Air Cargo">5 &ndash; 8 Working Days</td>
+                  <td data-label="Express Air Cargo">3 &ndash; 5 Working Days</td>
                 </tr>
                 <tr>
                   <td data-label="Parameter"><strong>Pricing Basis</strong></td>
@@ -968,8 +1564,8 @@
           </p>
           <div class="slc-callout">
             <strong>Standard Air Freight Volumetric Formula:</strong><br>
-            <code>Volumetric Weight (kg) = [Length (cm) × Width (cm) × Height (cm)] ÷ 6,000</code><br>
-            <em>Example: A carton measuring 60cm × 50cm × 40cm has a volume of 120,000 cm³. Divided by 6,000, its volumetric weight is 20 kg. If the scale weight is only 12 kg, billing is charged at 20 kg.</em>
+            <code>Volumetric Weight (kg) = [Length (cm) &times; Width (cm) &times; Height (cm)] &divide; 6,000</code><br>
+            <em>Example: A carton measuring 60cm &times; 50cm &times; 40cm has a volume of 120,000 cm&sup3;. Divided by 6,000, its volumetric weight is 20 kg. If the scale weight is only 12 kg, billing is charged at 20 kg.</em>
           </div>
           <p>
             You can calculate both volumetric and ocean CBM weights instantly using our interactive tools on the <a href="shipping.html">Shipping Calculator page</a>.
@@ -1128,7 +1724,7 @@
           <div class="slc-reviewer-badge">
             <div class="slc-reviewer-avatar">WO</div>
             <div>
-              <strong>Technical Guidance by Wolex (CEO, Savelanded)</strong> &bull; China–Nigeria Air Cargo &amp; Sourcing Specialist<br>
+              <strong>Technical Guidance by Wolex (CEO, Savelanded)</strong> &bull; China&ndash;Nigeria Air Cargo &amp; Sourcing Specialist<br>
               <span style="font-size:0.8rem; color:#718096;">Verified with IATA air cargo standards &bull; Direct flight allocations CAN &rarr; LOS</span>
             </div>
           </div>
@@ -1150,7 +1746,7 @@
           <details>
             <summary>How is volumetric weight calculated for air cargo to Lagos?</summary>
             <div class="slc-faq-item__answer">
-              <p>Following <a href='https://www.iata.org/' target='_blank' rel='noopener noreferrer' class='slc-ext-link'>IATA (International Air Transport Association)</a> rules, volumetric weight in kilograms is calculated as (Length × Width × Height in cm) ÷ 6,000. Airlines charge the higher number between the actual scale weight and the volumetric weight.</p>
+              <p>Following <a href='https://www.iata.org/' target='_blank' rel='noopener noreferrer' class='slc-ext-link'>IATA (International Air Transport Association)</a> rules, volumetric weight in kilograms is calculated as (Length &times; Width &times; Height in cm) &divide; 6,000. Airlines charge the higher number between the actual scale weight and the volumetric weight.</p>
             </div>
           </details>
         </div>
@@ -1187,7 +1783,7 @@
       <div class="slc-sidebar-card slc-sidebar-card--dark">
         <div style="font-family:var(--slc-font-head); font-size:1.15rem; font-weight:700; color:var(--slc-gold); margin-bottom:12px;">Need Instant Cargo Support?</div>
         <p style="font-size:0.9rem; color:rgba(255,255,255,0.75); line-height:1.6; margin-bottom:20px;">
-          Speak directly with our China–Nigeria logistics managers for cargo rates, warehouse receiving, and procurement assistance.
+          Speak directly with our China&ndash;Nigeria logistics managers for cargo rates, warehouse receiving, and procurement assistance.
         </p>
         <div style="display:flex; flex-direction:column; gap:12px;">
           <a href="tel:+8618248547224" class="slc-btn slc-btn-gold" style="width:100%; justify-content:center;">
@@ -1210,7 +1806,7 @@
        ========================================================================== -->
   <section class="slc-cta">
     <div class="slc-container slc-cta__inner">
-      <span class="slc-cta__pill">Direct China–Nigeria Logistics Desk</span>
+      <span class="slc-cta__pill">Direct China&ndash;Nigeria Logistics Desk</span>
       <h2 class="slc-cta__title">
         Ready to Ship <em>Without Delays</em> or Stress?
       </h2>
@@ -1248,7 +1844,7 @@
             </div>
           </a>
           <p class="slc-footer__desc">
-            Reliable China–Nigeria sourcing, procurement, and international logistics connecting trusted Chinese suppliers with businesses across Nigeria.
+            Reliable China&ndash;Nigeria sourcing, procurement, and international logistics connecting trusted Chinese suppliers with businesses across Nigeria.
           </p>
           <div style="font-family:var(--slc-font-head); font-size:0.75rem; font-weight:700; color:var(--slc-gold); letter-spacing:0.12em; text-transform:uppercase;">
             Connecting China to Nigeria. Simplifying Global Trade.
