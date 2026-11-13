@@ -425,41 +425,86 @@
       }
     }
 
-    /* 9. Comparison table: tablet horizontal scroll (641-880px) */
-    @media (max-width: 880px) and (min-width: 641px) {
+    /* 9. Comparison table: card transformation on mobile & tablet (<= 880px) - no horizontal sliding */
+    @media (max-width: 880px) {
       .slc-comparison-table-wrapper {
-        overflow-x: auto !important; -webkit-overflow-scrolling: touch !important;
-        border-radius: 12px !important; border: 1px solid rgba(128,24,35,0.14) !important;
-        background: #fff !important; box-shadow: 0 4px 16px rgba(0,0,0,0.06) !important;
+        overflow-x: visible !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 20px 0 !important;
       }
       .slc-comparison-table {
-        display: table !important; min-width: 640px !important;
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        border: none !important;
       }
-      .slc-comparison-table thead { display: table-header-group !important; }
+      .slc-comparison-table thead {
+        display: none !important;
+      }
       .slc-comparison-table tbody {
-        display: table-row-group !important; flex-direction: unset !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 18px !important;
+        width: 100% !important;
       }
       .slc-comparison-table tbody tr {
-        display: table-row !important; padding: 0 !important;
-        border-radius: 0 !important; box-shadow: none !important;
+        display: block !important;
+        width: 100% !important;
+        background: #ffffff !important;
+        border: 1.5px solid rgba(128, 24, 35, 0.16) !important;
+        border-radius: 14px !important;
+        padding: 18px 20px !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.05) !important;
       }
-      .slc-comparison-table tbody tr::before { display: none !important; }
       .slc-comparison-table tbody td {
-        display: table-cell !important; padding: 12px 14px !important;
-        font-size: 0.85rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 10px 0 !important;
+        border-bottom: 1px dashed rgba(0,0,0,0.08) !important;
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+        color: #2d3748 !important;
       }
-      .slc-comparison-table tbody td::before { display: none !important; }
-    }
-
-    /* 10. Comparison table desktop: allow wrapping on medium screens */
-    @media (max-width: 1200px) and (min-width: 881px) {
-      .slc-comparison-table thead th {
-        white-space: normal !important; font-size: 0.8rem !important;
-        padding: 14px !important;
+      .slc-comparison-table tbody td:first-child {
+        padding-top: 0 !important;
+        border-bottom: 2px solid rgba(201, 147, 59, 0.4) !important;
+        padding-bottom: 12px !important;
+        margin-bottom: 6px !important;
       }
-      .slc-comparison-table tbody td { padding: 14px !important; font-size: 0.88rem !important; }
-      .slc-comparison-table td:last-child,
-      .slc-comparison-table th:last-child { width: 100px !important; }
+      .slc-comparison-table tbody td:first-child strong {
+        color: #801823 !important;
+        font-size: 1.08rem !important;
+        font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      }
+      .slc-comparison-table tbody td:last-child {
+        border-bottom: none !important;
+        background: #faf7f2 !important;
+        border-radius: 10px !important;
+        padding: 12px 14px !important;
+        margin-top: 8px !important;
+        border: 1px solid rgba(201, 147, 59, 0.3) !important;
+      }
+      .slc-comparison-table tbody td::before {
+        content: attr(data-label) !important;
+        display: block !important;
+        font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+        font-weight: 800 !important;
+        color: #801823 !important;
+        font-size: 0.72rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        margin-bottom: 4px !important;
+      }
+      .slc-comparison-table tbody td:first-child::before {
+        color: #c9933b !important;
+      }
     }
 
     /* 11. Rate tables (pricing) */
@@ -911,7 +956,6 @@
     }
     .slc-comparison-table {
       width: 100% !important;
-      min-width: 760px !important;
       border-collapse: collapse !important;
       font-size: 0.9rem !important;
       text-align: left !important;
@@ -1204,6 +1248,88 @@
     }
 
     /* 13. Mobile Table Transformation & Breakpoints */
+    /* Comparison table: card transformation on mobile & tablet (<= 880px) */
+    @media (max-width: 880px) {
+      .slc-comparison-table-wrapper {
+        overflow-x: visible !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 20px 0 !important;
+      }
+      .slc-comparison-table {
+        display: block !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        border: none !important;
+      }
+      .slc-comparison-table thead {
+        display: none !important;
+      }
+      .slc-comparison-table tbody {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 18px !important;
+        width: 100% !important;
+      }
+      .slc-comparison-table tbody tr {
+        display: block !important;
+        width: 100% !important;
+        background: #ffffff !important;
+        border: 1.5px solid rgba(128, 24, 35, 0.16) !important;
+        border-radius: 14px !important;
+        padding: 18px 20px !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.05) !important;
+      }
+      .slc-comparison-table tbody td {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 10px 0 !important;
+        border-bottom: 1px dashed rgba(0,0,0,0.08) !important;
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+        color: #2d3748 !important;
+      }
+      .slc-comparison-table tbody td:first-child {
+        padding-top: 0 !important;
+        border-bottom: 2px solid rgba(201, 147, 59, 0.4) !important;
+        padding-bottom: 12px !important;
+        margin-bottom: 6px !important;
+      }
+      .slc-comparison-table tbody td:first-child strong {
+        color: #801823 !important;
+        font-size: 1.08rem !important;
+        font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+      }
+      .slc-comparison-table tbody td:last-child {
+        border-bottom: none !important;
+        background: #faf7f2 !important;
+        border-radius: 10px !important;
+        padding: 12px 14px !important;
+        margin-top: 8px !important;
+        border: 1px solid rgba(201, 147, 59, 0.3) !important;
+      }
+      .slc-comparison-table tbody td::before {
+        content: attr(data-label) !important;
+        display: block !important;
+        font-family: var(--slc-font-head, 'Sora', sans-serif) !important;
+        font-weight: 800 !important;
+        color: #801823 !important;
+        font-size: 0.72rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.05em !important;
+        margin-bottom: 4px !important;
+      }
+      .slc-comparison-table tbody td:first-child::before {
+        color: #c9933b !important;
+      }
+    }
+
     @media (max-width: 992px) {
       .slc-step-grid {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -1637,21 +1763,21 @@
                   <td data-label="Carton Dimensions">40cm &times; 30cm &times; 25cm (30,000 cm&sup3;)</td>
                   <td data-label="Actual Weight">22.0 kg</td>
                   <td data-label="Volumetric Weight">30,000 &divide; 6,000 = <strong>5.0 kg</strong></td>
-                  <td data-label="Billed Weight &amp; Explanation"><strong>22.0 kg</strong> (Actual scale weight applies because physical mass exceeds dimensional volume)</td>
+                  <td data-label="Billed Weight & Explanation"><strong>22.0 kg</strong> (Actual scale weight applies because physical mass exceeds dimensional volume)</td>
                 </tr>
                 <tr>
                   <td data-label="Cargo Scenario"><strong>Bulky Lightweight Goods</strong> (e.g., shoes in boxes, hats, plush toys)</td>
                   <td data-label="Carton Dimensions">70cm &times; 60cm &times; 50cm (210,000 cm&sup3;)</td>
                   <td data-label="Actual Weight">14.0 kg</td>
                   <td data-label="Volumetric Weight">210,000 &divide; 6,000 = <strong>35.0 kg</strong></td>
-                  <td data-label="Billed Weight &amp; Explanation"><strong>35.0 kg</strong> (Volumetric weight applies because cargo consumes significant aircraft hold space)</td>
+                  <td data-label="Billed Weight & Explanation"><strong>35.0 kg</strong> (Volumetric weight applies because cargo consumes significant aircraft hold space)</td>
                 </tr>
                 <tr>
                   <td data-label="Cargo Scenario"><strong>Balanced Electronics Carton</strong> (e.g., smart watches, phone accessories)</td>
                   <td data-label="Carton Dimensions">50cm &times; 40cm &times; 30cm (60,000 cm&sup3;)</td>
                   <td data-label="Actual Weight">11.5 kg</td>
                   <td data-label="Volumetric Weight">60,000 &divide; 6,000 = <strong>10.0 kg</strong></td>
-                  <td data-label="Billed Weight &amp; Explanation"><strong>11.5 kg</strong> (Scale weight slightly exceeds volume; billed on exact 11.5 kg)</td>
+                  <td data-label="Billed Weight & Explanation"><strong>11.5 kg</strong> (Scale weight slightly exceeds volume; billed on exact 11.5 kg)</td>
                 </tr>
               </tbody>
             </table>
